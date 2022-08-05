@@ -83,15 +83,16 @@ body {
 	align-items: flex-end;
 	width: 100%;
 	position: absolute;
-	top: 44%;
-	padding: 20px;
+	top: 30%;
+	padding: 0px;
+	height: 40%;
 }
 
-.effect:hover{
-    background-color: rgba(255, 68, 0, 0.267);
+.effect:hover {
+	background-color: rgba(255, 68, 0, 0.267);
 }
-.blue-diag:hover{
-    background-color: rgba(0, 191, 255, 0.234);
+.blue-diag:hover {
+	background-color: rgba(0, 191, 255, 0.234);
 }
 .diag1 {
 	height: 50px;
@@ -162,16 +163,49 @@ body {
 	background-color: orangered;
 	width: 40px;
 	border-radius: 5px;
-    margin: auto;
+	margin: auto;
 }
-.day-cost{
-    background-color: #000;
-    color: white;
-    margin-bottom: 15px;
-    border-radius: 4px;
-    padding: 7px;
-    display: none;
+.day-cost {
+	background-color: #000;
+	color: white;
+	margin-bottom: 15px;
+	border-radius: 4px;
+	padding: 7px;
+	display: none;
 }
-.hover:hover .day-cost{
-    display: block;
+.hover:hover .day-cost {
+	display: block;
+}
+
+@media only screen and (min-width: 414px) and (max-width: 768px) {
+	.box{
+		margin-top: 70px;
+		width: 100vw;
+		height: 100vh;
+		position: absolute;
+		top: 54%;
+		left: 49%;
+		transform: translate(-50%,-50%);
+	}
+	.box .upper-belt{
+		width: 340px;
+		margin: 0 auto;
+	}
+	.main-content{
+		width: 340px;
+		margin: 34px auto 0;
+		height: 386px;
+	}
+	.main-content .diagrams{
+		width: 81%;
+		top: 10%;
+		padding: 15px;
+	}
+	.bottom-main{
+		top: 55%;
+		width: 85%;
+	}
+	.style-diag{
+		width: 32px;
+	}
 }
