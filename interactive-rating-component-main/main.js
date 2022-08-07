@@ -11,14 +11,11 @@ const grade = document.querySelectorAll('.grade')
 
 const hideAndShow = () => {
 	card.classList.add('none')
+	card.classList.remove('block')
 	thanks.classList.add('block')
+	thanks.classList.remove('none')
 }
 
-const addColor = () => {
-    grade.classList.toggle('selected')
-}
-
-grade.addEventListener('click',addColor)
 
 
 submit.addEventListener('click', hideAndShow)

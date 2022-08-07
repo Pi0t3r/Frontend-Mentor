@@ -8,8 +8,14 @@ body {
 	background-color: hsl(216, 12%, 8%);
 	font-size: 15px;
 }
+.none{
+    display: none;
+}
+.block{
+    display: block;
+}
 .card {
-	background-color: hsl(213, 19%, 18%);
+    background-color: hsl(213, 19%, 18%);
 	width: 90vw;
 	position: absolute;
 	top: 50%;
@@ -18,17 +24,17 @@ body {
 	border-radius: 10px;
 }
 .card h1 {
-	color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 100%);
 }
 .text {
-	margin: 20px;
+    margin: 20px;
 }
 .text p {
-	color: hsl(217, 12%, 63%);
+    color: hsl(217, 12%, 63%);
 }
 
 .card .star {
-	background-color: hsl(216, 12%, 30%);
+    background-color: hsl(216, 12%, 30%);
 	padding: 10px;
 	width: 37px;
 	height: 37px;
@@ -40,14 +46,14 @@ body {
 }
 
 .grades {
-	display: flex;
+    display: flex;
 	flex-direction: row;
 	color: hsl(217, 12%, 63%);
 	justify-content: space-around;
 }
 
 .grade {
-	background-color: hsl(216, 12%, 30%);
+    background-color: hsl(216, 12%, 30%);
 	width: 37px;
 	border-radius: 50%;
 	height: 37px;
@@ -93,7 +99,6 @@ button:hover {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	border-radius: 10px;
-    display: none;
 }
 
 .image{
@@ -122,12 +127,3 @@ button:hover {
     margin-bottom: 35px;
 }
 
-.none{
-    display: none;
-}
-.block{
-    display: block;
-}
-.selected {
-	background-color: hsl(25, 97%, 53%);
-}
