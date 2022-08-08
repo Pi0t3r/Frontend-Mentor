@@ -14,6 +14,9 @@ body {
 .block{
     display: block;
 }
+.active{
+    background-color: hsl(25, 97%, 53%);
+}
 .card {
     background-color: hsl(213, 19%, 18%);
 	width: 90vw;
@@ -67,6 +70,9 @@ body {
 .grade:hover {
 	background-color: hsl(216, 12%, 54%);
 	color: hsl(0, 0%, 100%);
+}
+.grade:focus{
+    background-color: hsl(25, 97%, 53%);
 }
 
 
