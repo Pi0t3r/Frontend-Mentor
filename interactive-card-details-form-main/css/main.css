@@ -89,4 +89,22 @@ body {
 .left-side .background .card1 .small-code p {
   font-size: 12px;
 }
+
+.left-side .background .card2 {
+  position: relative;
+  top: 24%;
+  left: 64%;
+}
+
+.left-side .background .card2 .cvc {
+  position: absolute;
+  top: 44.7%;
+  left: 57%;
+  color: white;
+}
+
+.left-side .background .card2 .cvc p {
+  font-size: 13px;
+  letter-spacing: 2px;
+}
 /*# sourceMappingURL=main.css.map */

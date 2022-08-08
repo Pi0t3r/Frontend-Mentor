@@ -36,44 +36,59 @@ body {
 				background-color: hsl(0, 0%, 100%);
 			}
 			.circle2 {
-                position: absolute;
-                top: 24%;
-                left: 22.5%;
+				position: absolute;
+				top: 24%;
+				left: 22.5%;
 				width: 20px;
 				height: 20px;
-                border-radius: 50%;
+				border-radius: 50%;
 				border: 1px solid hsl(0, 0%, 100%);
 			}
-            .code{
-                position: absolute;
-                left: 19%;
-                top: 35%;
-                color: hsl(0, 0%, 100%);
-                letter-spacing: 2px;
+			.code {
+				position: absolute;
+				left: 19%;
+				top: 35%;
+				color: hsl(0, 0%, 100%);
+				letter-spacing: 2px;
+				p {
+					font-size: 29px;
+				}
+			}
+			.name {
+				position: absolute;
+				top: 42.5%;
+				left: 19%;
+				color: hsl(0, 0%, 100%);
+				letter-spacing: 3px;
+				text-transform: uppercase;
+				p {
+					font-size: 12px;
+				}
+			}
+			.small-code {
+				position: absolute;
+				top: 42.5%;
+				left: 37.2%;
+				color: hsl(0, 0%, 100%);
+				p {
+					font-size: 12px;
+				}
+			}
+		}
+		.card2 {
+			position: relative;
+			top: 24%;
+			left: 64%;
+			.cvc {
+				position: absolute;
+				top: 44.7%;
+				left: 57%;
+				color: hsl(0, 0%, 100%);
                 p{
-                    font-size: 29px;
+                    font-size: 13px;
+                    letter-spacing: 2px;
                 }
-            }
-            .name{
-                position: absolute;
-                top: 42.5%;
-                left: 19%;
-                color: hsl(0, 0%, 100%);
-                letter-spacing: 3px;
-                text-transform: uppercase;
-                p{
-                    font-size: 12px;
-                }
-            }
-            .small-code{
-                position: absolute;
-                top: 42.5%;
-                left: 37.2%;
-                color: hsl(0, 0%, 100%);
-                p{
-                    font-size: 12px;
-                }
-            }
+			}
 		}
 	}
 }
