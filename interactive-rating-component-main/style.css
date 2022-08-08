@@ -133,3 +133,20 @@ button:hover {
     margin-bottom: 35px;
 }
 
+@media(min-width:1440px){
+    .card{
+        width: 22%;
+        border-radius: 20px;
+        padding: 15px;
+    }
+    .text h1{
+        text-align: left;
+    }
+    .text p{
+        text-align: left;
+        line-height: 25px;
+    }
+    .button button{
+        height: 50px;
+    }
+}
