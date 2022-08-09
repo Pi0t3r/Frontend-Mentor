@@ -84,11 +84,140 @@ body {
 				top: 44.7%;
 				left: 57%;
 				color: hsl(0, 0%, 100%);
-                p{
-                    font-size: 13px;
-                    letter-spacing: 2px;
-                }
+				p {
+					font-size: 13px;
+					letter-spacing: 2px;
+				}
 			}
 		}
+	}
+}
+
+.right-side {
+	position: absolute;
+	top: 21%;
+	width: 34%;
+	height: 55%;
+	right: 12%;
+	.form {
+		width: 100%;
+		height: 100%;
+		.name {
+			position: relative;
+			top: 14%;
+			left: 6%;
+			p {
+				text-transform: uppercase;
+				font-size: 11px;
+				letter-spacing: 1px;
+				margin-bottom: 10px;
+				color: hsl(278, 68%, 11%);
+				font-weight: bold;
+			}
+			input {
+				width: 61%;
+				height: 44px;
+				border-radius: 11px;
+				padding: 10px;
+				border: 1px solid hsl(270, 3%, 87%);
+			}
+			input::placeholder {
+				color: hsl(270, 3%, 87%);
+				font-size: 15px;
+				font-weight: bold;
+			}
+		}
+		.number {
+			position: relative;
+			left: 6%;
+			top: 20%;
+			p {
+				text-transform: uppercase;
+				font-size: 11px;
+				letter-spacing: 1px;
+				margin-bottom: 10px;
+				color: hsl(278, 68%, 11%);
+				font-weight: bold;
+			}
+			input {
+				width: 61%;
+				height: 44px;
+				border-radius: 11px;
+				padding: 10px;
+				border: 1px solid hsl(270, 3%, 87%);
+			}
+			input::placeholder {
+				color: hsl(270, 3%, 87%);
+				font-size: 15px;
+				font-weight: bold;
+			}
+		}
+		.dateCvc {
+			position: relative;
+			left: 6%;
+			top: 30%;
+			display: flex;
+			flex-direction: row;
+			width: 61%;
+			.date {
+				p {
+					text-transform: uppercase;
+					font-size: 11px;
+					letter-spacing: 1px;
+					margin-bottom: 10px;
+					color: hsl(278, 68%, 11%);
+					font-weight: bold;
+				}
+				input {
+					width: 33%;
+					height: 35px;
+					padding: 10px;
+					border-radius: 9px;
+					border: 1px solid hsl(270, 3%, 87%);
+				}
+				input::placeholder {
+					color: hsl(270, 3%, 87%);
+					font-size: 15px;
+					font-weight: bold;
+				}
+			}
+			.cvc {
+				p {
+					text-transform: uppercase;
+					font-size: 11px;
+					letter-spacing: 1px;
+					margin-bottom: 10px;
+					color: hsl(278, 68%, 11%);
+					font-weight: bold;
+				}
+				input {
+					height: 35px;
+					padding: 10px;
+					border-radius: 9px;
+					border: 1px solid hsl(270, 3%, 87%);
+				}
+				input::placeholder {
+					color: hsl(270, 3%, 87%);
+					font-size: 15px;
+					font-weight: bold;
+				}
+			}
+		}
+        .btn{
+            position: relative;
+            left: 6%;
+            top: 35%;width: 100%;
+            button{
+                width: 61%;
+                height: 50px;
+                border-radius: 9px;
+                background-color: hsl(278, 68%, 11%);
+                color: hsl(270, 3%, 87%);
+                p{
+                    font-size: 15px;
+                    letter-spacing: 1px;
+                }
+            }
+        }
 	}
 }
