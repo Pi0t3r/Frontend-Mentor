@@ -179,7 +179,14 @@ body {
   font-weight: normal;
   text-transform: none;
   margin-top: 5px;
+}
+
+.right-side .form .number .none {
   display: none;
+}
+
+.right-side .form .number .block {
+  display: block;
 }
 
 .right-side .form .number p {
@@ -347,6 +354,7 @@ body {
   border-radius: 9px;
   background-color: #21092f;
   color: #dedddf;
+  cursor: pointer;
 }
 
 .right-side .form .btn button p {

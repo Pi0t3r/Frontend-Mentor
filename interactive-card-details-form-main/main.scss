@@ -136,8 +136,14 @@ body {
 				font-weight: normal;
 				text-transform: none;
 				margin-top: 5px;
-				display: none;
+				
 			}
+            .none{
+                display: none;
+            }
+            .block{
+                display: block;
+            }
 			p {
 				text-transform: uppercase;
 				font-size: 11px;
@@ -236,6 +242,7 @@ body {
 				border-radius: 9px;
 				background-color: hsl(278, 68%, 11%);
 				color: hsl(270, 3%, 87%);
+                cursor: pointer;
 				p {
 					font-size: 15px;
 					letter-spacing: 1px;
