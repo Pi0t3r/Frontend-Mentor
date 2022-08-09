@@ -131,6 +131,13 @@ body {
 			position: relative;
 			left: 6%;
 			top: 20%;
+			.wrong {
+				color: hsl(0, 100%, 66%);
+				font-weight: normal;
+				text-transform: none;
+				margin-top: 5px;
+				display: none;
+			}
 			p {
 				text-transform: uppercase;
 				font-size: 11px;
@@ -155,10 +162,11 @@ body {
 		.dateCvc {
 			position: relative;
 			left: 6%;
-			top: 30%;
+			top: 26%;
 			display: flex;
 			flex-direction: row;
 			width: 61%;
+
 			.date {
 				p {
 					text-transform: uppercase;
@@ -179,6 +187,13 @@ body {
 					color: hsl(270, 3%, 87%);
 					font-size: 15px;
 					font-weight: bold;
+				}
+				.wrong {
+					margin-top: 5px;
+					color: hsl(0, 100%, 66%);
+					font-weight: normal;
+					text-transform: none;
+					display: none;
 				}
 			}
 			.cvc {
@@ -201,23 +216,31 @@ body {
 					font-size: 15px;
 					font-weight: bold;
 				}
+				.wrong {
+					color: hsl(0, 100%, 66%);
+					font-weight: normal;
+					text-transform: none;
+					margin-top: 5px;
+					display: none;
+				}
 			}
 		}
-        .btn{
-            position: relative;
-            left: 6%;
-            top: 35%;width: 100%;
-            button{
-                width: 61%;
-                height: 50px;
-                border-radius: 9px;
-                background-color: hsl(278, 68%, 11%);
-                color: hsl(270, 3%, 87%);
-                p{
-                    font-size: 15px;
-                    letter-spacing: 1px;
-                }
-            }
-        }
+		.btn {
+			position: relative;
+			left: 6%;
+			top: 30%;
+			width: 100%;
+			button {
+				width: 61%;
+				height: 50px;
+				border-radius: 9px;
+				background-color: hsl(278, 68%, 11%);
+				color: hsl(270, 3%, 87%);
+				p {
+					font-size: 15px;
+					letter-spacing: 1px;
+				}
+			}
+		}
 	}
 }

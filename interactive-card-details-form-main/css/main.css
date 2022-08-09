@@ -174,6 +174,14 @@ body {
   top: 20%;
 }
 
+.right-side .form .number .wrong {
+  color: #ff5252;
+  font-weight: normal;
+  text-transform: none;
+  margin-top: 5px;
+  display: none;
+}
+
 .right-side .form .number p {
   text-transform: uppercase;
   font-size: 11px;
@@ -218,7 +226,7 @@ body {
 .right-side .form .dateCvc {
   position: relative;
   left: 6%;
-  top: 30%;
+  top: 26%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -270,6 +278,14 @@ body {
   font-weight: bold;
 }
 
+.right-side .form .dateCvc .date .wrong {
+  margin-top: 5px;
+  color: #ff5252;
+  font-weight: normal;
+  text-transform: none;
+  display: none;
+}
+
 .right-side .form .dateCvc .cvc p {
   text-transform: uppercase;
   font-size: 11px;
@@ -310,10 +326,18 @@ body {
   font-weight: bold;
 }
 
+.right-side .form .dateCvc .cvc .wrong {
+  color: #ff5252;
+  font-weight: normal;
+  text-transform: none;
+  margin-top: 5px;
+  display: none;
+}
+
 .right-side .form .btn {
   position: relative;
   left: 6%;
-  top: 35%;
+  top: 30%;
   width: 100%;
 }
 
