@@ -1,4 +1,3 @@
-const number = document.querySelector('.inputNumber')
 const dateM = document.querySelector('.dateM')
 const dateY = document.querySelector('.dateY')
 const cvc = document.querySelector('.inputCvc')
@@ -9,7 +8,12 @@ const wrongDate = document.querySelector('.wrongDate')
 const inputNumber = document.querySelector('.inputNumber')
 const form = document.querySelector('.form')
 const complete = document.querySelector('.complete')
-let number2 = "432 32 42dcs"
+const creditNumber = document.querySelector('.creditCardNumber')
+const inputName = document.querySelector('.inputName')
+const creditName = document.querySelector('.creditName')
+const month = document.querySelector('.month')
+const year = document.querySelector('.year')
+const creditCvc = document.querySelector('.creditCvc')
 
 const checkDate = () => {
 	if (dateY.value.length !== 2 && dateM.value.length !== 2) {
@@ -44,19 +48,28 @@ const checkCvc = () => {
 }
 
 const allGood = () => {
-    if(dateY.value.length == 2 && dateY.value.length == 2 && inputNumber.value.length === 12 && cvc.value.length === 3){
-        form.classList.remove('block')
-        form.classList.add('none')
-        complete.classList.remove('none')
-        complete.classList.add('block')
-    }
+	if (dateY.value.length == 2 && dateY.value.length == 2 && inputNumber.value.length === 12 && cvc.value.length === 3) {
+		form.classList.remove('block')
+		form.classList.add('none')
+		complete.classList.remove('none')
+		complete.classList.add('block')
+	}
 }
+const changeText = () => { 
+	creditNumber.innerHTML = inputNumber.value
+	creditName.innerHTML = inputName.value
+	month.innerHTML = dateM.value
+	year.innerHTML = dateY.value
+	creditCvc.innerHTML = cvc.value
+ }
+
 
 const checkAll = () => {
 	checkDate()
 	checkNumber()
 	checkCvc()
-    allGood()
+	allGood()
+	changeText()
 }
 
 btn.addEventListener('click', checkAll)
