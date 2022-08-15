@@ -24,12 +24,12 @@ body {
 			img {
 				position: relative;
 				top: 70%;
-				left: 67%;
+				left: 40%;
 			}
 			.circle1 {
 				position: absolute;
-				left: 18.5%;
-				top: 22.5%;
+				left: 14.5%;
+				top: 24.5%;
 				width: 50px;
 				height: 50px;
 				border-radius: 50%;
@@ -37,8 +37,8 @@ body {
 			}
 			.circle2 {
 				position: absolute;
-				top: 24%;
-				left: 22.5%;
+				top: 26.5%;
+				left: 19%;
 				width: 20px;
 				height: 20px;
 				border-radius: 50%;
@@ -46,7 +46,7 @@ body {
 			}
 			.code {
 				position: absolute;
-				left: 19%;
+				left: 14.5%;
 				top: 35%;
 				color: hsl(0, 0%, 100%);
 				letter-spacing: 2px;
@@ -56,8 +56,8 @@ body {
 			}
 			.name {
 				position: absolute;
-				top: 42.5%;
-				left: 19%;
+				top: 47.5%;
+				left: 14.5%;
 				color: hsl(0, 0%, 100%);
 				letter-spacing: 3px;
 				text-transform: uppercase;
@@ -67,8 +67,8 @@ body {
 			}
 			.small-code {
 				position: absolute;
-				top: 42.5%;
-				left: 37.2%;
+				top: 47.5%;
+				left: 37.5%;
 				color: hsl(0, 0%, 100%);
 				p {
 					font-size: 12px;
@@ -78,11 +78,11 @@ body {
 		.card2 {
 			position: relative;
 			top: 24%;
-			left: 64%;
+			left: 54%;
 			.cvc {
 				position: absolute;
 				top: 44.7%;
-				left: 57%;
+				left: 71%;
 				color: hsl(0, 0%, 100%);
 				p {
 					font-size: 13px;
@@ -102,13 +102,12 @@ body {
 	}
 	position: absolute;
 	top: 21%;
-	width: 34%;
+	width: 40%;
 	height: 55%;
-	right: 12%;
+	right: 8%;
 	.form {
 		width: 100%;
 		height: 100%;
-		
 		.name {
 			position: relative;
 			top: 14%;
@@ -190,7 +189,7 @@ body {
 					font-weight: bold;
 				}
 				input {
-					width: 33%;
+					width: 43%;
 					height: 35px;
 					padding: 10px;
 					border-radius: 9px;
