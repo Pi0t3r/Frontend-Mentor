@@ -116,6 +116,14 @@ body {
   right: 12%;
 }
 
+.right-side .none {
+  display: none;
+}
+
+.right-side .block {
+  display: block;
+}
+
 .right-side .form {
   width: 100%;
   height: 100%;
@@ -338,7 +346,6 @@ body {
   font-weight: normal;
   text-transform: none;
   margin-top: 5px;
-  display: none;
 }
 
 .right-side .form .btn {
@@ -360,5 +367,54 @@ body {
 .right-side .form .btn button p {
   font-size: 15px;
   letter-spacing: 1px;
+}
+
+.right-side .complete {
+  width: 100%;
+  height: 100%;
+}
+
+.right-side .complete .icon {
+  height: 40%;
+}
+
+.right-side .complete .icon img {
+  position: relative;
+  left: 50%;
+  top: 58%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.right-side .complete .text {
+  text-align: center;
+}
+
+.right-side .complete .text h1 {
+  text-transform: uppercase;
+  color: #21092f;
+  margin-top: 27px;
+  letter-spacing: 2px;
+  font-weight: lighter;
+}
+
+.right-side .complete .text p {
+  color: #8e8593;
+  margin-top: 20px;
+}
+
+.right-side .complete .button {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.right-side .complete .button button {
+  background-color: #21092f;
+  color: #dedddf;
+  width: 70%;
+  height: 50px;
+  border-radius: 8px;
+  letter-spacing: 1px;
+  font-size: 15px;
 }
 /*# sourceMappingURL=main.css.map */
