@@ -29,8 +29,8 @@ const checkDate = () => {
 
 inputNumber.onkeydown = function () {
 	if (inputNumber.value.length > 0) {
-		if (inputNumber.value.length % 4 == 0) {
-			inputNumber.value += '-'
+		if (inputNumber.value.length === 4 || inputNumber.value.length === 9 || inputNumber.value.length === 14) {
+			inputNumber.value += ' '
 		}
 	}
 }
