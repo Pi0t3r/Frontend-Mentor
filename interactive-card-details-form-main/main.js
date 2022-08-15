@@ -27,6 +27,14 @@ const checkDate = () => {
 	}
 }
 
+inputNumber.onkeydown = function () {
+	if (inputNumber.value.length > 0) {
+		if (inputNumber.value.length % 4 == 0) {
+			inputNumber.value += '-'
+		}
+	}
+}
+
 const checkNumber = () => {
 	if (inputNumber.value.length !== 12) {
 		pNumber.style.display = 'block'
@@ -55,14 +63,13 @@ const allGood = () => {
 		complete.classList.add('block')
 	}
 }
-const changeText = () => { 
+const changeText = () => {
 	creditNumber.innerHTML = inputNumber.value
 	creditName.innerHTML = inputName.value
 	month.innerHTML = dateM.value
 	year.innerHTML = dateY.value
 	creditCvc.innerHTML = cvc.value
- }
-
+}
 
 const checkAll = () => {
 	checkDate()
