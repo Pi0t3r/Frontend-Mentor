@@ -21,7 +21,7 @@ body {
     position: absolute;
     top: 0;
     width: 100%;
-    height: 40%;
+    height: 36%;
   }
 }
 
@@ -42,7 +42,7 @@ body {
     width: 273.66px;
     z-index: 2;
     position: absolute;
-    top: 50%;
+    top: 48.5%;
     left: 5.5%;
     height: 150px;
   }
@@ -223,12 +223,19 @@ body {
 }
 
 .right-side {
-  display: none;
   position: absolute;
   top: 21%;
   width: 40%;
   height: 55%;
   right: 8%;
+}
+
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+  .right-side {
+    top: 39%;
+    width: 100%;
+    left: 0;
+  }
 }
 
 .right-side .none {
@@ -265,6 +272,12 @@ body {
   border-radius: 11px;
   padding: 10px;
   border: 1px solid #dedddf;
+}
+
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+  .right-side .form .name input {
+    width: 90%;
+  }
 }
 
 .right-side .form .name input::-webkit-input-placeholder {
@@ -329,6 +342,12 @@ body {
   border: 1px solid #dedddf;
 }
 
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+  .right-side .form .number input {
+    width: 90%;
+  }
+}
+
 .right-side .form .number input::-webkit-input-placeholder {
   color: #dedddf;
   font-size: 15px;
@@ -365,6 +384,12 @@ body {
       -ms-flex-direction: row;
           flex-direction: row;
   width: 61%;
+}
+
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+  .right-side .form .dateCvc {
+    width: 90%;
+  }
 }
 
 .right-side .form .dateCvc .date p {
@@ -470,6 +495,14 @@ body {
   width: 100%;
 }
 
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+  .right-side .form .btn {
+    width: 100%;
+    left: 0;
+    text-align: center;
+  }
+}
+
 .right-side .form .btn button {
   width: 61%;
   height: 50px;
@@ -479,9 +512,21 @@ body {
   cursor: pointer;
 }
 
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+  .right-side .form .btn button {
+    width: 90%;
+  }
+}
+
 .right-side .form .btn button p {
   font-size: 15px;
   letter-spacing: 1px;
+}
+
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+  .right-side .form .btn button p {
+    font-size: 17px;
+  }
 }
 
 .right-side .complete {
