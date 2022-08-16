@@ -16,6 +16,15 @@ body {
   height: 100vh;
 }
 
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+  .left-side {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 40%;
+  }
+}
+
 .left-side .background {
   width: 100%;
   height: 100%;
@@ -28,10 +37,30 @@ body {
   height: 245px;
 }
 
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+  .left-side .background .card1 {
+    width: 273.66px;
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 5.5%;
+    height: 150px;
+  }
+}
+
 .left-side .background .card1 img {
   position: relative;
   top: 70%;
   left: 40%;
+}
+
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+  .left-side .background .card1 img {
+    height: 150px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
 
 .left-side .background .card1 .circle1 {
@@ -44,6 +73,15 @@ body {
   background-color: white;
 }
 
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+  .left-side .background .card1 .circle1 {
+    left: 7%;
+    top: 11%;
+    width: 30px;
+    height: 30px;
+  }
+}
+
 .left-side .background .card1 .circle2 {
   position: absolute;
   top: 26.5%;
@@ -54,16 +92,38 @@ body {
   border: 1px solid white;
 }
 
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+  .left-side .background .card1 .circle2 {
+    top: 17%;
+    left: 22%;
+    height: 13px;
+    width: 13px;
+  }
+}
+
 .left-side .background .card1 .code {
   position: absolute;
-  left: 14.5%;
-  top: 35%;
+  left: 7%;
+  top: 59%;
   color: white;
   letter-spacing: 2px;
 }
 
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+  .left-side .background .card1 .code {
+    left: 8%;
+    top: 58%;
+  }
+}
+
 .left-side .background .card1 .code p {
   font-size: 29px;
+}
+
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+  .left-side .background .card1 .code p {
+    font-size: 17px;
+  }
 }
 
 .left-side .background .card1 .name {
@@ -75,8 +135,23 @@ body {
   text-transform: uppercase;
 }
 
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+  .left-side .background .card1 .name {
+    top: 82%;
+    left: 8%;
+    letter-spacing: 1px;
+    width: 48%;
+  }
+}
+
 .left-side .background .card1 .name p {
   font-size: 12px;
+}
+
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+  .left-side .background .card1 .name p {
+    font-size: 9px;
+  }
 }
 
 .left-side .background .card1 .small-code {
@@ -86,14 +161,40 @@ body {
   color: white;
 }
 
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+  .left-side .background .card1 .small-code {
+    top: 82%;
+    left: 80.5%;
+    letter-spacing: 1px;
+  }
+}
+
 .left-side .background .card1 .small-code p {
   font-size: 12px;
+}
+
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+  .left-side .background .card1 .small-code p {
+    font-size: 9px;
+  }
 }
 
 .left-side .background .card2 {
   position: relative;
   top: 24%;
   left: 54%;
+}
+
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+  .left-side .background .card2 {
+    position: absolute;
+    top: 13%;
+    left: 23%;
+  }
+  .left-side .background .card2 img {
+    position: relative;
+    height: 150px;
+  }
 }
 
 .left-side .background .card2 .cvc {
@@ -103,12 +204,26 @@ body {
   color: white;
 }
 
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+  .left-side .background .card2 .cvc {
+    top: 44.5%;
+    left: 79%;
+  }
+}
+
 .left-side .background .card2 .cvc p {
   font-size: 13px;
   letter-spacing: 2px;
 }
 
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+  .left-side .background .card2 .cvc p {
+    font-size: 8px;
+  }
+}
+
 .right-side {
+  display: none;
   position: absolute;
   top: 21%;
   width: 40%;
@@ -416,5 +531,6 @@ body {
   border-radius: 8px;
   letter-spacing: 1px;
   font-size: 15px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */

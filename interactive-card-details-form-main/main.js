@@ -15,6 +15,7 @@ const month = document.querySelector('.month')
 const year = document.querySelector('.year')
 const creditCvc = document.querySelector('.creditCvc')
 
+
 const checkDate = () => {
 	if (dateY.value.length !== 2 && dateM.value.length !== 2) {
 		wrongDate.style.display = 'block'
@@ -36,10 +37,10 @@ inputNumber.onkeydown = function () {
 }
 
 const checkNumber = () => {
-	if (inputNumber.value.length !== 12) {
+	if (inputNumber.value.length !== 19) {
 		pNumber.style.display = 'block'
 		inputNumber.style.border = '1px solid red'
-	} else if (inputNumber.value.length === 12) {
+	} else if (inputNumber.value.length === 19) {
 		pNumber.style.display = 'none'
 		inputNumber.style.border = '1px solid #dedddf'
 	}
@@ -56,7 +57,7 @@ const checkCvc = () => {
 }
 
 const allGood = () => {
-	if (dateY.value.length == 2 && dateY.value.length == 2 && inputNumber.value.length === 12 && cvc.value.length === 3) {
+	if (dateY.value.length == 2 && dateY.value.length == 2 && inputNumber.value.length === 19 && cvc.value.length === 3) {
 		form.classList.remove('block')
 		form.classList.add('none')
 		complete.classList.remove('none')

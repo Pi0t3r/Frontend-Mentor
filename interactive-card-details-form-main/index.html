@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -48,19 +48,19 @@
         </div>
         <div class="number">
           <p>card number</p>
-          <input class="inputNumber" type="text" placeholder="e.g. 1234 5678 9123 0000" maxlength="19">
+          <input class="inputNumber" type="tel" placeholder="e.g. 1234 5678 9123 0000" maxlength="19">
           <p class="wrong wrongNumber none">Wrong format, numbers only</p>
         </div>
         <div class="dateCvc">
           <div class="date">
             <p>exp. date (mm/yy)</p>
-            <input class="dateM" type="text" placeholder="MM">
-            <input class="dateY" type="text" placeholder="YY">
+            <input class="dateM" type="text" placeholder="MM" maxlength="2">
+            <input class="dateY" type="text" placeholder="YY" maxlength="2">
             <p class="wrong wrongDate">Can't be blank</p>
           </div>
           <div class="cvc">
             <p>cvc</p>
-            <input class="inputCvc" type="text" placeholder="e.g. 123">
+            <input class="inputCvc" type="text" placeholder="e.g. 123" maxlength="3">
             <p class="wrong none wrongCvc">Can't be blank</p>
           </div>
         </div>
