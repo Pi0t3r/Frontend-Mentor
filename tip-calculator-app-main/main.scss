@@ -27,7 +27,7 @@ body {
 		top: 4%;
 		left: 10%;
 		width: 83%;
-		#inputBill {
+		.inputBill {
 			width: 100%;
 			border: none;
 			background-color: hsl(189, 41%, 97%);
@@ -63,6 +63,10 @@ body {
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: space-between;
+            .change {
+                background-color: hsl(172, 67%, 45%);
+                color: hsl(183, 100%, 15%);
+            }
 			button,
 			input {
 				width: 45%;
@@ -94,7 +98,7 @@ body {
 			font-weight: bold;
 			color: hsl(186, 14%, 43%);
 		}
-		input {
+		.inputPeople {
 			width: 100%;
 			border: none;
 			background-color: #f4fafa;
@@ -121,62 +125,62 @@ body {
 		font-weight: bold;
 		background-color: hsl(183, 100%, 15%);
 		border-radius: 8px;
-        padding: 20px;
-        .tipPerson{
-            display: flex;
-            flex-direction: row;
-            width: 100%;
-            justify-content: space-between;
-            .text{
-                display: flex;
-                flex-direction: column;
-                .grey{
-                    color: hsl(184, 14%, 56%);
-                }
-            }
-            .priceTip{
-                display: flex;
-                flex-direction: row;
-                color: hsl(172, 67%, 45%);
-                position: relative;
-                font-size: 30px;
-            }
-        }
-        .totalPrice{
-            display: flex;
-            flex-direction: row;
-            width: 100%;
-            justify-content: space-between;
-            margin-top: 30px;
-            .text{
-                display: flex;
-                flex-direction: column;
-                .grey{
-                    color: hsl(184, 14%, 56%);
-                }
-            }
-            .price{
-                display: flex;
-                flex-direction: row;
-                color: hsl(172, 67%, 45%);
-                position: relative;
-                font-size: 30px;
-            }
-        }
-        .btn{
-            margin-top: 30px;
-            button{
-                width: 100%;
-                border: none;
-                background-color: hsl(172, 67%, 45%);
-                font-family: 'Space Mono', monospace;
-                text-transform: uppercase;
-                height: 50px;
-                border-radius: 5px;
-                font-weight: bold;
-                font-size: 24px;
-                color: hsl(183, 100%, 15%);
-            }
-        }
+		padding: 20px;
+		.tipPerson {
+			display: flex;
+			flex-direction: row;
+			width: 100%;
+			justify-content: space-between;
+			.text {
+				display: flex;
+				flex-direction: column;
+				.grey {
+					color: hsl(184, 14%, 56%);
+				}
+			}
+			.priceTip {
+				display: flex;
+				flex-direction: row;
+				color: hsl(172, 67%, 45%);
+				position: relative;
+				font-size: 30px;
+			}
+		}
+		.totalPrice {
+			display: flex;
+			flex-direction: row;
+			width: 100%;
+			justify-content: space-between;
+			margin-top: 30px;
+			.text {
+				display: flex;
+				flex-direction: column;
+				.grey {
+					color: hsl(184, 14%, 56%);
+				}
+			}
+			.price {
+				display: flex;
+				flex-direction: row;
+				color: hsl(172, 67%, 45%);
+				position: relative;
+				font-size: 30px;
+			}
+		}
+		.btn {
+			margin-top: 30px;
+			button {
+				width: 100%;
+				border: none;
+				background-color: hsl(172, 67%, 45%);
+				font-family: 'Space Mono', monospace;
+				text-transform: uppercase;
+				height: 50px;
+				border-radius: 5px;
+				font-weight: bold;
+				font-size: 24px;
+				color: hsl(183, 100%, 15%);
+			}
+		}
 	}
 }

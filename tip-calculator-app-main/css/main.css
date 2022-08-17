@@ -33,7 +33,7 @@ body {
   width: 83%;
 }
 
-.splitter .bill #inputBill {
+.splitter .bill .inputBill {
   width: 100%;
   border: none;
   background-color: #f4fafa;
@@ -81,6 +81,11 @@ body {
           justify-content: space-between;
 }
 
+.splitter .tip .buttons .change {
+  background-color: #26c0ab;
+  color: #00494d;
+}
+
 .splitter .tip .buttons button,
 .splitter .tip .buttons input {
   width: 45%;
@@ -116,7 +121,7 @@ body {
   color: #5e7a7d;
 }
 
-.splitter .people input {
+.splitter .people .inputPeople {
   width: 100%;
   border: none;
   background-color: #f4fafa;
