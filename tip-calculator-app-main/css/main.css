@@ -15,6 +15,7 @@ body {
   text-align: center;
   margin-top: 35px;
   text-transform: uppercase;
+  letter-spacing: 10px;
 }
 
 .splitter {
@@ -26,14 +27,42 @@ body {
   border-top-right-radius: 30px;
 }
 
-.splitter .bill {
+@media (min-width: 1440px) {
+  .splitter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 60%;
+    margin: 50px auto;
+    height: 60vh;
+    border-radius: 30px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .splitter .left-side {
+    width: 50%;
+  }
+}
+
+.splitter .left-side .bill {
   position: relative;
   top: 4%;
   left: 10%;
   width: 83%;
 }
 
-.splitter .bill .inputBill {
+@media (min-width: 1440px) {
+  .splitter .left-side .bill {
+    top: 8%;
+  }
+}
+
+.splitter .left-side .bill .inputBill {
   width: 100%;
   border: none;
   background-color: #f4fafa;
@@ -47,30 +76,42 @@ body {
   padding-right: 10px;
 }
 
-.splitter .bill img {
+.splitter .left-side .bill .inputBill:focus {
+  outline: none;
+  border: 3px solid #26c0ab;
+}
+
+.splitter .left-side .bill img {
   position: absolute;
   padding: 16px;
 }
 
-.splitter .bill p {
+.splitter .left-side .bill p {
   color: #5e7a7d;
   font-weight: bold;
 }
 
-.splitter .tip {
+.splitter .left-side .tip {
   position: relative;
   left: 10%;
   top: 8%;
   width: 83%;
 }
 
-.splitter .tip p {
+@media (min-width: 1440px) {
+  .splitter .left-side .tip {
+    width: 100%;
+    top: 15%;
+  }
+}
+
+.splitter .left-side .tip p {
   color: #5e7a7d;
   margin-bottom: 20px;
   font-weight: bold;
 }
 
-.splitter .tip .buttons {
+.splitter .left-side .tip .buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -81,13 +122,23 @@ body {
           justify-content: space-between;
 }
 
-.splitter .tip .buttons .change {
+@media (min-width: 1440px) {
+  .splitter .left-side .tip .buttons {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+    left: -8%;
+  }
+}
+
+.splitter .left-side .tip .buttons .change {
   background-color: #26c0ab;
   color: #00494d;
 }
 
-.splitter .tip .buttons button,
-.splitter .tip .buttons input {
+.splitter .left-side .tip .buttons button,
+.splitter .left-side .tip .buttons input {
   width: 45%;
   height: 40px;
   margin-bottom: 23px;
@@ -98,30 +149,45 @@ body {
   border-radius: 6px;
 }
 
-.splitter .tip .buttons button {
+@media (min-width: 1440px) {
+  .splitter .left-side .tip .buttons button,
+  .splitter .left-side .tip .buttons input {
+    width: 25%;
+    margin: 10px;
+    font-size: 20px;
+  }
+}
+
+.splitter .left-side .tip .buttons button {
   color: white;
   background-color: #00494d;
 }
 
-.splitter .tip .buttons input {
+.splitter .left-side .tip .buttons input {
   text-align: right;
   padding-right: 15px;
   background-color: #f4fafa;
 }
 
-.splitter .people {
+.splitter .left-side .people {
   position: relative;
   left: 10%;
   top: 9%;
   width: 83%;
 }
 
-.splitter .people p {
+@media (min-width: 1440px) {
+  .splitter .left-side .people {
+    top: 25%;
+  }
+}
+
+.splitter .left-side .people p {
   font-weight: bold;
   color: #5e7a7d;
 }
 
-.splitter .people .inputPeople {
+.splitter .left-side .people .inputPeople {
   width: 100%;
   border: none;
   background-color: #f4fafa;
@@ -135,7 +201,12 @@ body {
   padding-right: 10px;
 }
 
-.splitter .people img {
+.splitter .left-side .people .inputPeople:focus {
+  outline: none;
+  border: 3px solid #26c0ab;
+}
+
+.splitter .left-side .people img {
   position: absolute;
   padding: 16px;
 }
@@ -150,6 +221,22 @@ body {
   background-color: #00494d;
   border-radius: 8px;
   padding: 20px;
+}
+
+@media (min-width: 1440px) {
+  .splitter .total {
+    padding: 40px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .splitter .total {
+    width: 46%;
+    height: 88%;
+    left: 1%;
+    top: 6%;
+    border-radius: 20px;
+  }
 }
 
 .splitter .total .tipPerson {
@@ -208,6 +295,12 @@ body {
   margin-top: 30px;
 }
 
+@media (min-width: 1440px) {
+  .splitter .total .totalPrice {
+    margin-top: 50px;
+  }
+}
+
 .splitter .total .totalPrice .text {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -239,7 +332,14 @@ body {
   margin-top: 30px;
 }
 
-.splitter .total .btn button {
+@media (min-width: 1440px) {
+  .splitter .total .btn {
+    position: relative;
+    top: 33%;
+  }
+}
+
+.splitter .total .btn .reset {
   width: 100%;
   border: none;
   background-color: #26c0ab;
@@ -250,5 +350,12 @@ body {
   font-weight: bold;
   font-size: 24px;
   color: #00494d;
+  cursor: pointer;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+.splitter .total .btn .reset:hover {
+  background-color: #f4fafa;
 }
 /*# sourceMappingURL=main.css.map */

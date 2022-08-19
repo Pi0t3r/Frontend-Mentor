@@ -13,6 +13,7 @@ body {
 	text-align: center;
 	margin-top: 35px;
 	text-transform: uppercase;
+	letter-spacing: 10px;
 }
 
 .splitter {
@@ -22,98 +23,140 @@ body {
 	margin-top: 20px;
 	border-top-left-radius: 30px;
 	border-top-right-radius: 30px;
-	.bill {
-		position: relative;
-		top: 4%;
-		left: 10%;
-		width: 83%;
-		.inputBill {
-			width: 100%;
-			border: none;
-			background-color: hsl(189, 41%, 97%);
-			border-radius: 5px;
-			height: 50px;
-			text-align-last: right;
-			font-weight: bold;
-			color: hsl(186, 14%, 43%);
-			font-size: 24px;
-			font-family: 'Space Mono', monospace;
-			padding-right: 10px;
-		}
-		img {
-			position: absolute;
-			padding: 16px;
-		}
-		p {
-			color: hsl(186, 14%, 43%);
-			font-weight: bold;
-		}
+	@media (min-width: 1440px) {
+		display: flex;
+		flex-direction: row;
+		width: 60%;
+		margin: 50px auto;
+		height: 60vh;
+		border-radius: 30px;
 	}
-	.tip {
-		position: relative;
-		left: 10%;
-		top: 8%;
-		width: 83%;
-		p {
-			color: hsl(186, 14%, 43%);
-			margin-bottom: 20px;
-			font-weight: bold;
+	.left-side {
+		@media (min-width: 1440px) {
+			width: 50%;
 		}
-		.buttons {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-between;
-            .change {
-                background-color: hsl(172, 67%, 45%);
-                color: hsl(183, 100%, 15%);
-            }
-			button,
-			input {
-				width: 45%;
-				height: 40px;
-				margin-bottom: 23px;
-				font-family: 'Space Mono', monospace;
-				font-weight: bold;
+		.bill {
+			position: relative;
+			top: 4%;
+			left: 10%;
+			width: 83%;
+			@media (min-width: 1440px) {
+				top: 8%;
+			}
+
+			.inputBill {
+				width: 100%;
 				border: none;
-				font-size: 23px;
-				border-radius: 6px;
-			}
-			button {
-				color: hsl(0, 0%, 100%);
-				background-color: hsl(183, 100%, 15%);
-			}
-			input {
-				text-align: right;
-				padding-right: 15px;
 				background-color: hsl(189, 41%, 97%);
+				border-radius: 5px;
+				height: 50px;
+				text-align-last: right;
+				font-weight: bold;
+				color: hsl(186, 14%, 43%);
+				font-size: 24px;
+				font-family: 'Space Mono', monospace;
+				padding-right: 10px;
+			}
+			.inputBill:focus {
+				outline: none;
+				border: 3px solid hsl(172, 67%, 45%);
+			}
+			img {
+				position: absolute;
+				padding: 16px;
+			}
+			p {
+				color: hsl(186, 14%, 43%);
+				font-weight: bold;
 			}
 		}
-	}
-	.people {
-		position: relative;
-		left: 10%;
-		top: 9%;
-		width: 83%;
-		p {
-			font-weight: bold;
-			color: hsl(186, 14%, 43%);
+		.tip {
+			position: relative;
+			left: 10%;
+			top: 8%;
+			width: 83%;
+			@media (min-width: 1440px) {
+				width: 100%;
+				top: 15%;
+			}
+			p {
+				color: hsl(186, 14%, 43%);
+				margin-bottom: 20px;
+				font-weight: bold;
+			}
+			.buttons {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				@media (min-width: 1440px) {
+					justify-content: center;
+					position: relative;
+					left: -8%;
+				}
+				.change {
+					background-color: hsl(172, 67%, 45%);
+					color: hsl(183, 100%, 15%);
+				}
+				button,
+				input {
+					width: 45%;
+					height: 40px;
+					margin-bottom: 23px;
+					font-family: 'Space Mono', monospace;
+					font-weight: bold;
+					border: none;
+					font-size: 23px;
+					border-radius: 6px;
+					@media (min-width: 1440px) {
+						width: 25%;
+						margin: 10px;
+						font-size: 20px;
+					}
+				}
+				button {
+					color: hsl(0, 0%, 100%);
+					background-color: hsl(183, 100%, 15%);
+				}
+				input {
+					text-align: right;
+					padding-right: 15px;
+					background-color: hsl(189, 41%, 97%);
+				}
+			}
 		}
-		.inputPeople {
-			width: 100%;
-			border: none;
-			background-color: #f4fafa;
-			border-radius: 5px;
-			height: 50px;
-			text-align-last: right;
-			font-weight: bold;
-			color: #5e7a7d;
-			font-size: 24px;
-			font-family: 'Space Mono', monospace;
-			padding-right: 10px;
-		}
-		img {
-			position: absolute;
-			padding: 16px;
+		.people {
+			position: relative;
+			left: 10%;
+			top: 9%;
+			width: 83%;
+			@media (min-width: 1440px) {
+				top: 25%;
+			}
+			p {
+				font-weight: bold;
+				color: hsl(186, 14%, 43%);
+			}
+			.inputPeople {
+				width: 100%;
+				border: none;
+				background-color: #f4fafa;
+				border-radius: 5px;
+				height: 50px;
+				text-align-last: right;
+				font-weight: bold;
+				color: #5e7a7d;
+				font-size: 24px;
+				font-family: 'Space Mono', monospace;
+				padding-right: 10px;
+			}
+			.inputPeople:focus {
+				outline: none;
+				border: 3px solid hsl(172, 67%, 45%);
+			}
+			img {
+				position: absolute;
+				padding: 16px;
+			}
 		}
 	}
 	.total {
@@ -126,6 +169,16 @@ body {
 		background-color: hsl(183, 100%, 15%);
 		border-radius: 8px;
 		padding: 20px;
+		@media (min-width: 1440px) {
+			padding: 40px;
+		}
+		@media (min-width: 1440px) {
+			width: 46%;
+			height: 88%;
+			left: 1%;
+			top: 6%;
+			border-radius: 20px;
+		}
 		.tipPerson {
 			display: flex;
 			flex-direction: row;
@@ -152,6 +205,9 @@ body {
 			width: 100%;
 			justify-content: space-between;
 			margin-top: 30px;
+			@media (min-width: 1440px) {
+				margin-top: 50px;
+			}
 			.text {
 				display: flex;
 				flex-direction: column;
@@ -169,7 +225,11 @@ body {
 		}
 		.btn {
 			margin-top: 30px;
-			button {
+			@media (min-width: 1440px) {
+				position: relative;
+				top: 33%;
+			}
+			.reset {
 				width: 100%;
 				border: none;
 				background-color: hsl(172, 67%, 45%);
@@ -180,6 +240,11 @@ body {
 				font-weight: bold;
 				font-size: 24px;
 				color: hsl(183, 100%, 15%);
+				cursor: pointer;
+				transition: background-color 0.5s;
+			}
+			.reset:hover {
+				background-color: hsl(189, 41%, 97%);
 			}
 		}
 	}
