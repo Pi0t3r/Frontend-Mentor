@@ -138,7 +138,7 @@ body {
 }
 
 .splitter .left-side .tip .buttons button,
-.splitter .left-side .tip .buttons input {
+.splitter .left-side .tip .buttons .tcustom {
   width: 45%;
   height: 40px;
   margin-bottom: 23px;
@@ -151,7 +151,7 @@ body {
 
 @media (min-width: 1440px) {
   .splitter .left-side .tip .buttons button,
-  .splitter .left-side .tip .buttons input {
+  .splitter .left-side .tip .buttons .tcustom {
     width: 25%;
     margin: 10px;
     font-size: 20px;
@@ -163,10 +163,15 @@ body {
   background-color: #00494d;
 }
 
-.splitter .left-side .tip .buttons input {
+.splitter .left-side .tip .buttons .tcustom {
   text-align: right;
   padding-right: 15px;
   background-color: #f4fafa;
+}
+
+.splitter .left-side .tip .buttons .tcustom:focus {
+  outline: none;
+  border: 3px solid #26c0ab;
 }
 
 .splitter .left-side .people {

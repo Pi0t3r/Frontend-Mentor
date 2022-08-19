@@ -35,7 +35,7 @@ const countBill = () => {
 	const newTip3 = parseFloat(t15.value)
 	const newTip4 = parseFloat(t25.value)
 	const newTip5 = parseFloat(t50.value)
-    const customTip = tcustom.value * 0.01
+	const customTip = tcustom.value * 0.01
 	if (t5.classList.contains('change')) {
 		const countTip = newPrice * newTip1
 		const countAll = (newPrice + countTip) / newPeople
@@ -48,7 +48,7 @@ const countBill = () => {
 		const splitTip2 = countTip2 / newPeople
 		price.innerHTML = countAll2.toFixed(2)
 		tip.innerHTML = splitTip2.toFixed(2)
-	}  else if (t15.classList.contains('change')) {
+	} else if (t15.classList.contains('change')) {
 		const countTip3 = newPrice * newTip3
 		const countAll3 = (newPrice + countTip3) / newPeople
 		const splitTip3 = countTip3 / newPeople
@@ -66,20 +66,41 @@ const countBill = () => {
 		const splitTip5 = countTip5 / newPeople
 		price.innerHTML = countAll5.toFixed(2)
 		tip.innerHTML = splitTip5.toFixed(2)
-	} else if(tcustom.value > 0){
-        const countTip6 = newPrice * customTip
+	} else if (tcustom.value > 0) {
+		const countTip6 = newPrice * customTip
 		const countAll6 = (newPrice + countTip6) / newPeople
 		const splitTip6 = countTip6 / newPeople
 		price.innerHTML = countAll6.toFixed(2)
 		tip.innerHTML = splitTip6.toFixed(2)
-    } else {
+	} else {
 		const result = newPrice / newPeople
 		price.innerHTML = result.toFixed(2)
 		tip.innerHTML = '0.00 '
 	}
 }
 
-reset.addEventListener('click', countBill)
+const resetAll = () => {
+	bill.value = '0'
+	t5.classList.remove = 'change'
+	// t10.classList.remove = 'change'
+	// t15.classList.remove = 'change'
+	// t25.classList.remove = 'change'
+	// t50.classList.remove = 'change'
+	people.value = '0'
+	tcustom.value = ''
+	tip.innerHTML = '0.00'
+	price.innerHTML = '0.00'
+}
+
+reset.addEventListener('click', resetAll)
+bill.addEventListener('change', countBill)
+people.addEventListener('change', countBill)
+t5.addEventListener('change', countBill)
+t10.addEventListener('change', countBill)
+t15.addEventListener('change', countBill)
+t25.addEventListener('change', countBill)
+t50.addEventListener('change', countBill)
+tcustom.addEventListener('change', countBill)
 t5.addEventListener('click', changeColor1)
 t10.addEventListener('click', changeColor2)
 t15.addEventListener('click', changeColor3)
