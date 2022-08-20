@@ -1,0 +1,81 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: hsl(30, 38%, 92%);
+	font-size: 14px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.card {
+	background-color: hsl(0, 0%, 100%);
+	width: 90vw;
+	height: 94vh;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, 3%);
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.card .image img {
+	width: 100%;
+}
+
+.card .text {
+	padding: 29px;
+}
+.card .text .perfume {
+	text-transform: uppercase;
+	color: hsl(228, 12%, 48%);
+	letter-spacing: 4px;
+	margin-bottom: 10px;
+}
+.card .text h1 {
+	font-family: 'Fraunces', serif;
+	font-weight: bold;
+	font-size: 32px;
+}
+.card .text .paragraf {
+	color: hsl(228, 12%, 48%);
+	line-height: 26px;
+	margin-top: 15px;
+	font-size: 13.4px;
+}
+.prices {
+	display: flex;
+	flex-direction: row;
+    padding: 0 29px;
+    position: relative;
+    top: -3%;
+}
+.prices .main {
+	color: hsl(158, 36%, 37%);
+	font-weight: bold;
+	font-size: 30px;
+	font-family: 'Fraunces', serif;
+}
+.prices .previous{
+    color:  hsl(228, 12%, 48%);
+    text-decoration: line-through;
+    position: relative;
+    top: 10px;
+    left: 5%;
+}
+.btn{
+    padding: 0 29px;
+    text-align: center;
+}
+button{
+    width: 100%;
+    background-color: hsl(158, 36%, 37%);
+    border: none;
+    height: 50px;
+    border-radius: 10px;
+}
+button p{
+    color: hsl(0, 0%, 100%);
+}
