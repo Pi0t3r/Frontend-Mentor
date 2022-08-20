@@ -1,0 +1,46 @@
+body {
+	background-color: hsl(212, 45%, 89%);
+	font-family: 'Outfit', sans-serif;
+	font-size: 15px;
+}
+
+.card {
+	background-color: #fff;
+	width: 250px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 10px;
+}
+.card .image img {
+	width: 90%;
+	margin: 13px;
+	border-radius: 10px;
+}
+.card .text {
+	padding: 0 20px;
+	text-align: center;
+}
+.text h2 {
+	font-size: 18px;
+}
+.card .text .paragraf {
+	padding-bottom: 20px;
+	font-size: 13px;
+	color: hsl(220, 15%, 55%);
+}
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+	.card {
+		width: 81vw;
+		height: 75vh;
+	}
+	.text h2 {
+		font-size: 21px;
+		padding: 0 10px;
+	}
+	.text .paragraf {
+		font-size: 16px;
+		padding: 0 17px;
+	}
+}
