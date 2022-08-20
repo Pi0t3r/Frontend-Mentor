@@ -149,6 +149,7 @@ body {
 
 .bottom-main .right-side {
 	width: 50%;
+	margin-top: 14px;
 }
 .bottom-main .right-side .text {
 	position: relative;
