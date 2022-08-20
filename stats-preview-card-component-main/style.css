@@ -21,17 +21,20 @@ body {
 	overflow: hidden;
 	z-index: 0;
 }
-.shadow{
+/* .shadow{
     width: 300.15px;
     height: 220px;
     position: absolute;
     top: 0;
     background-color: hsla(277, 64%, 61%, 0.704);
-
-}
-.card .image img {
-	width: 100%;
 	z-index: -1;
+
+} */
+.card .image {
+	background-image: url('./images/image-header-mobile.jpg');
+	width: 50%;
+	
+	/* z-index: -1; */
 }
 
 
@@ -106,42 +109,52 @@ h2 {
     .shadow{
         position: absolute;
         right: 0;
-        width: 654px;
-        height: 480px;
+        width: 45%;
+        height: 100%;
         background-color: hsla(277, 64%, 61%, 0.704);
-        z-index: 10;
+        z-index: 1;
     }
 	.card {
 		display: flex;
 		flex-direction: row;
-		height: 44vh;
+		height: 66vh;
         width: 76vw;
 	}
 	.card .image {
+		background-image: url('./images/image-header-desktop.jpg');
+		width: 45%;
+		height: 100%;
+		background-size: cover;
+		background-position: center;
 		position: absolute;
 		right: 0;
 	}
 	.card .main {
 		position: absolute;
-		left: 20px;
-		width: 38%;
-        top: 36px;
+		width: 55%;
+        top: 10%;
 	}
     .main .title, .main .text p{
         text-align: left;
     }
 	.footer {
 		position: absolute;
-		left: 0;
+		left: 5.2%;
 		bottom: 0;
         flex-direction: row;
         text-align: left;
+		display: flex;justify-content: space-between;
 	}
     .title h2{
         font-size: 39px;
     }
     .main .text p{
-        line-height: 33px;
+		line-height: 33px;
+		font-size: 20px;
+		margin: 0;
+		width: 86%;
+		position: relative;
+		left: 10%;
     }
     .footer .number{
         font-size: 25px;
