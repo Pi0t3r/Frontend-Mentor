@@ -5,7 +5,9 @@
 }
 
 body {
-	background-color: antiquewhite;
+	background-color: hsl(27, 66%, 92%);
+	font-family: 'DM Sans', sans-serif;
+	font-size: 18px;
 }
 
 .box {
@@ -16,7 +18,7 @@ body {
 }
 
 .box .upper-belt {
-	background-color: orangered;
+	background-color: hsl(10, 79%, 65%);
 	width: 500px;
 	height: 100px;
 	border-radius: 15px;
@@ -56,7 +58,7 @@ body {
 	position: absolute;
 	right: 34px;
 	top: 50%;
-	background-color: #000;
+	background-color: hsl(25, 47%, 15%);
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
@@ -74,6 +76,8 @@ body {
 .main-content .title {
 	padding: 20px;
 	letter-spacing: 1px;
+	font-size: 15px;
+	font-family: 'DM Sans', sans-serif;
 }
 
 .diagrams {
@@ -92,7 +96,7 @@ body {
 	background-color: rgba(255, 68, 0, 0.267);
 }
 .blue-diag:hover {
-	background-color: rgba(0, 191, 255, 0.234);
+	background-color: hsl(186, 34%, 60%);
 }
 .diag1 {
 	height: 50px;
@@ -105,7 +109,7 @@ body {
 }
 .diag4 {
 	height: 70px;
-	background-color: deepskyblue;
+	background-color: hsl(186, 34%, 60%);
 }
 .diag5 {
 	height: 50px;
@@ -147,7 +151,7 @@ body {
 	width: 50%;
 }
 .bottom-main .right-side .text {
-	position: absolute;
+	position: relative;
 	right: 10%;
 	display: flex;
 	flex-direction: column;
@@ -160,7 +164,7 @@ body {
 }
 
 .style-diag {
-	background-color: orangered;
+	background-color: hsl(10, 79%, 65%);
 	width: 40px;
 	border-radius: 5px;
 	margin: auto;
@@ -177,35 +181,43 @@ body {
 	display: block;
 }
 
-@media only screen and (min-width: 414px) and (max-width: 768px) {
-	.box{
-		margin-top: 70px;
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+	.box {
+		position: absolute;
+		top: 59%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 		width: 100vw;
 		height: 100vh;
-		position: absolute;
-		top: 54%;
-		left: 49%;
-		transform: translate(-50%,-50%);
 	}
-	.box .upper-belt{
+	.box .upper-belt {
 		width: 340px;
 		margin: 0 auto;
 	}
-	.main-content{
+	.main-content {
 		width: 340px;
 		margin: 34px auto 0;
 		height: 386px;
 	}
-	.main-content .diagrams{
+	.main-content .diagrams {
 		width: 81%;
-		top: 10%;
-		padding: 15px;
+		top: 18%;
+		left: 50%;
+		transform: translateX(-50%);
 	}
-	.bottom-main{
+	.bottom-main {
 		top: 55%;
-		width: 85%;
+		width: 90%;
+		height: 23%;
 	}
-	.style-diag{
+	.bottom-main .left-side .text {
+		position: relative;
+		top: 30%;
+	}
+	.style-diag {
 		width: 32px;
+	}
+	.bottom-main .right-side .text {
+		top: 40%;
 	}
 }
