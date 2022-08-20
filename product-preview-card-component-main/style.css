@@ -21,8 +21,12 @@ body {
 	overflow: hidden;
 }
 
-.card .image img {
-	width: 100%;
+.card .image{
+	background-image: url('./images/image-product-mobile.jpg');
+    width: 100%;
+    height: 50%;
+    background-position: center;
+    background-size: cover;
 }
 
 .card .text {
@@ -48,9 +52,9 @@ body {
 .prices {
 	display: flex;
 	flex-direction: row;
-    padding: 0 29px;
-    position: relative;
-    top: -3%;
+	padding: 0 29px;
+	position: relative;
+	top: -3%;
 }
 .prices .main {
 	color: hsl(158, 36%, 37%);
@@ -58,24 +62,71 @@ body {
 	font-size: 30px;
 	font-family: 'Fraunces', serif;
 }
-.prices .previous{
-    color:  hsl(228, 12%, 48%);
-    text-decoration: line-through;
-    position: relative;
-    top: 10px;
-    left: 5%;
+.prices .previous {
+	color: hsl(228, 12%, 48%);
+	text-decoration: line-through;
+	position: relative;
+	top: 10px;
+	left: 5%;
 }
-.btn{
-    padding: 0 29px;
-    text-align: center;
+.btn {
+	padding: 0 29px;
+	text-align: center;
 }
-button{
-    width: 100%;
-    background-color: hsl(158, 36%, 37%);
-    border: none;
-    height: 50px;
-    border-radius: 10px;
+button {
+	width: 100%;
+	background-color: hsl(158, 36%, 37%);
+	border: none;
+	height: 50px;
+	border-radius: 10px;
+	cursor: pointer;
 }
-button p{
-    color: hsl(0, 0%, 100%);
+button p {
+	color: hsl(0, 0%, 100%);
+}
+
+@media (min-width: 1440px) {
+	.card {
+		width: 50vw;
+		height: 60vh;
+		position: relative;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, 30%);
+		display: flex;
+		flex-direction: row;
+	}
+    .card .image{
+        background-image: url('./images/image-product-desktop.jpg');
+        height: 100%;
+        width: 50%;
+    }
+    .right-side{
+        position: relative;
+        right: 0;
+        width: 50%;
+        height: 100%;
+    }
+    .right-side .btn{
+        position: relative;
+        bottom: -3%;
+    }
+    .right-side .prices{
+        top: -1%;
+    }
+    .right-side .previous{
+        left: 12%;
+        top: 15px;
+    }
+    .right-side .main{
+        font-size: 40px;
+    }
+    .right-side .text .paragraf{
+        font-size: 18.4px;
+    }
+    .card .text h1{
+        font-size: 40px;
+        line-height: 40px;
+    }
+	
 }
