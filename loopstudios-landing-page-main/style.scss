@@ -1,0 +1,205 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Alata', sans-serif;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 15px;
+}
+
+// NAV
+nav {
+	background-image: url('../images/mobile/image-hero.jpg');
+	width: 100vw;
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+	color: hsl(0, 0%, 100%);
+
+	.bar {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding: 35px 25px;
+		.title {
+			h1 {
+				font-size: 31px;
+				margin-top: -4px;
+			}
+		}
+	}
+	.content-nav {
+		border: 3px solid hsl(0, 0%, 100%);
+		width: 89vw;
+		height: 34vh;
+		position: relative;
+		top: 15%;
+		margin: 0 auto;
+		text-transform: uppercase;
+		padding: 35px;
+		p {
+			font-size: 39px;
+		}
+	}
+}
+
+// MAIN
+
+main {
+	.image {
+		width: 100%;
+		text-align: center;
+		margin-top: 100px;
+		img {
+			width: 90%;
+		}
+	}
+	.title {
+		h1 {
+			text-align: center;
+			text-transform: uppercase;
+			margin-top: 30px;
+			font-family: 'Josefin Sans', sans-serif;
+			font-weight: normal;
+		}
+	}
+	.text {
+		text-align: center;
+		padding: 0 50px;
+		color: hsl(0, 0%, 55%);
+		font-weight: bold;
+		line-height: 25px;
+		margin-top: 20px;
+	}
+	.creations {
+		margin-top: 80px;
+		width: 100%;
+		.title {
+			h2 {
+				text-transform: uppercase;
+				text-align: center;
+			}
+		}
+		.images {
+			margin-top: 40px;
+			text-align: center;
+			.image {
+				width: 90%;
+				height: 127px;
+				background-size: cover;
+				background-position: center;
+				margin: 0 auto 30px;
+				box-shadow: inset 42px -3px 73px;
+				p {
+					color: white;
+					text-transform: uppercase;
+					position: relative;
+					left: 6%;
+					top: 47%;
+					font-size: 22px;
+					width: 34%;
+					text-align: left;
+				}
+			}
+			.one {
+				background-image: url('../images/mobile/image-deep-earth.jpg');
+			}
+			.two {
+				background-image: url('../images/mobile/image-night-arcade.jpg');
+			}
+			.three {
+				background-image: url('../images/mobile/image-soccer-team.jpg');
+			}
+			.four {
+				background-image: url('../images/mobile/image-grid.jpg');
+				p {
+					width: 30%;
+				}
+			}
+			.five {
+				background-image: url('../images/mobile/image-from-above.jpg');
+			}
+			.six {
+				background-image: url('../images/mobile/image-pocket-borealis.jpg');
+			}
+			.seven {
+				background-image: url('../images/mobile/image-curiosity.jpg');
+			}
+			.eight {
+				background-image: url('../images/mobile/image-fisheye.jpg');
+			}
+		}
+	}
+	.btn {
+		text-align: center;
+		margin-bottom: 80px;
+		button {
+			background: none;
+			border: 1px solid black;
+			p {
+				font-family: 'Alata', sans-serif;
+				text-transform: uppercase;
+				padding: 10px 40px;
+				font-weight: bold;
+				letter-spacing: 4px;
+			}
+		}
+	}
+}
+
+// FOOTER
+
+footer {
+	background-color: hsl(0, 0%, 0%);
+	.title {
+		padding-top: 60px;
+		h1 {
+			color: hsl(0, 0%, 100%);
+			text-align: center;
+		}
+	}
+	.contact {
+		ul {
+			text-align: center;
+            margin-top: 54px;
+
+			li {
+				margin: 30px 0 20px 0;
+				a {
+					color: hsl(0, 0%, 100%);
+					text-decoration: none;
+					font-weight: bold;
+					font-size: 20px;
+				}
+			}
+		}
+	}
+	.social-media {
+		ul {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+            width: 43%;
+            margin: 0 auto;
+            font-size: 28px;
+            margin-top: 54px;
+			li {
+                list-style: none;
+				i {
+					color: hsl(0, 0%, 100%);
+				}
+			}
+		}
+	}
+    .copyright{
+        color: hsl(0, 0%, 55%);
+        font-weight: bold;
+        text-align: center;
+        margin-top: 20px;
+       padding-bottom: 60px;
+       font-size: 18px;
+    }
+}

@@ -1,0 +1,236 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Alata', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 15px;
+}
+
+nav {
+  background-image: url("../images/mobile/image-hero.jpg");
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+nav .bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 35px 25px;
+}
+
+nav .bar .title h1 {
+  font-size: 31px;
+  margin-top: -4px;
+}
+
+nav .content-nav {
+  border: 3px solid white;
+  width: 89vw;
+  height: 34vh;
+  position: relative;
+  top: 15%;
+  margin: 0 auto;
+  text-transform: uppercase;
+  padding: 35px;
+}
+
+nav .content-nav p {
+  font-size: 39px;
+}
+
+main .image {
+  width: 100%;
+  text-align: center;
+  margin-top: 100px;
+}
+
+main .image img {
+  width: 90%;
+}
+
+main .title h1 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 30px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: normal;
+}
+
+main .text {
+  text-align: center;
+  padding: 0 50px;
+  color: #8c8c8c;
+  font-weight: bold;
+  line-height: 25px;
+  margin-top: 20px;
+}
+
+main .creations {
+  margin-top: 80px;
+  width: 100%;
+}
+
+main .creations .title h2 {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+main .creations .images {
+  margin-top: 40px;
+  text-align: center;
+}
+
+main .creations .images .image {
+  width: 90%;
+  height: 127px;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto 30px;
+  -webkit-box-shadow: inset 42px -3px 73px;
+          box-shadow: inset 42px -3px 73px;
+}
+
+main .creations .images .image p {
+  color: white;
+  text-transform: uppercase;
+  position: relative;
+  left: 6%;
+  top: 47%;
+  font-size: 22px;
+  width: 34%;
+  text-align: left;
+}
+
+main .creations .images .one {
+  background-image: url("../images/mobile/image-deep-earth.jpg");
+}
+
+main .creations .images .two {
+  background-image: url("../images/mobile/image-night-arcade.jpg");
+}
+
+main .creations .images .three {
+  background-image: url("../images/mobile/image-soccer-team.jpg");
+}
+
+main .creations .images .four {
+  background-image: url("../images/mobile/image-grid.jpg");
+}
+
+main .creations .images .four p {
+  width: 30%;
+}
+
+main .creations .images .five {
+  background-image: url("../images/mobile/image-from-above.jpg");
+}
+
+main .creations .images .six {
+  background-image: url("../images/mobile/image-pocket-borealis.jpg");
+}
+
+main .creations .images .seven {
+  background-image: url("../images/mobile/image-curiosity.jpg");
+}
+
+main .creations .images .eight {
+  background-image: url("../images/mobile/image-fisheye.jpg");
+}
+
+main .btn {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+main .btn button {
+  background: none;
+  border: 1px solid black;
+}
+
+main .btn button p {
+  font-family: 'Alata', sans-serif;
+  text-transform: uppercase;
+  padding: 10px 40px;
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+
+footer {
+  background-color: black;
+}
+
+footer .title {
+  padding-top: 60px;
+}
+
+footer .title h1 {
+  color: white;
+  text-align: center;
+}
+
+footer .contact ul {
+  text-align: center;
+  margin-top: 54px;
+}
+
+footer .contact ul li {
+  margin: 30px 0 20px 0;
+}
+
+footer .contact ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+footer .social-media ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 43%;
+  margin: 0 auto;
+  font-size: 28px;
+  margin-top: 54px;
+}
+
+footer .social-media ul li {
+  list-style: none;
+}
+
+footer .social-media ul li i {
+  color: white;
+}
+
+footer .copyright {
+  color: #8c8c8c;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  padding-bottom: 60px;
+  font-size: 18px;
+}
+/*# sourceMappingURL=style.css.map */
