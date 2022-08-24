@@ -6,7 +6,7 @@ const openMenu = () => {
 	document.querySelector('.nav-menu').classList.add('left')
 }
 const closeMenu = () => {
-	document.querySelector('.nav-menu').classList.remove('left')
+	document.querySelector('.nav-menu').classList.remove('left')    
 }
 
 close.addEventListener('click', closeMenu)

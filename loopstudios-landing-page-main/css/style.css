@@ -13,6 +13,7 @@ body {
 
 .left {
   left: 0;
+  visibility: visible;
 }
 
 nav {
@@ -22,6 +23,7 @@ nav {
   background-size: cover;
   background-position: center;
   color: white;
+  max-width: 1440px;
   overflow: hidden;
 }
 
@@ -102,6 +104,55 @@ nav .bar .menu ul a {
   cursor: pointer;
 }
 
+nav .bar .menu ul .hover::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  bottom: 30%;
+  background-color: white;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+nav .bar .menu ul .hover:hover::after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+nav .bar .menu ul .one::after {
+  content: '';
+  left: 3.5%;
+}
+
+nav .bar .menu ul .two::after {
+  content: '';
+  left: 24%;
+}
+
+nav .bar .menu ul .three::after {
+  content: '';
+  left: 45%;
+}
+
+nav .bar .menu ul .four::after {
+  content: '';
+  left: 67%;
+}
+
+nav .bar .menu ul .five::after {
+  content: '';
+  left: 90%;
+}
+
 @media (min-width: 1440px) {
   nav .bar .bars {
     display: none;
@@ -141,8 +192,14 @@ nav .nav-menu {
   top: 0;
   right: -110%;
   padding: 50px 30px;
-  -webkit-transition: left .5s;
-  transition: left .5s;
+  -webkit-transition: left 0.5s;
+  transition: left 0.5s;
+}
+
+@media (min-width: 1440px) {
+  nav .nav-menu {
+    display: none;
+  }
 }
 
 nav .nav-menu .title {
@@ -594,22 +651,16 @@ footer .right-side .social-media ul li {
 footer .right-side .social-media ul li i {
   color: white;
   cursor: pointer;
-  display: inline-block;
-  -webkit-transition: -webkit-transform 0.25 ease-out;
-  transition: -webkit-transform 0.25 ease-out;
-  transition: transform 0.25 ease-out;
-  transition: transform 0.25 ease-out, -webkit-transform 0.25 ease-out;
 }
 
 footer .right-side .social-media ul li .hover-animation::after {
   content: '';
   position: absolute;
+  width: 20px;
+  height: 2px;
   -webkit-transform: scale(0);
           transform: scale(0);
-  width: 15px;
-  height: 2px;
   bottom: 0;
-  left: 3%;
   background-color: white;
   -webkit-transform-origin: bottom right;
           transform-origin: bottom right;
@@ -618,8 +669,32 @@ footer .right-side .social-media ul li .hover-animation::after {
 footer .right-side .social-media ul li .hover-animation:hover::after {
   -webkit-transform: scale(1);
           transform: scale(1);
-  -webkit-transform-origin: bottom left;
-          transform-origin: bottom left;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+footer .right-side .social-media ul li .one::after {
+  content: '';
+  left: 1.7%;
+}
+
+footer .right-side .social-media ul li .two::after {
+  content: '';
+  left: 30%;
+}
+
+footer .right-side .social-media ul li .three::after {
+  content: '';
+  left: 58%;
+}
+
+footer .right-side .social-media ul li .four::after {
+  content: '';
+  left: 87%;
 }
 
 footer .right-side .copyright {
