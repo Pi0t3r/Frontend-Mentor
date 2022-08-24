@@ -51,7 +51,7 @@ nav .bar {
 @media (min-width: 1440px) {
   nav .bar .title {
     position: relative;
-    left: 3.6%;
+    left: 10%;
   }
 }
 
@@ -61,9 +61,16 @@ nav .bar .title h1 {
 }
 
 nav .bar .menu {
+  display: none;
   position: relative;
   right: 10%;
   width: 25%;
+}
+
+@media (min-width: 1440px) {
+  nav .bar .menu {
+    display: block;
+  }
 }
 
 nav .bar .menu ul {
@@ -90,8 +97,10 @@ nav .bar .menu ul a {
   cursor: pointer;
 }
 
-nav .bar .bars {
-  display: none;
+@media (min-width: 1440px) {
+  nav .bar .bars {
+    display: none;
+  }
 }
 
 nav .content-nav {
@@ -110,12 +119,24 @@ nav .content-nav {
     width: 30vw;
     height: 23vh;
     top: 15%;
-    left: -29.6%;
+    left: -23.5%;
   }
 }
 
 nav .content-nav p {
   font-size: 39px;
+}
+
+@media (min-width: 1440px) {
+  main .main-text {
+    width: 42%;
+    position: absolute;
+    top: 97%;
+    background-color: white;
+    right: 8%;
+    height: 48%;
+    padding: 43px 75px 0;
+  }
 }
 
 main .image {
@@ -128,12 +149,28 @@ main .image img {
   width: 90%;
 }
 
+@media (min-width: 1440px) {
+  main .image img {
+    width: 50%;
+    position: relative;
+    left: -13.5%;
+  }
+}
+
 main .title h1 {
   text-align: center;
   text-transform: uppercase;
   margin-top: 30px;
   font-family: 'Josefin Sans', sans-serif;
   font-weight: normal;
+}
+
+@media (min-width: 1440px) {
+  main .title h1 {
+    text-align: left;
+    width: 95%;
+    padding-left: 46px;
+  }
 }
 
 main .text {
@@ -145,9 +182,23 @@ main .text {
   margin-top: 20px;
 }
 
+@media (min-width: 1440px) {
+  main .text {
+    text-align: left;
+    padding: 0 0 0 46px;
+    font-size: 15px;
+  }
+}
+
 main .creations {
   margin-top: 80px;
   width: 100%;
+}
+
+@media (min-width: 1440px) {
+  main .creations .title {
+    margin: 94px 0 60px;
+  }
 }
 
 main .creations .title h2 {
@@ -155,9 +206,32 @@ main .creations .title h2 {
   text-align: center;
 }
 
+@media (min-width: 1440px) {
+  main .creations .title h2 {
+    text-align: left;
+    padding-left: 11.5%;
+    font-size: 43px;
+  }
+}
+
 main .creations .images {
   margin-top: 40px;
   text-align: center;
+}
+
+@media (min-width: 1440px) {
+  main .creations .images {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 0 142px;
+  }
 }
 
 main .creations .images .image {
@@ -170,27 +244,63 @@ main .creations .images .image {
           box-shadow: inset 42px -3px 73px;
 }
 
+@media (min-width: 1440px) {
+  main .creations .images .image {
+    width: 21%;
+    height: 400px;
+    -webkit-box-shadow: inset 0px -51px 166px;
+            box-shadow: inset 0px -51px 166px;
+  }
+}
+
 main .creations .images .image p {
   color: white;
   text-transform: uppercase;
   position: relative;
   left: 6%;
-  top: 4337%;
+  top: 47%;
   font-size: 22px;
   width: 34%;
   text-align: left;
+}
+
+@media (min-width: 1440px) {
+  main .creations .images .image p {
+    left: 14%;
+    font-size: 22px;
+    width: 47%;
+    top: 82%;
+  }
 }
 
 main .creations .images .one {
   background-image: url("../images/mobile/image-deep-earth.jpg");
 }
 
+@media (min-width: 1440px) {
+  main .creations .images .one {
+    background-image: url("../images/desktop/image-deep-earth.jpg");
+  }
+}
+
 main .creations .images .two {
   background-image: url("../images/mobile/image-night-arcade.jpg");
 }
 
+@media (min-width: 1440px) {
+  main .creations .images .two {
+    background-image: url("../images/desktop/image-night-arcade.jpg");
+  }
+}
+
 main .creations .images .three {
   background-image: url("../images/mobile/image-soccer-team.jpg");
+}
+
+@media (min-width: 1440px) {
+  main .creations .images .three {
+    background-image: url("../images/desktop/image-soccer-team.jpg");
+  }
 }
 
 main .creations .images .four {
@@ -201,25 +311,58 @@ main .creations .images .four p {
   width: 30%;
 }
 
+@media (min-width: 1440px) {
+  main .creations .images .four {
+    background-image: url("../images/desktop/image-grid.jpg");
+  }
+}
+
 main .creations .images .five {
   background-image: url("../images/mobile/image-from-above.jpg");
+}
+
+@media (min-width: 1440px) {
+  main .creations .images .five {
+    background-image: url("../images/desktop/image-from-above.jpg");
+  }
 }
 
 main .creations .images .six {
   background-image: url("../images/mobile/image-pocket-borealis.jpg");
 }
 
+@media (min-width: 1440px) {
+  main .creations .images .six {
+    background-image: url("../images/desktop/image-pocket-borealis.jpg");
+  }
+}
+
 main .creations .images .seven {
   background-image: url("../images/mobile/image-curiosity.jpg");
+  background-image: url("../images/desktop/image-curiosity.jpg");
 }
 
 main .creations .images .eight {
   background-image: url("../images/mobile/image-fisheye.jpg");
 }
 
+@media (min-width: 1440px) {
+  main .creations .images .eight {
+    background-image: url("../images/desktop/image-fisheye.jpg");
+  }
+}
+
 main .btn {
   text-align: center;
   margin-bottom: 80px;
+}
+
+@media (min-width: 1440px) {
+  main .btn {
+    position: absolute;
+    top: 149%;
+    right: 11.5%;
+  }
 }
 
 main .btn button {
@@ -239,32 +382,95 @@ footer {
   background-color: black;
 }
 
-footer .title {
+@media (min-width: 1440px) {
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 165px;
+    height: 180px;
+  }
+}
+
+@media (min-width: 1440px) {
+  footer .left-side {
+    width: 50%;
+  }
+}
+
+footer .left-side .title {
   padding-top: 60px;
 }
 
-footer .title h1 {
+footer .left-side .title h1 {
   color: white;
   text-align: center;
 }
 
-footer .contact ul {
-  text-align: center;
-  margin-top: 54px;
+@media (min-width: 1440px) {
+  footer .left-side .title h1 {
+    text-align: left;
+  }
 }
 
-footer .contact ul li {
+footer .left-side .contact ul {
+  text-align: center;
+  padding-top: 54px;
+}
+
+@media (min-width: 1440px) {
+  footer .left-side .contact ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-top: 0px;
+  }
+}
+
+footer .left-side .contact ul li {
   margin: 30px 0 20px 0;
 }
 
-footer .contact ul li a {
+footer .left-side .contact ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
   font-size: 20px;
 }
 
-footer .social-media ul {
+@media (min-width: 1440px) {
+  footer .right-side {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1440px) {
+  footer .right-side .social-media {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+footer .right-side .social-media ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -276,25 +482,50 @@ footer .social-media ul {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 43%;
-  margin: 0 auto;
   font-size: 28px;
-  margin-top: 54px;
+  margin: 54px auto 0;
 }
 
-footer .social-media ul li {
+@media (min-width: 1440px) {
+  footer .right-side .social-media ul {
+    margin: 54px 0 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 30%;
+    position: relative;
+    right: -70%;
+  }
+}
+
+footer .right-side .social-media ul li {
   list-style: none;
 }
 
-footer .social-media ul li i {
+footer .right-side .social-media ul li i {
   color: white;
 }
 
-footer .copyright {
+footer .right-side .copyright {
   color: #8c8c8c;
   font-weight: bold;
   text-align: center;
   margin-top: 20px;
   padding-bottom: 60px;
   font-size: 18px;
+}
+
+@media (min-width: 1440px) {
+  footer .right-side .copyright {
+    text-align: right;
+    padding: 13px 0 0 60px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
