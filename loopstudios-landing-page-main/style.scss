@@ -11,6 +11,9 @@ body {
 }
 
 // NAV
+.left {
+	left: 0;
+}
 nav {
 	background-image: url('../images/mobile/image-hero.jpg');
 	width: 100vw;
@@ -18,6 +21,7 @@ nav {
 	background-size: cover;
 	background-position: center;
 	color: hsl(0, 0%, 100%);
+	overflow: hidden;
 	@media (min-width: 1440px) {
 		background-image: url('../images/desktop/image-hero.jpg');
 		background-size: 100% 100%;
@@ -90,11 +94,51 @@ nav {
 			font-size: 39px;
 		}
 	}
+	.nav-menu {
+		width: 100vw;
+		height: 100vh;
+		background-color: hsl(0, 0%, 0%);
+		z-index: 100;
+		position: absolute;
+		top: 0;
+		right: -110%;
+		padding: 50px 30px;
+		transition: left .5s;
+
+		.title {
+			color: hsl(0, 0%, 100%);
+		}
+		.btn {
+			position: absolute;
+			right: 0;
+			top: 0;
+			padding: 30px 10px;
+			.close {
+				padding: 20px;
+			}
+		}
+		.navigation {
+			padding: 90px 0 0 0;
+			ul {
+				line-height: 55px;
+				font-size: 23px;
+				li {
+					list-style: none;
+					a {
+						color: hsl(0, 0%, 100%);
+						text-decoration: none;
+						text-transform: uppercase;
+					}
+				}
+			}
+		}
+	}
 }
 
 // MAIN
 
 main {
+	overflow: hidden;
 	.main-text {
 		@media (min-width: 1440px) {
 			width: 42%;
@@ -179,6 +223,8 @@ main {
 				background-position: center;
 				margin: 0 auto 30px;
 				box-shadow: inset 42px -3px 73px;
+				cursor: pointer;
+				transition: box-shadow 0.5s;
 				@media (min-width: 1440px) {
 					width: 21%;
 					height: 400px;
@@ -193,6 +239,7 @@ main {
 					font-size: 22px;
 					width: 34%;
 					text-align: left;
+					transition: color 0.5s;
 					@media (min-width: 1440px) {
 						left: 14%;
 						font-size: 22px;
@@ -200,6 +247,12 @@ main {
 						top: 82%;
 					}
 				}
+			}
+			.image:hover {
+				box-shadow: inset 1px 0px 300px 20px white;
+			}
+			.image:hover p {
+				color: hsl(0, 0%, 0%);
 			}
 			.one {
 				background-image: url('../images/mobile/image-deep-earth.jpg');
@@ -263,6 +316,8 @@ main {
 		button {
 			background: none;
 			border: 1px solid black;
+			cursor: pointer;
+			transition: background-color 0.4s, color 0.4s;
 			p {
 				font-family: 'Alata', sans-serif;
 				text-transform: uppercase;
@@ -271,12 +326,17 @@ main {
 				letter-spacing: 4px;
 			}
 		}
+		button:hover {
+			background-color: hsl(0, 0%, 0%);
+			color: hsl(0, 0%, 100%);
+		}
 	}
 }
 
 // FOOTER
 
 footer {
+	overflow: hidden;
 	background-color: hsl(0, 0%, 0%);
 	@media (min-width: 1440px) {
 		display: flex;
@@ -317,6 +377,7 @@ footer {
 						text-decoration: none;
 						font-weight: bold;
 						font-size: 20px;
+						cursor: pointer;
 					}
 				}
 			}
@@ -351,6 +412,24 @@ footer {
 					list-style: none;
 					i {
 						color: hsl(0, 0%, 100%);
+						cursor: pointer;
+						display: inline-block;
+						transition: transform 0.25 ease-out;
+					}
+					.hover-animation::after {
+						content: '';
+						position: absolute;
+						transform: scale(0);
+						width: 15px;
+						height: 2px;
+						bottom: 0;
+						left: 3%;
+						background-color: hsl(0, 0%, 100%);
+						transform-origin: bottom right;
+					}
+					.hover-animation:hover::after {
+						transform: scale(1);
+						transform-origin: bottom left;
 					}
 				}
 			}

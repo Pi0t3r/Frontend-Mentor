@@ -11,6 +11,10 @@ body {
   font-size: 15px;
 }
 
+.left {
+  left: 0;
+}
+
 nav {
   background-image: url("../images/mobile/image-hero.jpg");
   width: 100vw;
@@ -18,6 +22,7 @@ nav {
   background-size: cover;
   background-position: center;
   color: white;
+  overflow: hidden;
 }
 
 @media (min-width: 1440px) {
@@ -125,6 +130,57 @@ nav .content-nav {
 
 nav .content-nav p {
   font-size: 39px;
+}
+
+nav .nav-menu {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  right: -110%;
+  padding: 50px 30px;
+  -webkit-transition: left .5s;
+  transition: left .5s;
+}
+
+nav .nav-menu .title {
+  color: white;
+}
+
+nav .nav-menu .btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 30px 10px;
+}
+
+nav .nav-menu .btn .close {
+  padding: 20px;
+}
+
+nav .nav-menu .navigation {
+  padding: 90px 0 0 0;
+}
+
+nav .nav-menu .navigation ul {
+  line-height: 55px;
+  font-size: 23px;
+}
+
+nav .nav-menu .navigation ul li {
+  list-style: none;
+}
+
+nav .nav-menu .navigation ul li a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+main {
+  overflow: hidden;
 }
 
 @media (min-width: 1440px) {
@@ -242,6 +298,11 @@ main .creations .images .image {
   margin: 0 auto 30px;
   -webkit-box-shadow: inset 42px -3px 73px;
           box-shadow: inset 42px -3px 73px;
+  cursor: pointer;
+  -webkit-transition: -webkit-box-shadow 0.5s;
+  transition: -webkit-box-shadow 0.5s;
+  transition: box-shadow 0.5s;
+  transition: box-shadow 0.5s, -webkit-box-shadow 0.5s;
 }
 
 @media (min-width: 1440px) {
@@ -262,6 +323,8 @@ main .creations .images .image p {
   font-size: 22px;
   width: 34%;
   text-align: left;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
 }
 
 @media (min-width: 1440px) {
@@ -271,6 +334,15 @@ main .creations .images .image p {
     width: 47%;
     top: 82%;
   }
+}
+
+main .creations .images .image:hover {
+  -webkit-box-shadow: inset 1px 0px 300px 20px white;
+          box-shadow: inset 1px 0px 300px 20px white;
+}
+
+main .creations .images .image:hover p {
+  color: black;
 }
 
 main .creations .images .one {
@@ -368,6 +440,9 @@ main .btn {
 main .btn button {
   background: none;
   border: 1px solid black;
+  cursor: pointer;
+  -webkit-transition: background-color 0.4s, color 0.4s;
+  transition: background-color 0.4s, color 0.4s;
 }
 
 main .btn button p {
@@ -378,7 +453,13 @@ main .btn button p {
   letter-spacing: 4px;
 }
 
+main .btn button:hover {
+  background-color: black;
+  color: white;
+}
+
 footer {
+  overflow: hidden;
   background-color: black;
 }
 
@@ -450,6 +531,7 @@ footer .left-side .contact ul li a {
   text-decoration: none;
   font-weight: bold;
   font-size: 20px;
+  cursor: pointer;
 }
 
 @media (min-width: 1440px) {
@@ -511,6 +593,33 @@ footer .right-side .social-media ul li {
 
 footer .right-side .social-media ul li i {
   color: white;
+  cursor: pointer;
+  display: inline-block;
+  -webkit-transition: -webkit-transform 0.25 ease-out;
+  transition: -webkit-transform 0.25 ease-out;
+  transition: transform 0.25 ease-out;
+  transition: transform 0.25 ease-out, -webkit-transform 0.25 ease-out;
+}
+
+footer .right-side .social-media ul li .hover-animation::after {
+  content: '';
+  position: absolute;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  width: 15px;
+  height: 2px;
+  bottom: 0;
+  left: 3%;
+  background-color: white;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+footer .right-side .social-media ul li .hover-animation:hover::after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
 }
 
 footer .right-side .copyright {
