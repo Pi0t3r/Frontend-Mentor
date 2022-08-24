@@ -20,6 +20,14 @@ nav {
   color: white;
 }
 
+@media (min-width: 1440px) {
+  nav {
+    background-image: url("../images/desktop/image-hero.jpg");
+    background-size: 100% 100%;
+    height: 61vh;
+  }
+}
+
 nav .bar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -34,9 +42,56 @@ nav .bar {
   padding: 35px 25px;
 }
 
+@media (min-width: 1440px) {
+  nav .bar {
+    padding: 81px 25px 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  nav .bar .title {
+    position: relative;
+    left: 3.6%;
+  }
+}
+
 nav .bar .title h1 {
   font-size: 31px;
   margin-top: -4px;
+}
+
+nav .bar .menu {
+  position: relative;
+  right: 10%;
+  width: 25%;
+}
+
+nav .bar .menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav .bar .menu ul li {
+  list-style: none;
+}
+
+nav .bar .menu ul a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+nav .bar .bars {
+  display: none;
 }
 
 nav .content-nav {
@@ -48,6 +103,15 @@ nav .content-nav {
   margin: 0 auto;
   text-transform: uppercase;
   padding: 35px;
+}
+
+@media (min-width: 1440px) {
+  nav .content-nav {
+    width: 30vw;
+    height: 23vh;
+    top: 15%;
+    left: -29.6%;
+  }
 }
 
 nav .content-nav p {
@@ -111,7 +175,7 @@ main .creations .images .image p {
   text-transform: uppercase;
   position: relative;
   left: 6%;
-  top: 47%;
+  top: 4337%;
   font-size: 22px;
   width: 34%;
   text-align: left;
