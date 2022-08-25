@@ -1,0 +1,228 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  background-color: #1e202a;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.wrapper .title {
+  padding: 30px 0;
+}
+
+.wrapper .title h1 {
+  color: white;
+}
+
+.wrapper .title p {
+  color: #8b97c6;
+  font-weight: bold;
+}
+
+.wrapper .line {
+  width: 100%;
+  height: 1px;
+  background-color: #252a41;
+}
+
+.wrapper .mode {
+  padding-top: 20px;
+}
+
+.wrapper .mode p {
+  color: #8b97c6;
+  font-weight: bold;
+}
+
+.wrapper .mode .switch {
+  height: 100px;
+  position: relative;
+  right: 50px;
+}
+
+.wrapper .mode .switch .theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+  left: 94%;
+  top: -20%;
+}
+
+.wrapper .mode .switch .theme-switch input {
+  display: none;
+}
+
+.wrapper .mode .switch .theme-switch .slider {
+  background: -webkit-gradient(linear, left top, left bottom, from(#378fe6), to(#3eda82));
+  background: linear-gradient(#378fe6, #3eda82);
+  bottom: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.wrapper .mode .switch .theme-switch .slider::before {
+  background-color: #1e202a;
+  bottom: 4px;
+  content: '';
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  width: 26px;
+}
+
+.wrapper .mode .switch .theme-switch input:checked + .slider {
+  background: #aeb3cb;
+}
+
+.wrapper .mode .switch .theme-switch input:checked + .slider::before {
+  -webkit-transform: translateX(26px);
+          transform: translateX(26px);
+  background-color: white;
+}
+
+.wrapper .mode .switch .theme-switch .slider.round {
+  border-radius: 34px;
+}
+
+.wrapper .mode .switch .theme-switch .slider.round::before {
+  border-radius: 50%;
+}
+
+.wrapper .cards .card {
+  width: 100%;
+  height: 220px;
+  background-color: #252a41;
+  margin: -18% 0 29%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.wrapper .cards .card .line-card {
+  width: 100%;
+  height: 5px;
+}
+
+.wrapper .cards .card .text {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 30%;
+}
+
+.wrapper .cards .card .text .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  top: -14px;
+}
+
+.wrapper .cards .card .text .info p {
+  color: #8b97c6;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+.wrapper .cards .card .text .number-follow .number {
+  font-weight: bold;
+  font-size: 50px;
+  color: white;
+}
+
+.wrapper .cards .card .text .number-follow .follow {
+  text-transform: uppercase;
+  color: #8b97c6;
+  letter-spacing: 4px;
+}
+
+.wrapper .cards .card .text .how-many {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  left: 22%;
+  bottom: -15px;
+}
+
+.wrapper .cards .card .text .how-many img {
+  height: 5px;
+  line-height: 17px;
+  position: relative;
+  top: 6px;
+  right: 8px;
+}
+
+.wrapper .cards .card .text .how-many p {
+  font-weight: bold;
+}
+
+.wrapper .cards .one .line-card {
+  background-color: #198ff5;
+}
+
+.wrapper .cards .one .how-many p {
+  color: white;
+}
+
+.wrapper .cards .two .line-card {
+  background-color: #1ca0f2;
+}
+
+.wrapper .cards .two .how-many p {
+  color: #1db489;
+}
+
+.wrapper .cards .three .line-card {
+  background: -webkit-gradient(linear, left top, right top, from(#fdc468), to(#df4996));
+  background: linear-gradient(0.25turn, #fdc468, #df4996);
+}
+
+.wrapper .cards .three .how-many p {
+  color: #1db489;
+}
+
+.wrapper .cards .three .number-follow .number {
+  position: relative;
+  left: 18%;
+}
+
+.wrapper .cards .four .line-card {
+  background-color: #c4032a;
+}
+
+.wrapper .cards .four .how-many p {
+  color: #c4032a;
+}
+
+.wrapper .title h1 {
+  margin: -80px 0 0 0;
+}
+/*# sourceMappingURL=main.css.map */

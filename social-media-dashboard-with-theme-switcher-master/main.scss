@@ -1,0 +1,201 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+	font-size: 14px;
+	background-color: hsl(230, 17%, 14%);
+}
+
+.wrapper {
+	width: 90%;
+	margin: 0 auto;
+	.title {
+		padding: 30px 0;
+		// border-bottom: 0.5px solid hsl(228, 34%, 66%);
+		h1 {
+			color: hsl(0, 0%, 100%);
+		}
+		p {
+			color: hsl(228, 34%, 66%);
+			font-weight: bold;
+		}
+	}
+	.line {
+		width: 100%;
+		height: 1px;
+		background-color: hsl(228, 28%, 20%);
+	}
+	.mode {
+		padding-top: 20px;
+		p {
+			color: hsl(228, 34%, 66%);
+			font-weight: bold;
+		}
+		.switch {
+			height: 100px;
+			position: relative;
+			right: 50px;
+			.theme-switch {
+				display: inline-block;
+				height: 34px;
+				position: relative;
+				width: 60px;
+				left: 94%;
+				top: -20%;
+				input {
+					display: none;
+				}
+				.slider {
+					background: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+					bottom: 0;
+					cursor: pointer;
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					transition: 0.4s;
+				}
+				.slider::before {
+					background-color: hsl(230, 17%, 14%);
+					bottom: 4px;
+					content: '';
+					height: 26px;
+					left: 4px;
+					position: absolute;
+					transition: 0.4s;
+					width: 26px;
+				}
+				input:checked + .slider {
+					background: hsl(230, 22%, 74%);
+				}
+				input:checked + .slider::before {
+					transform: translateX(26px);
+					background-color: hsl(0, 0%, 100%);
+				}
+				.slider.round {
+					border-radius: 34px;
+				}
+				.slider.round::before {
+					border-radius: 50%;
+				}
+			}
+		}
+	}
+	.cards {
+		.card {
+			width: 100%;
+			height: 220px;
+			background-color: #252a41;
+			margin: -18% 0 29%;
+			border-radius: 5px;
+			overflow: hidden;
+			.line-card {
+				width: 100%;
+				height: 5px;
+			}
+			.text {
+				position: relative;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				width: 30%;
+				.info {
+					display: flex;
+					flex-direction: row;
+					position: relative;
+					top: -14px;
+					p {
+						color: hsl(228, 34%, 66%);
+						font-weight: bold;
+						padding-left: 10px;
+					}
+				}
+				.number-follow {
+					.number {
+						font-weight: bold;
+						font-size: 50px;
+						color: hsl(0, 0%, 100%);
+					}
+					.follow {
+						text-transform: uppercase;
+						color: hsl(228, 34%, 66%);
+						letter-spacing: 4px;
+					}
+				}
+				.how-many {
+					display: flex;
+					flex-direction: row;
+					position: relative;
+					left: 22%;
+					bottom: -15px;
+					img {
+						height: 5px;
+						line-height: 17px;
+						position: relative;
+						top: 6px;
+						right: 8px;
+					}
+					p {
+						
+						font-weight: bold;
+					}
+				}
+			}
+		}
+		.one {
+			.line-card {
+				background-color: hsl(208, 92%, 53%);
+			}
+            .how-many{
+                p{
+                    color: hsl(0, 0%, 100%);
+                }
+            }
+		}
+		.two {
+			.line-card {
+				background-color: hsl(203, 89%, 53%);
+			}
+			.how-many {
+				p {
+					color: hsl(163, 72%, 41%);
+				}
+			}
+		}
+        .three{
+            .line-card{
+                background: linear-gradient(0.25turn,hsl(37, 97%, 70%),hsl(329, 70%, 58%));
+            }
+            .how-many{
+                p{
+                    color: hsl(163, 72%, 41%);
+                }
+            }
+            .number-follow{
+                .number{
+                    position: relative;
+                    left: 18%;
+                }
+            }
+        }
+        .four{
+            .line-card{
+               background-color: hsl(348, 97%, 39%); 
+            }
+            .how-many{
+                p{
+                    color: hsl(348, 97%, 39%);
+                }
+            }
+        }
+	}
+    .title{
+        h1{
+            margin: -80px 0 0 0;
+        }
+    }
+}
