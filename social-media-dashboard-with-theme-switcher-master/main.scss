@@ -3,25 +3,33 @@
 	margin: 0;
 	padding: 0;
 }
-
+.body-color {
+	background-color: hsl(0, 0%, 100%);
+}
 body {
 	font-family: 'Inter', sans-serif;
 	font-size: 14px;
 	background-color: hsl(230, 17%, 14%);
 }
-
+.green {
+	color: hsl(163, 72%, 41%);
+}
 .wrapper {
 	width: 90%;
 	margin: 0 auto;
-	.title {
+	.title1 {
 		padding: 30px 0;
+		.darkColor {
+			color: hsl(230, 17%, 14%);
+		}
 		h1 {
 			color: hsl(0, 0%, 100%);
 		}
+
 		p {
 			color: hsl(228, 34%, 66%);
 			font-weight: bold;
-            padding: 7px 0 0 0;
+			padding: 7px 0 0 0;
 		}
 	}
 	.line {
@@ -85,6 +93,7 @@ body {
 			}
 		}
 	}
+
 	.cards {
 		.card {
 			width: 100%;
@@ -93,6 +102,7 @@ body {
 			margin: -18% 0 29%;
 			border-radius: 5px;
 			overflow: hidden;
+
 			.line-card {
 				width: 100%;
 				height: 5px;
@@ -120,6 +130,9 @@ body {
 						font-size: 50px;
 						color: hsl(0, 0%, 100%);
 					}
+					.light-theme-text {
+						color: hsl(230, 17%, 14%);
+					}
 					.follow {
 						text-transform: uppercase;
 						color: hsl(228, 34%, 66%);
@@ -144,6 +157,9 @@ body {
 					}
 				}
 			}
+		}
+		.bg-card {
+			background-color: hsl(227, 47%, 96%);
 		}
 		.one {
 			.line-card {
@@ -193,6 +209,9 @@ body {
 		}
 	}
 	.title-second {
+		.gray{
+			color: hsl(228, 12%, 44%);
+		}
 		h1 {
 			margin: -50px 0 50px 0;
 			color: hsl(0, 0%, 100%);
@@ -228,37 +247,45 @@ body {
 				flex-direction: column;
 				justify-content: space-between;
 				align-items: flex-end;
-                .procent{
-                    display: flex;
-                    flex-direction: row;
-                    line-height: 5px;
-                    img{
-                        margin-right: 5px;
-                    }
-                    p{
-                        font-weight: bold;
-                    }
-                }
+				.procent {
+					display: flex;
+					flex-direction: row;
+					line-height: 5px;
+					img {
+						margin-right: 5px;
+					}
+					p {
+						font-weight: bold;
+					}
+				}
 			}
 		}
-        .one,.three,.four,.five,.six{
-            .right-side{
-                .procent{
-                    p{
-                        color: hsl(163, 72%, 41%);
-
-                    }
-                }
-            }
-        }
-        .two,.seven,.eight{
-            .right-side{
-                .procent{
-                    p{
-                        color: hsl(356, 69%, 56%);
-                    }
-                }
-            }
-        }
+		.bg-card {
+			background-color: hsl(227, 47%, 96%);
+		}
+		.one,
+		.three,
+		.four,
+		.five,
+		.six {
+			.right-side {
+				.procent {
+					p {
+						color: hsl(163, 72%, 41%);
+					}
+				}
+			}
+		}
+		.two,
+		.seven,
+		.eight {
+			.right-side {
+				.procent {
+					p {
+						color: hsl(356, 69%, 56%);
+					}
+				}
+			}
+		}
 	}
 }

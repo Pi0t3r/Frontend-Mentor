@@ -5,10 +5,18 @@
   padding: 0;
 }
 
+.body-color {
+  background-color: white;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   font-size: 14px;
   background-color: #1e202a;
+}
+
+.green {
+  color: #1db489;
 }
 
 .wrapper {
@@ -16,15 +24,19 @@ body {
   margin: 0 auto;
 }
 
-.wrapper .title {
+.wrapper .title1 {
   padding: 30px 0;
 }
 
-.wrapper .title h1 {
+.wrapper .title1 .darkColor {
+  color: #1e202a;
+}
+
+.wrapper .title1 h1 {
   color: white;
 }
 
-.wrapper .title p {
+.wrapper .title1 p {
   color: #8b97c6;
   font-weight: bold;
   padding: 7px 0 0 0;
@@ -154,6 +166,10 @@ body {
   color: white;
 }
 
+.wrapper .cards .card .text .number-follow .light-theme-text {
+  color: #1e202a;
+}
+
 .wrapper .cards .card .text .number-follow .follow {
   text-transform: uppercase;
   color: #8b97c6;
@@ -183,6 +199,10 @@ body {
 
 .wrapper .cards .card .text .how-many p {
   font-weight: bold;
+}
+
+.wrapper .cards .bg-card {
+  background-color: #f0f2fa;
 }
 
 .wrapper .cards .one .line-card {
@@ -221,6 +241,10 @@ body {
 
 .wrapper .cards .four .how-many p {
   color: #c4032a;
+}
+
+.wrapper .title-second .gray {
+  color: #63687e;
 }
 
 .wrapper .title-second h1 {
@@ -296,11 +320,21 @@ body {
   font-weight: bold;
 }
 
-.wrapper .overview-cards .one .right-side .procent p, .wrapper .overview-cards .three .right-side .procent p, .wrapper .overview-cards .four .right-side .procent p, .wrapper .overview-cards .five .right-side .procent p, .wrapper .overview-cards .six .right-side .procent p {
+.wrapper .overview-cards .bg-card {
+  background-color: #f0f2fa;
+}
+
+.wrapper .overview-cards .one .right-side .procent p,
+.wrapper .overview-cards .three .right-side .procent p,
+.wrapper .overview-cards .four .right-side .procent p,
+.wrapper .overview-cards .five .right-side .procent p,
+.wrapper .overview-cards .six .right-side .procent p {
   color: #1db489;
 }
 
-.wrapper .overview-cards .two .right-side .procent p, .wrapper .overview-cards .seven .right-side .procent p, .wrapper .overview-cards .eight .right-side .procent p {
+.wrapper .overview-cards .two .right-side .procent p,
+.wrapper .overview-cards .seven .right-side .procent p,
+.wrapper .overview-cards .eight .right-side .procent p {
   color: #dc414c;
 }
 /*# sourceMappingURL=main.css.map */
