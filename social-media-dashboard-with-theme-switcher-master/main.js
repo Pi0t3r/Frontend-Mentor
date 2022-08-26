@@ -1,5 +1,5 @@
 const btn = document.querySelector('.slider')
-const darkTexts = document.querySelector('.dark1')
+const darkTexts = document.querySelector('.dark')
 const one = document.querySelector('.one')
 const two = document.querySelector('.two')
 const three = document.querySelector('.three')
@@ -18,6 +18,14 @@ const over5 = document.querySelector('.fifth')
 const over6 = document.querySelector('.sixth')
 const over7 = document.querySelector('.seventh')
 const over8 = document.querySelector('.eighth')
+const dark1 = document.querySelector('.dark1')
+const dark2 = document.querySelector('.dark2')
+const dark3 = document.querySelector('.dark3')
+const dark4 = document.querySelector('.dark4')
+const dark5 = document.querySelector('.dark5')
+const dark6 = document.querySelector('.dark6')
+const dark7 = document.querySelector('.dark7')
+const dark8 = document.querySelector('.dark8')
 
 
 const changeTheme = () => {
@@ -41,6 +49,14 @@ const changeTheme = () => {
     over6.classList.toggle('bg-card')
     over7.classList.toggle('bg-card')
     over8.classList.toggle('bg-card')
+    dark1.classList.toggle('light-theme-text')
+    dark2.classList.toggle('light-theme-text')
+    dark3.classList.toggle('light-theme-text')
+    dark4.classList.toggle('light-theme-text')
+    dark5.classList.toggle('light-theme-text')
+    dark6.classList.toggle('light-theme-text')
+    dark7.classList.toggle('light-theme-text')
+    dark8.classList.toggle('light-theme-text')
 }
 
 btn.addEventListener('click', changeTheme)

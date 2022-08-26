@@ -11,9 +11,7 @@ body {
 	font-size: 14px;
 	background-color: hsl(230, 17%, 14%);
 }
-.green {
-	color: hsl(163, 72%, 41%);
-}
+
 .wrapper {
 	width: 90%;
 	margin: 0 auto;
@@ -155,6 +153,9 @@ body {
 					p {
 						font-weight: bold;
 					}
+					.green {
+						color: hsl(163, 72%, 41%);
+					}
 				}
 			}
 		}
@@ -209,7 +210,7 @@ body {
 		}
 	}
 	.title-second {
-		.gray{
+		.gray {
 			color: hsl(228, 12%, 44%);
 		}
 		h1 {
@@ -238,6 +239,9 @@ body {
 					font-size: 30px;
 					font-weight: bold;
 					margin-top: 20px;
+				}
+				.light-theme-text {
+					color: hsl(230, 17%, 14%);
 				}
 			}
 			.right-side {

@@ -15,10 +15,6 @@ body {
   background-color: #1e202a;
 }
 
-.green {
-  color: #1db489;
-}
-
 .wrapper {
   width: 90%;
   margin: 0 auto;
@@ -201,6 +197,10 @@ body {
   font-weight: bold;
 }
 
+.wrapper .cards .card .text .how-many .green {
+  color: #1db489;
+}
+
 .wrapper .cards .bg-card {
   background-color: #f0f2fa;
 }
@@ -281,6 +281,10 @@ body {
   font-size: 30px;
   font-weight: bold;
   margin-top: 20px;
+}
+
+.wrapper .overview-cards .overview-card .left-side .light-theme-text {
+  color: #1e202a;
 }
 
 .wrapper .overview-cards .overview-card .right-side {
