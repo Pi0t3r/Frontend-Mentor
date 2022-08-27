@@ -15,6 +15,9 @@ body {
 .wrapper {
 	width: 90%;
 	margin: 0 auto;
+	@media (min-width: 1440px) {
+		width: 80%;
+	}
 	.title1 {
 		padding: 30px 0;
 		.darkColor {
@@ -34,12 +37,20 @@ body {
 		width: 100%;
 		height: 1px;
 		background-color: hsl(228, 28%, 20%);
+		@media (min-width: 1440px) {
+			display: none;
+		}
 	}
 	.mode {
 		padding-top: 20px;
 		p {
 			color: hsl(228, 34%, 66%);
 			font-weight: bold;
+			@media (min-width: 1440px) {
+				position: absolute;
+				right: 16%;
+				top: 4%;
+			}
 		}
 		.switch {
 			height: 100px;
@@ -52,6 +63,10 @@ body {
 				width: 60px;
 				left: 94%;
 				top: -20%;
+				@media (min-width: 1440px) {
+					left: 99%;
+					top: -118%;
+				}
 				input {
 					display: none;
 				}
@@ -93,6 +108,15 @@ body {
 	}
 
 	.cards {
+		@media (min-width: 1440px) {
+			margin-top: -85px;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			width: 100%;
+			justify-content: space-between;
+			cursor: pointer;
+		}
 		.card {
 			width: 100%;
 			height: 220px;
@@ -100,6 +124,10 @@ body {
 			margin: -18% 0 29%;
 			border-radius: 5px;
 			overflow: hidden;
+			@media (min-width: 1440px) {
+				width: 22%;
+				margin: 0;
+			}
 
 			.line-card {
 				width: 100%;
@@ -111,11 +139,20 @@ body {
 				top: 50%;
 				transform: translate(-50%, -50%);
 				width: 30%;
+				@media (min-width: 1440px) {
+					width: 100%;
+					text-align: center;
+				}
 				.info {
 					display: flex;
 					flex-direction: row;
 					position: relative;
 					top: -14px;
+					@media (min-width: 1440px) {
+						left: 50%;
+						top: -23px;
+						transform: translateX(-20%);
+					}
 					p {
 						color: hsl(228, 34%, 66%);
 						font-weight: bold;
@@ -143,6 +180,10 @@ body {
 					position: relative;
 					left: 22%;
 					bottom: -15px;
+					@media (min-width: 1440px) {
+						left: 36%;
+						bottom: -27px;
+					}
 					img {
 						height: 5px;
 						line-height: 17px;
@@ -153,14 +194,25 @@ body {
 					p {
 						font-weight: bold;
 					}
+					.p {
+						@media (min-width: 1440px) {
+							color: hsl(163, 72%, 41%);
+						}
+					}
 					.green {
 						color: hsl(163, 72%, 41%);
 					}
 				}
 			}
 		}
+		.card:hover {
+			background-color:  hsl(228, 12%, 44%);
+		}
 		.bg-card {
 			background-color: hsl(227, 47%, 96%);
+		}
+		.bg-card:hover{
+			background-color: hsl(228, 33%, 84%);
 		}
 		.one {
 			.line-card {
@@ -195,6 +247,9 @@ body {
 				.number {
 					position: relative;
 					left: 18%;
+					@media (min-width: 1440px) {
+						left: 0;
+					}
 				}
 			}
 		}
@@ -216,9 +271,18 @@ body {
 		h1 {
 			margin: -50px 0 50px 0;
 			color: hsl(0, 0%, 100%);
+			@media (min-width: 1440px) {
+				margin: 50px 0 50px;
+			}
 		}
 	}
 	.overview-cards {
+		@media (min-width: 1440px) {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
 		.overview-card {
 			width: 100%;
 			height: 125px;
@@ -229,6 +293,10 @@ body {
 			flex-direction: row;
 			justify-content: space-between;
 			padding: 30px;
+			cursor: pointer;
+			@media (min-width: 1440px) {
+				width: 22%;
+			}
 			.left-side {
 				.text {
 					color: hsl(228, 34%, 66%);
@@ -264,9 +332,16 @@ body {
 				}
 			}
 		}
+		.overview-card:hover{
+			background-color:  hsl(228, 12%, 44%);
+		}
 		.bg-card {
 			background-color: hsl(227, 47%, 96%);
 		}
+		.bg-card:hover{
+			background-color: hsl(228, 33%, 84%);
+		}
+		
 		.one,
 		.three,
 		.four,
