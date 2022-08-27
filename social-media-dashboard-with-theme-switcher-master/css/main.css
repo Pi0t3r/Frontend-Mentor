@@ -9,6 +9,43 @@
   background-color: white;
 }
 
+.bold {
+  font-weight: bold;
+}
+
+.backgroundColorDardCard {
+  background-color: #252a41;
+}
+
+.redColorText {
+  color: #dc414c;
+}
+
+.greenColorText {
+  color: #1db489;
+}
+
+.whiteColor {
+  color: white;
+}
+
+.desaturatedBlue {
+  color: #8b97c6;
+}
+
+.boldWithWhiteColor {
+  font-weight: bold;
+  color: white;
+}
+
+.width100 {
+  width: 100%;
+}
+
+.relative {
+  position: relative;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   font-size: 14px;
@@ -34,20 +71,12 @@ body {
   color: #1e202a;
 }
 
-.wrapper .title1 h1 {
-  color: white;
-}
-
 .wrapper .title1 p {
-  color: #8b97c6;
-  font-weight: bold;
   padding: 7px 0 0 0;
 }
 
 .wrapper .line {
-  width: 100%;
   height: 1px;
-  background-color: #252a41;
 }
 
 @media (min-width: 1440px) {
@@ -60,11 +89,6 @@ body {
   padding-top: 20px;
 }
 
-.wrapper .mode p {
-  color: #8b97c6;
-  font-weight: bold;
-}
-
 @media (min-width: 1440px) {
   .wrapper .mode p {
     position: absolute;
@@ -75,14 +99,12 @@ body {
 
 .wrapper .mode .switch {
   height: 100px;
-  position: relative;
   right: 50px;
 }
 
 .wrapper .mode .switch .theme-switch {
   display: inline-block;
   height: 34px;
-  position: relative;
   width: 60px;
   left: 94%;
   top: -20%;
@@ -102,9 +124,9 @@ body {
 .wrapper .mode .switch .theme-switch .slider {
   background: -webkit-gradient(linear, left top, left bottom, from(#378fe6), to(#3eda82));
   background: linear-gradient(#378fe6, #3eda82);
+  position: absolute;
   bottom: 0;
   cursor: pointer;
-  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -114,11 +136,11 @@ body {
 
 .wrapper .mode .switch .theme-switch .slider::before {
   background-color: #1e202a;
+  position: absolute;
   bottom: 4px;
   content: '';
   height: 26px;
   left: 4px;
-  position: absolute;
   -webkit-transition: 0.4s;
   transition: 0.4s;
   width: 26px;
@@ -163,9 +185,7 @@ body {
 }
 
 .wrapper .cards .card {
-  width: 100%;
   height: 220px;
-  background-color: #252a41;
   margin: -18% 0 29%;
   border-radius: 5px;
   overflow: hidden;
@@ -179,12 +199,10 @@ body {
 }
 
 .wrapper .cards .card .line-card {
-  width: 100%;
   height: 5px;
 }
 
 .wrapper .cards .card .text {
-  position: relative;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -207,7 +225,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  position: relative;
   top: -14px;
 }
 
@@ -221,15 +238,11 @@ body {
 }
 
 .wrapper .cards .card .text .info p {
-  color: #8b97c6;
-  font-weight: bold;
   padding-left: 10px;
 }
 
 .wrapper .cards .card .text .number-follow .number {
-  font-weight: bold;
   font-size: 50px;
-  color: white;
 }
 
 .wrapper .cards .card .text .number-follow .light-theme-text {
@@ -238,7 +251,6 @@ body {
 
 .wrapper .cards .card .text .number-follow .follow {
   text-transform: uppercase;
-  color: #8b97c6;
   letter-spacing: 4px;
 }
 
@@ -250,7 +262,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  position: relative;
   left: 22%;
   bottom: -15px;
 }
@@ -265,13 +276,8 @@ body {
 .wrapper .cards .card .text .how-many img {
   height: 5px;
   line-height: 17px;
-  position: relative;
   top: 6px;
   right: 8px;
-}
-
-.wrapper .cards .card .text .how-many p {
-  font-weight: bold;
 }
 
 @media (min-width: 1440px) {
@@ -280,12 +286,8 @@ body {
   }
 }
 
-.wrapper .cards .card .text .how-many .green {
-  color: #1db489;
-}
-
 .wrapper .cards .card:hover {
-  background-color: #63687e;
+  background-color: #f0f2fa;
 }
 
 .wrapper .cards .bg-card {
@@ -300,16 +302,8 @@ body {
   background-color: #198ff5;
 }
 
-.wrapper .cards .one .how-many p {
-  color: white;
-}
-
 .wrapper .cards .two .line-card {
   background-color: #1ca0f2;
-}
-
-.wrapper .cards .two .how-many p {
-  color: #1db489;
 }
 
 .wrapper .cards .three .line-card {
@@ -317,12 +311,7 @@ body {
   background: linear-gradient(0.25turn, #fdc468, #df4996);
 }
 
-.wrapper .cards .three .how-many p {
-  color: #1db489;
-}
-
 .wrapper .cards .three .number-follow .number {
-  position: relative;
   left: 18%;
 }
 
@@ -333,11 +322,7 @@ body {
 }
 
 .wrapper .cards .four .line-card {
-  background-color: #c4032a;
-}
-
-.wrapper .cards .four .how-many p {
-  color: #c4032a;
+  background-color: #dc414c;
 }
 
 .wrapper .title-second .gray {
@@ -346,7 +331,6 @@ body {
 
 .wrapper .title-second h1 {
   margin: -50px 0 50px 0;
-  color: white;
 }
 
 @media (min-width: 1440px) {
@@ -373,9 +357,7 @@ body {
 }
 
 .wrapper .overview-cards .overview-card {
-  width: 100%;
   height: 125px;
-  background-color: #252a41;
   border-radius: 5px;
   margin-bottom: 15px;
   display: -webkit-box;
@@ -398,15 +380,8 @@ body {
   }
 }
 
-.wrapper .overview-cards .overview-card .left-side .text {
-  color: #8b97c6;
-  font-weight: bold;
-}
-
 .wrapper .overview-cards .overview-card .left-side .number-second {
-  color: white;
   font-size: 30px;
-  font-weight: bold;
   margin-top: 20px;
 }
 
@@ -447,10 +422,6 @@ body {
   margin-right: 5px;
 }
 
-.wrapper .overview-cards .overview-card .right-side .procent p {
-  font-weight: bold;
-}
-
 .wrapper .overview-cards .overview-card:hover {
   background-color: #63687e;
 }
@@ -461,19 +432,5 @@ body {
 
 .wrapper .overview-cards .bg-card:hover {
   background-color: #c9cee4;
-}
-
-.wrapper .overview-cards .one .right-side .procent p,
-.wrapper .overview-cards .three .right-side .procent p,
-.wrapper .overview-cards .four .right-side .procent p,
-.wrapper .overview-cards .five .right-side .procent p,
-.wrapper .overview-cards .six .right-side .procent p {
-  color: #1db489;
-}
-
-.wrapper .overview-cards .two .right-side .procent p,
-.wrapper .overview-cards .seven .right-side .procent p,
-.wrapper .overview-cards .eight .right-side .procent p {
-  color: #dc414c;
 }
 /*# sourceMappingURL=main.css.map */

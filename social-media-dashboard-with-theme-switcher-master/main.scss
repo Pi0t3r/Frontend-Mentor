@@ -1,15 +1,46 @@
+@import './colors';
+@import './mixin';
+@import './parameters';
+
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 }
 .body-color {
-	background-color: hsl(0, 0%, 100%);
+	background-color: $whiteColor;
+}
+.bold {
+	font-weight: bold;
+}
+.backgroundColorDardCard {
+	background-color: $cardDarkThemeBg;
+}
+.redColorText {
+	color: $redColorText;
+}
+.greenColorText {
+	color: $greenColorText;
+}
+.whiteColor {
+	color: $whiteColor;
+}
+.desaturatedBlue {
+	color: $DesaturatedBlue;
+}
+.boldWithWhiteColor {
+	@include boldWithWhiteColor;
+}
+.width100 {
+	width: $hundredPercent;
+}
+.relative{
+	position: relative;
 }
 body {
 	font-family: 'Inter', sans-serif;
 	font-size: 14px;
-	background-color: hsl(230, 17%, 14%);
+	background-color: $veryDarkBlue;
 }
 
 .wrapper {
@@ -21,22 +52,14 @@ body {
 	.title1 {
 		padding: 30px 0;
 		.darkColor {
-			color: hsl(230, 17%, 14%);
+			color: $veryDarkBlue;
 		}
-		h1 {
-			color: hsl(0, 0%, 100%);
-		}
-
 		p {
-			color: hsl(228, 34%, 66%);
-			font-weight: bold;
 			padding: 7px 0 0 0;
 		}
 	}
 	.line {
-		width: 100%;
 		height: 1px;
-		background-color: hsl(228, 28%, 20%);
 		@media (min-width: 1440px) {
 			display: none;
 		}
@@ -44,8 +67,6 @@ body {
 	.mode {
 		padding-top: 20px;
 		p {
-			color: hsl(228, 34%, 66%);
-			font-weight: bold;
 			@media (min-width: 1440px) {
 				position: absolute;
 				right: 16%;
@@ -54,12 +75,10 @@ body {
 		}
 		.switch {
 			height: 100px;
-			position: relative;
 			right: 50px;
 			.theme-switch {
 				display: inline-block;
 				height: 34px;
-				position: relative;
 				width: 60px;
 				left: 94%;
 				top: -20%;
@@ -72,21 +91,21 @@ body {
 				}
 				.slider {
 					background: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+					position: absolute;
 					bottom: 0;
 					cursor: pointer;
-					position: absolute;
 					top: 0;
 					left: 0;
 					right: 0;
 					transition: 0.4s;
 				}
 				.slider::before {
-					background-color: hsl(230, 17%, 14%);
+					background-color: $veryDarkBlue;
+					position: absolute;
 					bottom: 4px;
 					content: '';
 					height: 26px;
 					left: 4px;
-					position: absolute;
 					transition: 0.4s;
 					width: 26px;
 				}
@@ -95,7 +114,7 @@ body {
 				}
 				input:checked + .slider::before {
 					transform: translateX(26px);
-					background-color: hsl(0, 0%, 100%);
+					background-color: $whiteColor;
 				}
 				.slider.round {
 					border-radius: 34px;
@@ -106,21 +125,17 @@ body {
 			}
 		}
 	}
-
 	.cards {
 		@media (min-width: 1440px) {
 			margin-top: -85px;
-			display: flex;
-			flex-direction: row;
+			@include flex;
 			flex-wrap: wrap;
-			width: 100%;
+			width: $hundredPercent;
 			justify-content: space-between;
 			cursor: pointer;
 		}
 		.card {
-			width: 100%;
 			height: 220px;
-			background-color: hsl(228, 28%, 20%);
 			margin: -18% 0 29%;
 			border-radius: 5px;
 			overflow: hidden;
@@ -128,25 +143,20 @@ body {
 				width: 22%;
 				margin: 0;
 			}
-
 			.line-card {
-				width: 100%;
 				height: 5px;
 			}
 			.text {
-				position: relative;
 				left: 50%;
 				top: 50%;
 				transform: translate(-50%, -50%);
 				width: 30%;
 				@media (min-width: 1440px) {
-					width: 100%;
+					width: $hundredPercent;
 					text-align: center;
 				}
 				.info {
-					display: flex;
-					flex-direction: row;
-					position: relative;
+					@include flex;
 					top: -14px;
 					@media (min-width: 1440px) {
 						left: 50%;
@@ -154,30 +164,23 @@ body {
 						transform: translateX(-20%);
 					}
 					p {
-						color: hsl(228, 34%, 66%);
-						font-weight: bold;
 						padding-left: 10px;
 					}
 				}
 				.number-follow {
 					.number {
-						font-weight: bold;
 						font-size: 50px;
-						color: hsl(0, 0%, 100%);
 					}
 					.light-theme-text {
-						color: hsl(230, 17%, 14%);
+						color: $veryDarkBlue;
 					}
 					.follow {
 						text-transform: uppercase;
-						color: hsl(228, 34%, 66%);
 						letter-spacing: 4px;
 					}
 				}
 				.how-many {
-					display: flex;
-					flex-direction: row;
-					position: relative;
+					@include flex;
 					left: 22%;
 					bottom: -15px;
 					@media (min-width: 1440px) {
@@ -187,65 +190,42 @@ body {
 					img {
 						height: 5px;
 						line-height: 17px;
-						position: relative;
 						top: 6px;
 						right: 8px;
 					}
-					p {
-						font-weight: bold;
-					}
 					.p {
 						@media (min-width: 1440px) {
-							color: hsl(163, 72%, 41%);
+							color: $greenColorText;
 						}
-					}
-					.green {
-						color: hsl(163, 72%, 41%);
 					}
 				}
 			}
 		}
 		.card:hover {
-			background-color:  hsl(228, 12%, 44%);
+			background-color: $LightGrayishBlue;
 		}
 		.bg-card {
-			background-color: hsl(227, 47%, 96%);
+			background-color: $LightGrayishBlue;
 		}
-		.bg-card:hover{
+		.bg-card:hover {
 			background-color: hsl(228, 33%, 84%);
 		}
 		.one {
 			.line-card {
 				background-color: hsl(208, 92%, 53%);
 			}
-			.how-many {
-				p {
-					color: hsl(0, 0%, 100%);
-				}
-			}
 		}
 		.two {
 			.line-card {
 				background-color: hsl(203, 89%, 53%);
-			}
-			.how-many {
-				p {
-					color: hsl(163, 72%, 41%);
-				}
 			}
 		}
 		.three {
 			.line-card {
 				background: linear-gradient(0.25turn, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
 			}
-			.how-many {
-				p {
-					color: hsl(163, 72%, 41%);
-				}
-			}
 			.number-follow {
 				.number {
-					position: relative;
 					left: 18%;
 					@media (min-width: 1440px) {
 						left: 0;
@@ -255,22 +235,16 @@ body {
 		}
 		.four {
 			.line-card {
-				background-color: hsl(348, 97%, 39%);
-			}
-			.how-many {
-				p {
-					color: hsl(348, 97%, 39%);
-				}
+				background-color: $redColorText;
 			}
 		}
 	}
 	.title-second {
 		.gray {
-			color: hsl(228, 12%, 44%);
+			color: $darkGrayishBlue;
 		}
 		h1 {
 			margin: -50px 0 50px 0;
-			color: hsl(0, 0%, 100%);
 			@media (min-width: 1440px) {
 				margin: 50px 0 50px;
 			}
@@ -278,19 +252,15 @@ body {
 	}
 	.overview-cards {
 		@media (min-width: 1440px) {
-			display: flex;
-			flex-direction: row;
+			@include flex;
 			flex-wrap: wrap;
 			justify-content: space-between;
 		}
 		.overview-card {
-			width: 100%;
 			height: 125px;
-			background-color: hsl(228, 28%, 20%);
 			border-radius: 5px;
 			margin-bottom: 15px;
-			display: flex;
-			flex-direction: row;
+			@include flex;
 			justify-content: space-between;
 			padding: 30px;
 			cursor: pointer;
@@ -298,73 +268,38 @@ body {
 				width: 22%;
 			}
 			.left-side {
-				.text {
-					color: hsl(228, 34%, 66%);
-					font-weight: bold;
-				}
 				.number-second {
-					color: hsl(0, 0%, 100%);
 					font-size: 30px;
-					font-weight: bold;
 					margin-top: 20px;
 				}
 				.light-theme-text {
-					color: hsl(230, 17%, 14%);
+					color: $veryDarkBlue;
 				}
 			}
 			.right-side {
 				width: 52px;
-				height: 100%;
+				height: $hundredPercent;
 				display: flex;
 				flex-direction: column;
 				justify-content: space-between;
 				align-items: flex-end;
 				.procent {
-					display: flex;
-					flex-direction: row;
+					@include flex;
 					line-height: 5px;
 					img {
 						margin-right: 5px;
 					}
-					p {
-						font-weight: bold;
-					}
 				}
 			}
 		}
-		.overview-card:hover{
-			background-color:  hsl(228, 12%, 44%);
+		.overview-card:hover {
+			background-color: $darkGrayishBlue;
 		}
 		.bg-card {
-			background-color: hsl(227, 47%, 96%);
+			background-color: $LightGrayishBlue;
 		}
-		.bg-card:hover{
+		.bg-card:hover {
 			background-color: hsl(228, 33%, 84%);
-		}
-		
-		.one,
-		.three,
-		.four,
-		.five,
-		.six {
-			.right-side {
-				.procent {
-					p {
-						color: hsl(163, 72%, 41%);
-					}
-				}
-			}
-		}
-		.two,
-		.seven,
-		.eight {
-			.right-side {
-				.procent {
-					p {
-						color: hsl(356, 69%, 56%);
-					}
-				}
-			}
 		}
 	}
 }

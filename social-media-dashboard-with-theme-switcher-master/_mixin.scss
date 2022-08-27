@@ -1,0 +1,8 @@
+@mixin flex {
+	display: flex;
+	flex-direction: row;
+}
+@mixin boldWithWhiteColor {
+	font-weight: bold;
+	color: $whiteColor;
+}
