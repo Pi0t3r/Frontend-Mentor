@@ -286,6 +286,10 @@ body {
   }
 }
 
+.wrapper .cards .card .text .how-many .green {
+  color: #1db489;
+}
+
 .wrapper .cards .card:hover {
   background-color: #f0f2fa;
 }

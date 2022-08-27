@@ -34,7 +34,7 @@
 .width100 {
 	width: $hundredPercent;
 }
-.relative{
+.relative {
 	position: relative;
 }
 body {
@@ -197,6 +197,9 @@ body {
 						@media (min-width: 1440px) {
 							color: $greenColorText;
 						}
+					}
+					.green {
+						color: $greenColorText;
 					}
 				}
 			}

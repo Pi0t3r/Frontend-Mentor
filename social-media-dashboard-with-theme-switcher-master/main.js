@@ -58,5 +58,4 @@ const changeTheme = () => {
     dark7.classList.toggle('light-theme-text')
     dark8.classList.toggle('light-theme-text')
 }
-
 btn.addEventListener('click', changeTheme)
