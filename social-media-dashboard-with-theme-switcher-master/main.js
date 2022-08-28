@@ -6,7 +6,7 @@ const overviewCard = [document.querySelector('.first'),document.querySelector('.
 const numbersOverviewCard = [document.querySelector('.dark1'),document.querySelector('.dark2'),document.querySelector('.dark3'),document.querySelector('.dark4'),document.querySelector('.dark5'),document.querySelector('.dark6'),document.querySelector('.dark7'),document.querySelector('.dark8')]
 
 
-const tryIt = () => {
+const changeTheme = () => {
     document.querySelector('.dark').classList.toggle('darkColor')
     document.querySelector('body').classList.toggle('body-color')
     document.querySelector('.h1').classList.toggle('gray')
@@ -23,5 +23,5 @@ const tryIt = () => {
     elements.forEach(toggleCardColor)
     overviewCard.forEach(toggleCardColor)
  }
-btn.addEventListener('click',tryIt)
+btn.addEventListener('click',changeTheme)
 
