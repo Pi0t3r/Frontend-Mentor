@@ -8,6 +8,10 @@ const btn = document.querySelector('.button')
 const cart = document.querySelector('.icon-cart')
 const amountNumber = document.querySelector('.amount-number')
 const cartMain = document.querySelector('.cart')
+const next = document.querySelector('.next')
+const prev = document.querySelector('.prev')
+const images = document.querySelector('.slider')
+
 
 const openSideMenu = () => {
 	menu.classList.remove('hide')
@@ -39,12 +43,16 @@ const showCart = () => {
 	if (!cartMain.classList.contains('none')) {
 		document.querySelector('.next').style.display = 'none'
 		document.querySelector('.prev').style.display = 'none'
-	}else{
-        document.querySelector('.next').style.display = 'block'
+	} else {
+		document.querySelector('.next').style.display = 'block'
 		document.querySelector('.prev').style.display = 'block'
-    }
+	}
 }
+const nextImage = () => { 
+    images.style.transform = `translateX(${-25}%)`
+ }
 
+next.addEventListener('click', nextImage)
 cart.addEventListener('click', showCart)
 btn.addEventListener('click', addToCartNumber)
 minus.addEventListener('click', substract)

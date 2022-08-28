@@ -47,6 +47,7 @@ nav .left-side img {
 
 nav .left-side h1 {
   font-size: 30px;
+  letter-spacing: -1px;
 }
 
 nav .right-side {
@@ -63,6 +64,10 @@ nav .right-side img {
   height: 25px;
   margin: auto;
   padding-left: 25px;
+}
+
+main {
+  overflow: hidden;
 }
 
 main .side-menu {
@@ -117,6 +122,17 @@ main .hide {
 main .img {
   height: 340px;
   overflow: hidden;
+  width: 400%;
+}
+
+main .img .slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 main .img img {
