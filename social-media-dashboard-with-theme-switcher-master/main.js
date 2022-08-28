@@ -1,61 +1,27 @@
 const btn = document.querySelector('.slider')
-const darkTexts = document.querySelector('.dark')
-const one = document.querySelector('.one')
-const two = document.querySelector('.two')
-const three = document.querySelector('.three')
-const four = document.querySelector('.four')
-const number1 = document.querySelector('.number1')
-const number2 = document.querySelector('.number2')
-const number3 = document.querySelector('.number3')
-const number4 = document.querySelector('.number4')
-const today = document.querySelector('.p')
-const h1 = document.querySelector('.h1')
-const over1 = document.querySelector('.first')
-const over2 = document.querySelector('.second')
-const over3 = document.querySelector('.third')
-const over4 = document.querySelector('.fourth')
-const over5 = document.querySelector('.fifth')
-const over6 = document.querySelector('.sixth')
-const over7 = document.querySelector('.seventh')
-const over8 = document.querySelector('.eighth')
-const dark1 = document.querySelector('.dark1')
-const dark2 = document.querySelector('.dark2')
-const dark3 = document.querySelector('.dark3')
-const dark4 = document.querySelector('.dark4')
-const dark5 = document.querySelector('.dark5')
-const dark6 = document.querySelector('.dark6')
-const dark7 = document.querySelector('.dark7')
-const dark8 = document.querySelector('.dark8')
+
+const elements = [document.querySelector('.one'),document.querySelector('.two'),document.querySelector('.three'),document.querySelector('.four')]
+const numbers = [document.querySelector('.number1'),document.querySelector('.number2'),document.querySelector('.number3'),document.querySelector('.number4')]
+const overviewCard = [document.querySelector('.first'),document.querySelector('.second'),document.querySelector('.third'),document.querySelector('.fourth'),document.querySelector('.fifth'),document.querySelector('.sixth'),document.querySelector('.seventh'),document.querySelector('.eighth')]
+const numbersOverviewCard = [document.querySelector('.dark1'),document.querySelector('.dark2'),document.querySelector('.dark3'),document.querySelector('.dark4'),document.querySelector('.dark5'),document.querySelector('.dark6'),document.querySelector('.dark7'),document.querySelector('.dark8')]
 
 
-const changeTheme = () => {
-	darkTexts.classList.toggle('darkColor')
-	document.querySelector('body').classList.toggle('body-color')
-    one.classList.toggle('bg-card')
-    two.classList.toggle('bg-card')
-    three.classList.toggle('bg-card')
-    four.classList.toggle('bg-card')
-    number1.classList.toggle('light-theme-text')
-    number2.classList.toggle('light-theme-text')
-    number3.classList.toggle('light-theme-text')
-    number4.classList.toggle('light-theme-text')
-    today.classList.toggle('green')
-    h1.classList.toggle('gray')
-    over1.classList.toggle('bg-card')
-    over2.classList.toggle('bg-card')
-    over3.classList.toggle('bg-card')
-    over4.classList.toggle('bg-card')
-    over5.classList.toggle('bg-card')
-    over6.classList.toggle('bg-card')
-    over7.classList.toggle('bg-card')
-    over8.classList.toggle('bg-card')
-    dark1.classList.toggle('light-theme-text')
-    dark2.classList.toggle('light-theme-text')
-    dark3.classList.toggle('light-theme-text')
-    dark4.classList.toggle('light-theme-text')
-    dark5.classList.toggle('light-theme-text')
-    dark6.classList.toggle('light-theme-text')
-    dark7.classList.toggle('light-theme-text')
-    dark8.classList.toggle('light-theme-text')
-}
-btn.addEventListener('click', changeTheme)
+const tryIt = () => {
+    document.querySelector('.dark').classList.toggle('darkColor')
+    document.querySelector('body').classList.toggle('body-color')
+    document.querySelector('.h1').classList.toggle('gray')
+    document.querySelector('.p').classList.toggle('green')
+
+    function toggleCardColor(element){
+        element.classList.toggle('bg-card')
+    }
+    function toggleNumberColor(element){
+        element.classList.toggle('light-theme-text')
+    }
+    numbers.forEach(toggleNumberColor)
+    numbersOverviewCard.forEach(toggleNumberColor)
+    elements.forEach(toggleCardColor)
+    overviewCard.forEach(toggleCardColor)
+ }
+btn.addEventListener('click',tryIt)
+
