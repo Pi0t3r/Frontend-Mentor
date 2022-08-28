@@ -327,9 +327,6 @@ main .text-main .btn button img {
   position: relative;
   left: -3%;
   top: 4px;
-}
-
-main .text-main .btn button .white {
   -webkit-filter: brightness(0) invert(1);
           filter: brightness(0) invert(1);
 }
