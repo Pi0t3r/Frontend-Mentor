@@ -65,6 +65,60 @@ nav .right-side img {
   padding-left: 25px;
 }
 
+main .side-menu {
+  width: 70%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  padding: 30px;
+  background-color: white;
+}
+
+main .side-menu .menu-item {
+  padding-top: 30px;
+}
+
+main .side-menu .menu-item ul {
+  list-style: none;
+  line-height: 45px;
+}
+
+main .side-menu .menu-item ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  font-size: 20px;
+}
+
+main .amount {
+  position: absolute;
+  background-color: #ff7d1a;
+  right: 17%;
+  top: 3%;
+  height: 13px;
+  width: 21px;
+  border-radius: 8px;
+  line-height: 13px;
+}
+
+main .amount p {
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+
+main .hide {
+  display: none;
+}
+
+main .img {
+  height: 340px;
+  overflow: hidden;
+}
+
 main .img img {
   width: 100%;
 }
@@ -86,6 +140,7 @@ main .img .next {
   top: 35%;
   width: 11%;
   height: 6%;
+  cursor: pointer;
 }
 
 main .img .prev {
@@ -96,6 +151,35 @@ main .img .prev {
   left: 4%;
   width: 11%;
   height: 6%;
+  cursor: pointer;
+}
+
+main .img .cart {
+  position: absolute;
+  top: 13%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 90%;
+  height: 44%;
+  border-radius: 15px;
+  background-color: white;
+  z-index: 1;
+}
+
+main .img .cart p {
+  padding: 25px;
+  font-weight: bold;
+}
+
+main .img .cart .empty {
+  text-align: center;
+  padding-top: 68px;
+  color: #68707d;
+}
+
+main .img .none {
+  display: none;
 }
 
 main .text-main {
@@ -168,6 +252,7 @@ main .text-main .how-many .minus {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   line-height: 41px;
+  cursor: pointer;
 }
 
 main .text-main .how-many .plus {
@@ -179,6 +264,7 @@ main .text-main .how-many .plus {
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
   line-height: 47px;
+  cursor: pointer;
 }
 
 main .text-main .how-many input {
@@ -186,6 +272,11 @@ main .text-main .how-many input {
   height: 50px;
   border: none;
   background-color: #f7f8fd;
+  text-align: center;
+  font-weight: bold;
+  color: black;
+  font-size: 18px;
+  outline: none;
 }
 
 main .text-main .how-many input::-webkit-input-placeholder {
@@ -216,16 +307,13 @@ main .text-main .how-many input::placeholder {
   font-size: 18px;
 }
 
-main .text-main .btn {
-  margin-bottom: 200px;
-}
-
 main .text-main .btn button {
   background-color: #ff7d1a;
   border: none;
   border-radius: 10px;
   width: 100%;
   height: 50px;
+  cursor: pointer;
 }
 
 main .text-main .btn button p {
