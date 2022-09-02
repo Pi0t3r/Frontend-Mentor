@@ -108,6 +108,17 @@ nav .right-side img {
   height: 25px;
   margin: auto;
   padding-left: 25px;
+  cursor: pointer;
+}
+
+@media (min-width: 1440px) {
+  nav .right-side img {
+    height: 43px;
+  }
+}
+
+nav .right-side .icon-cart {
+  height: 23px;
 }
 
 hr {
@@ -179,6 +190,13 @@ main .amount {
   line-height: 13px;
 }
 
+@media (min-width: 1440px) {
+  main .amount {
+    right: 14.5%;
+    top: 2.5%;
+  }
+}
+
 main .amount p {
   font-size: 10px;
   font-weight: bold;
@@ -205,6 +223,25 @@ main .img {
     overflow: visible;
     margin-left: 6%;
   }
+  main .img .slider .repeat {
+    display: none;
+  }
+}
+
+@media (min-width: 1440px) and (min-width: 1440px) {
+  main .img .slider .repeat {
+    display: block;
+    position: absolute;
+    bottom: 25%;
+    width: 20%;
+    left: 0;
+  }
+  main .img .slider .repeat img {
+    border-radius: 10px;
+  }
+}
+
+@media (min-width: 1440px) {
   main .img .slider .one {
     width: 100%;
   }
@@ -212,13 +249,31 @@ main .img {
     border-radius: 15px;
   }
   main .img .slider .two {
-    display: none;
+    position: absolute;
+    bottom: 25%;
+    width: 20%;
+    left: 27%;
+  }
+  main .img .slider .two img {
+    border-radius: 10px;
   }
   main .img .slider .three {
-    display: none;
+    position: absolute;
+    bottom: 25%;
+    width: 20%;
+    right: 27%;
+  }
+  main .img .slider .three img {
+    border-radius: 10px;
   }
   main .img .slider .four {
-    display: none;
+    position: absolute;
+    bottom: 25%;
+    width: 20%;
+    right: 0;
+  }
+  main .img .slider .four img {
+    border-radius: 10px;
   }
 }
 
@@ -300,6 +355,16 @@ main .img .cart {
   border-radius: 15px;
   background-color: white;
   z-index: 1;
+}
+
+@media (min-width: 1440px) {
+  main .img .cart {
+    position: absolute;
+    top: -17%;
+    left: 260%;
+    -webkit-box-shadow: -8px 13px 20px -6px #000;
+            box-shadow: -8px 13px 20px -6px #000;
+  }
 }
 
 main .img .cart p {
@@ -445,6 +510,7 @@ main .text-main .text p {
 @media (min-width: 1440px) {
   main .text-main .text p {
     font-size: 16px;
+    line-height: 28px;
   }
 }
 
@@ -592,10 +658,10 @@ main .text-main .how-many input::placeholder {
 
 @media (min-width: 1440px) {
   main .text-main .btn {
-    text-align: end;
     position: relative;
     top: -4.5%;
-    left: -7%;
+    left: 28%;
+    width: 57%;
   }
 }
 
@@ -610,7 +676,7 @@ main .text-main .btn button {
 
 @media (min-width: 1440px) {
   main .text-main .btn button {
-    width: 65%;
+    width: 100%;
   }
 }
 
