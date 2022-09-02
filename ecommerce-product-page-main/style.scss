@@ -27,7 +27,7 @@ nav {
 		}
 		h1 {
 			font-size: 30px;
-            letter-spacing: -1px;
+			letter-spacing: -1px;
 		}
 	}
 	.right-side {
@@ -41,32 +41,32 @@ nav {
 	}
 }
 main {
-    overflow: hidden;
-    .side-menu{
-        width: 70%;
-        height: 100%;
-        position: fixed;
-        left: 0;
-        top: 0;
-        z-index: 100;
-        padding: 30px;
-        background-color: hsl(0, 0%, 100%);
-        .menu-item{
-            padding-top: 30px;
-            ul{
-                list-style: none;
-                line-height: 45px;
-                li{
-                    a{
-                        text-decoration: none;
-                        font-weight: bold;
-                        color: hsl(0, 0%, 0%);
-                        font-size: 20px;
-                    }
-                }
-            }
-        }
-    }
+	overflow: hidden;
+	.side-menu {
+		width: 70%;
+		height: 100%;
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 100;
+		padding: 30px;
+		background-color: hsl(0, 0%, 100%);
+		.menu-item {
+			padding-top: 30px;
+			ul {
+				list-style: none;
+				line-height: 45px;
+				li {
+					a {
+						text-decoration: none;
+						font-weight: bold;
+						color: hsl(0, 0%, 0%);
+						font-size: 20px;
+					}
+				}
+			}
+		}
+	}
 	.amount {
 		position: absolute;
 		background-color: hsl(26, 100%, 55%);
@@ -83,21 +83,21 @@ main {
 			color: hsl(0, 0%, 100%);
 		}
 	}
-    .hide{
-        display: none;
-    }
+	.hide {
+		display: none;
+	}
 	.img {
 		height: 340px;
 		overflow: hidden;
-        width: 400%;
-        .slider{
-            display: flex;
-            flex-direction: row;
-        }
-		.move{
+		width: 400%;
+		.slider {
+			display: flex;
+			flex-direction: row;
+		}
+		.move {
 			transform: translateX(-375px);
 		}
-		.move2{
+		.move2 {
 			transform: translateX(-750px);
 		}
 		img {
@@ -148,6 +148,74 @@ main {
 				text-align: center;
 				padding-top: 68px;
 				color: hsl(219, 9%, 45%);
+			}
+			.has-item {
+				display: flex;
+				flex-direction: row;
+				height: 75%;
+
+				.cart-image {
+					width: 15%;
+					height: 25%;
+					border-radius: 7px;
+					position: relative;
+					top: 20%;
+					left: 7%;
+				}
+				.text {
+					display: flex;
+					flex-direction: column;
+					position: relative;
+					left: 4%;
+					.price {
+						font-weight: normal;
+						margin-top: -17%;
+						color: hsl(219, 9%, 45%);
+					}
+					.text-change {
+						margin-top: 10%;
+						font-weight: normal;
+						color: hsl(219, 9%, 45%);
+					}
+					.total-price {
+						font-weight: bold;
+						color: hsl(0, 0%, 0%);
+					}
+					.dolar {
+						font-weight: bold;
+						color: hsl(0, 0%, 0%);
+					}
+				}
+				.delete {
+					position: relative;
+					top: 30%;
+					right: -4%;
+				}
+				.btn {
+					position: absolute;
+					bottom: 10%;
+					width: 100%;
+					text-align: center;
+					button {
+						width: 88%;
+						height: 50px;
+						border-radius: 10px;
+						border: none;
+						background-color: hsl(26, 100%, 55%);
+						p {
+							position: relative;
+							text-align: center;
+							top: -13%;
+							font-weight: bold;
+							color: hsl(0, 0%, 100%);
+							font-family: 'Kumbh Sans', sans-serif;
+							letter-spacing: 1px;
+						}
+					}
+				}
+			}
+			.none {
+				display: none;
 			}
 		}
 		.none {
@@ -257,7 +325,7 @@ main {
 					position: relative;
 					left: -3%;
 					top: 4px;
-                    filter: brightness(0) invert(1);
+					filter: brightness(0) invert(1);
 				}
 			}
 		}

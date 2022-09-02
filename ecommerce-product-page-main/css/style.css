@@ -204,6 +204,95 @@ main .img .cart .empty {
   color: #68707d;
 }
 
+main .img .cart .has-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 75%;
+}
+
+main .img .cart .has-item .cart-image {
+  width: 15%;
+  height: 25%;
+  border-radius: 7px;
+  position: relative;
+  top: 20%;
+  left: 7%;
+}
+
+main .img .cart .has-item .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  left: 4%;
+}
+
+main .img .cart .has-item .text .price {
+  font-weight: normal;
+  margin-top: -17%;
+  color: #68707d;
+}
+
+main .img .cart .has-item .text .text-change {
+  margin-top: 10%;
+  font-weight: normal;
+  color: #68707d;
+}
+
+main .img .cart .has-item .text .total-price {
+  font-weight: bold;
+  color: black;
+}
+
+main .img .cart .has-item .text .dolar {
+  font-weight: bold;
+  color: black;
+}
+
+main .img .cart .has-item .delete {
+  position: relative;
+  top: 30%;
+  right: -4%;
+}
+
+main .img .cart .has-item .btn {
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+  text-align: center;
+}
+
+main .img .cart .has-item .btn button {
+  width: 88%;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: #ff7d1a;
+}
+
+main .img .cart .has-item .btn button p {
+  position: relative;
+  text-align: center;
+  top: -13%;
+  font-weight: bold;
+  color: white;
+  font-family: 'Kumbh Sans', sans-serif;
+  letter-spacing: 1px;
+}
+
+main .img .cart .none {
+  display: none;
+}
+
 main .img .none {
   display: none;
 }

@@ -11,88 +11,106 @@
 		<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet" />
 	</head>
 	<body>
-    <nav>
-        <div class="left-side">
-          <img class="open" src="./images/icon-menu.svg" alt="burger icon">
-          <h1>sneakers</h1>
-        </div>
-        <div class="right-side">
-          <img class="icon-cart" src="./images/icon-cart.svg" alt="icon cart">
-          <img src="./images/image-avatar.png" alt="image avatar man">
-        </div>
-    </nav>
-    <main>
-      <div class="side-menu hide">
-        <div class="btn-close">
-          <img src="./images/icon-close.svg" alt="icon close X">
-        </div>
-        <div class="menu-item">
-          <ul>
-            <li><a href="#">Collections</a></li>
-            <li><a href="#">Men</a></li>
-            <li><a href="#">Women</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="amount hide">
-        <p class="amount-number"></p>
-      </div>
-      <div class="img">
-        <div class="slider">
-          <div class="slide">
-            <img src="./images/image-product-1.jpg" alt="">
-          </div>
-          <div class="slide">
-            <img src="./images/image-product-2.jpg" alt="">
-          </div>
-          <div class="slide">
-            <img src="./images/image-product-3.jpg" alt="">
-          </div>
-          <div class="slide">
-            <img src="./images/image-product-4.jpg" alt="">
-          </div>
-        </div>
-        <div class="next">
-          <img class="icon" src="./images/icon-next.svg" alt="icon next">
-        </div>
-        <div class="prev">
-          <img class="icon" src="./images/icon-previous.svg" alt="icon previous">
-        </div>
-        <div class="cart none">
-          <p>Cart</p>
-          <hr>
-          <div class="empty">
-            <p>Your cart is empty</p>
-          </div>
-        </div>
-      </div>
-      <div class="text-main">
-        <p class="orange">sneaker company</p>
-        <h1>Fall Limited Edition Sneakers</h1>
-        <div class="text">
-          <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
-        </div>
-        <div class="prices">
-          <p class="main">$125.00</p>
-          <p class="promo">50%</p>
-          <p class="old">$250.00</p>
-        </div>
-        <div class="how-many">
-          <div class="minus">
-            <img src="./images/icon-minus.svg" alt="icon orange minus">
-          </div>
-          <div class="plus">
-            <img src="./images/icon-plus.svg" alt="icon orange plus">
-          </div>
-          <input class="howMany" type="text" placeholder="0">
-        </div>
-        <div class="btn">
-          <button class="button"><p><img src="./images/icon-cart.svg" alt="icon cart"> Add to cart</p></button>
-        </div>
-      </div>
-    </main>
-    <script src="./main.js"></script>
-  </body>
+		<nav>
+			<div class="left-side">
+				<img class="open" src="./images/icon-menu.svg" alt="burger icon" />
+				<h1>sneakers</h1>
+			</div>
+			<div class="right-side">
+				<img class="icon-cart" src="./images/icon-cart.svg" alt="icon cart" />
+				<img src="./images/image-avatar.png" alt="image avatar man" />
+			</div>
+		</nav>
+		<main>
+			<div class="side-menu hide">
+				<div class="btn-close">
+					<img src="./images/icon-close.svg" alt="icon close X" />
+				</div>
+				<div class="menu-item">
+					<ul>
+						<li><a href="#">Collections</a></li>
+						<li><a href="#">Men</a></li>
+						<li><a href="#">Women</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="amount hide">
+				<p class="amount-number"></p>
+			</div>
+			<div class="img">
+				<div class="slider">
+					<div class="slide">
+						<img src="./images/image-product-1.jpg" alt="" />
+					</div>
+					<div class="slide">
+						<img src="./images/image-product-2.jpg" alt="" />
+					</div>
+					<div class="slide">
+						<img src="./images/image-product-3.jpg" alt="" />
+					</div>
+					<div class="slide">
+						<img src="./images/image-product-4.jpg" alt="" />
+					</div>
+				</div>
+				<div class="next">
+					<img class="icon" src="./images/icon-next.svg" alt="icon next" />
+				</div>
+				<div class="prev">
+					<img class="icon" src="./images/icon-previous.svg" alt="icon previous" />
+				</div>
+				<div class="cart none">
+					<p>Cart</p>
+					<hr />
+					<div class="empty">
+						<p>Your cart is empty</p>
+					</div>
+					<div class="has-item none">
+						<img class="cart-image" src="./images/image-product-1-thumbnail.jpg" alt="" />
+						<div class="text">
+							<p class="text-change">Autumn Limited Edition...</p>
+							<p class="price">$<span class="price-main">125.00</span> x <span class="count">3</span> <span class="dolar">$</span><span class="total-price">375.00</span></p>
+						</div>
+            <div class="delete">
+              <img src="./images/icon-delete.svg" alt="icon delete">
+            </div>
+            <div class="btn">
+              <button type="submit"><p>Checkout</p></button>
+            </div>
+					</div>
+				</div>
+			</div>
+			<div class="text-main">
+				<p class="orange">sneaker company</p>
+				<h1>Fall Limited Edition Sneakers</h1>
+				<div class="text">
+					<p>
+						These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole,
+						they'll withstand everything the weather can offer.
+					</p>
+				</div>
+				<div class="prices">
+					<p class="main">$125.00</p>
+					<p class="promo">50%</p>
+					<p class="old">$250.00</p>
+				</div>
+				<div class="how-many">
+					<div class="minus">
+						<img src="./images/icon-minus.svg" alt="icon orange minus" />
+					</div>
+					<div class="plus">
+						<img src="./images/icon-plus.svg" alt="icon orange plus" />
+					</div>
+					<input class="howMany" type="text" placeholder="0" />
+				</div>
+				<div class="btn">
+					<button class="button">
+						<p><img src="./images/icon-cart.svg" alt="icon cart" /> Add to cart</p>
+					</button>
+				</div>
+			</div>
+		</main>
+		<script src="./main.js"></script>
+	</body>
 </html>
