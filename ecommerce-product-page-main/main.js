@@ -16,17 +16,28 @@ const empty = document.querySelector('.empty')
 const count = document.querySelector('.count')
 const total = document.querySelector('.total-price')
 const mainPrice = document.querySelector('.price-main')
+const deleteAll = document.querySelector('.delete-icon')
 
 const showItem = () => {
 	if (amountNumber.innerHTML > 0) {
 		empty.classList.add('none')
 		hasItem.classList.remove('none')
+	} else {
+		empty.classList.remove('none')
+		hasItem.classList.add('none')
 	}
+
 	count.innerHTML = howMany.value
 	total.innerHTML = mainPrice.innerHTML * count.innerHTML + '.00'
-	
 }
 
+const deleteCart = () => {
+	document.querySelector('.amount').classList.add('hide')
+	hasItem.classList.add('none')
+	empty.classList.remove('none')
+	howMany.value === 0
+	amountNumber.innerHTML = 0
+}
 const openSideMenu = () => {
 	menu.classList.remove('hide')
 }
@@ -46,7 +57,7 @@ const substract = () => {
 const addToCartNumber = () => {
 	if (howMany.value == 0) {
 		document.querySelector('.amount').classList.add('hide')
-		amountNumber.innerHTML === 0
+		amountNumber.innerHTML = howMany.value
 	} else if (howMany.value > 0) {
 		amountNumber.innerHTML = howMany.value
 		document.querySelector('.amount').classList.remove('hide')
@@ -79,6 +90,8 @@ const firstImage = () => {
 		images.classList.remove('move')
 	}
 }
+
+deleteAll.addEventListener('click', deleteCart)
 cart.addEventListener('click', showItem)
 prev.addEventListener('click', firstImage)
 prev.addEventListener('click', secondImage)
