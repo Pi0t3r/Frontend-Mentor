@@ -135,6 +135,16 @@ main .img .slider {
           flex-direction: row;
 }
 
+main .img .move {
+  -webkit-transform: translateX(-375px);
+          transform: translateX(-375px);
+}
+
+main .img .move2 {
+  -webkit-transform: translateX(-750px);
+          transform: translateX(-750px);
+}
+
 main .img img {
   width: 100%;
 }

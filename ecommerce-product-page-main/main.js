@@ -12,7 +12,6 @@ const next = document.querySelector('.next')
 const prev = document.querySelector('.prev')
 const images = document.querySelector('.slider')
 
-
 const openSideMenu = () => {
 	menu.classList.remove('hide')
 }
@@ -48,10 +47,25 @@ const showCart = () => {
 		document.querySelector('.prev').style.display = 'block'
 	}
 }
-const nextImage = () => { 
-    images.style.transform = `translateX(${-25}%)`
+const nextImage = () => {
+	images.classList.add('move')
+}
+const lastImage = () => {
+	if (images.classList.contains('move')) {
+		images.classList.add('move2')
+	}
+}
+const secondImage = () => {
+	images.classList.remove('move2')
+}
+const firstImage = () => { 
+	if(images.classList.contains('move') && !images.classList.contains('move2')){
+		images.classList.remove('move')
+	}
  }
-
+prev.addEventListener('click',firstImage)
+prev.addEventListener('click',secondImage)
+next.addEventListener('click', lastImage)
 next.addEventListener('click', nextImage)
 cart.addEventListener('click', showCart)
 btn.addEventListener('click', addToCartNumber)

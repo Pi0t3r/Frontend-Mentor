@@ -94,6 +94,12 @@ main {
             display: flex;
             flex-direction: row;
         }
+		.move{
+			transform: translateX(-375px);
+		}
+		.move2{
+			transform: translateX(-750px);
+		}
 		img {
 			width: 100%;
 		}
