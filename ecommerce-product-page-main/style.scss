@@ -49,8 +49,8 @@ nav {
 				justify-content: space-between;
 				list-style: none;
 				height: 95px;
-				li{
-					a{
+				li {
+					a {
 						text-decoration: none;
 						color: #68707d;
 					}
@@ -358,9 +358,14 @@ main {
 			}
 		}
 		.how-many {
-			display: none;
 			text-align: center;
 			margin: 20px 0 20px;
+			@media (min-width: 1440px) {
+				position: relative;
+				top: 8%;
+				width: 27%;
+				left: -6px;
+			}
 			.minus {
 				position: absolute;
 				left: 5%;
@@ -371,6 +376,9 @@ main {
 				border-bottom-left-radius: 10px;
 				line-height: 41px;
 				cursor: pointer;
+				@media (min-width: 1440px) {
+					width: 25%;
+				}
 			}
 			.plus {
 				position: absolute;
@@ -382,6 +390,9 @@ main {
 				border-top-right-radius: 10px;
 				line-height: 47px;
 				cursor: pointer;
+				@media (min-width: 1440px) {
+					width: 25%;
+				}
 			}
 			input {
 				width: 50%;
@@ -402,7 +413,12 @@ main {
 			}
 		}
 		.btn {
-			display: none;
+			@media (min-width: 1440px) {
+				text-align: end;
+				position: relative;
+				top: -4.5%;
+				left: -7%;
+			}
 			button {
 				background-color: hsl(26, 100%, 55%);
 				border: none;
@@ -410,6 +426,9 @@ main {
 				width: 100%;
 				height: 50px;
 				cursor: pointer;
+				@media(min-width:1440px){
+					width: 65%;
+				}
 				p {
 					color: hsl(0, 0%, 100%);
 					font-weight: bold;
