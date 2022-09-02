@@ -28,6 +28,12 @@ nav {
   padding: 0 20px;
 }
 
+@media (min-width: 1440px) {
+  nav {
+    padding: 0 150px;
+  }
+}
+
 nav .left-side {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -45,9 +51,47 @@ nav .left-side img {
   padding-right: 15px;
 }
 
+@media (min-width: 1440px) {
+  nav .left-side img {
+    display: none;
+  }
+}
+
 nav .left-side h1 {
   font-size: 30px;
   letter-spacing: -1px;
+}
+
+nav .left-side .nav-item {
+  display: none;
+  width: 500px;
+  margin-left: 5%;
+}
+
+@media (min-width: 1440px) {
+  nav .left-side .nav-item {
+    display: block;
+  }
+}
+
+nav .left-side .nav-item ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style: none;
+  height: 95px;
+}
+
+nav .left-side .nav-item ul li a {
+  text-decoration: none;
+  color: #68707d;
 }
 
 nav .right-side {
@@ -66,8 +110,35 @@ nav .right-side img {
   padding-left: 25px;
 }
 
+hr {
+  display: none;
+}
+
+@media (min-width: 1440px) {
+  hr {
+    display: block;
+    width: 79.5%;
+    margin: 0 auto;
+    margin-top: 22px;
+  }
+}
+
 main {
   overflow: hidden;
+}
+
+@media (min-width: 1440px) {
+  main {
+    padding: 0 150px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 660px;
+  }
 }
 
 main .side-menu {
@@ -125,6 +196,32 @@ main .img {
   width: 400%;
 }
 
+@media (min-width: 1440px) {
+  main .img {
+    width: 33%;
+    height: 100%;
+    position: relative;
+    top: 115px;
+    overflow: visible;
+    margin-left: 6%;
+  }
+  main .img .slider .one {
+    width: 100%;
+  }
+  main .img .slider .one img {
+    border-radius: 15px;
+  }
+  main .img .slider .two {
+    display: none;
+  }
+  main .img .slider .three {
+    display: none;
+  }
+  main .img .slider .four {
+    display: none;
+  }
+}
+
 main .img .slider {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -169,6 +266,12 @@ main .img .next {
   cursor: pointer;
 }
 
+@media (min-width: 1440px) {
+  main .img .next {
+    display: none;
+  }
+}
+
 main .img .prev {
   background-color: white;
   border-radius: 50%;
@@ -178,6 +281,12 @@ main .img .prev {
   width: 11%;
   height: 6%;
   cursor: pointer;
+}
+
+@media (min-width: 1440px) {
+  main .img .prev {
+    display: none;
+  }
 }
 
 main .img .cart {
@@ -302,6 +411,13 @@ main .text-main {
   margin: 0 auto;
 }
 
+@media (min-width: 1440px) {
+  main .text-main {
+    padding: 105px 31px 0 58px;
+    width: 50%;
+  }
+}
+
 main .text-main .orange {
   color: #ff7d1a;
   font-weight: bold;
@@ -315,9 +431,21 @@ main .text-main h1 {
   padding-bottom: 15px;
 }
 
+@media (min-width: 1440px) {
+  main .text-main h1 {
+    font-size: 42px;
+  }
+}
+
 main .text-main .text p {
   color: #68707d;
   font-size: 15px;
+}
+
+@media (min-width: 1440px) {
+  main .text-main .text p {
+    font-size: 16px;
+  }
 }
 
 main .text-main .prices {
@@ -333,6 +461,17 @@ main .text-main .prices {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 25px;
+}
+
+@media (min-width: 1440px) {
+  main .text-main .prices {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 main .text-main .prices .main {
@@ -353,7 +492,16 @@ main .text-main .prices .old {
   color: #b6bcc8;
 }
 
+@media (min-width: 1440px) {
+  main .text-main .prices .old {
+    position: relative;
+    bottom: -36px;
+    left: -28.5%;
+  }
+}
+
 main .text-main .how-many {
+  display: none;
   text-align: center;
   margin: 20px 0 20px;
 }
@@ -420,6 +568,10 @@ main .text-main .how-many input::placeholder {
   font-weight: bold;
   color: black;
   font-size: 18px;
+}
+
+main .text-main .btn {
+  display: none;
 }
 
 main .text-main .btn button {
