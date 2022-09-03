@@ -17,6 +17,21 @@ const count = document.querySelector('.count')
 const total = document.querySelector('.total-price')
 const mainPrice = document.querySelector('.price-main')
 const deleteAll = document.querySelector('.delete-icon')
+const image1 = document.querySelector('.image1')
+const imagesEnlarged = document.querySelectorAll('.enlarged')
+
+const showFirstImage = () => {
+	image1.classList.toggle('clicked')
+}
+const showSecondImage = () => {
+	document.querySelector('.image2').classList.toggle('clicked')
+}
+const showThirdImage = () => {
+	document.querySelector('.image3').classList.toggle('clicked')
+}
+const showFourthImage = () => {
+	document.querySelector('.image4').classList.toggle('clicked')
+}
 
 const showItem = () => {
 	if (amountNumber.innerHTML > 0) {
@@ -35,7 +50,7 @@ const deleteCart = () => {
 	document.querySelector('.amount').classList.add('hide')
 	hasItem.classList.add('none')
 	empty.classList.remove('none')
-	howMany.value === 0
+	howMany.value = 0
 	amountNumber.innerHTML = 0
 }
 const openSideMenu = () => {
@@ -90,7 +105,15 @@ const firstImage = () => {
 		images.classList.remove('move')
 	}
 }
+const moveEnlargedImage = () => {
+	document.querySelectorAll('.enlarged').classList.add('moveFirst')
+}
 
+document.querySelector('.right').addEventListener('click',moveEnlargedImage)
+document.querySelector('.image2').addEventListener('click', showSecondImage)
+document.querySelector('.image3').addEventListener('click', showThirdImage)
+document.querySelector('.image4').addEventListener('click', showFourthImage)
+image1.addEventListener('click', showFirstImage)
 deleteAll.addEventListener('click', deleteCart)
 cart.addEventListener('click', showItem)
 prev.addEventListener('click', firstImage)
