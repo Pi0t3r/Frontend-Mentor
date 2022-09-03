@@ -19,6 +19,12 @@ const mainPrice = document.querySelector('.price-main')
 const deleteAll = document.querySelector('.delete-icon')
 const image1 = document.querySelector('.image1')
 const imagesEnlarged = document.querySelectorAll('.enlarged')
+const array = [
+	document.querySelector('.enlargedFirst'),
+	document.querySelector('.enlargedSecond'),
+	document.querySelector('.enlargedThird'),
+]
+const pixels = [-463, -926, -1389]
 
 const showFirstImage = () => {
 	image1.classList.toggle('clicked')
@@ -105,11 +111,32 @@ const firstImage = () => {
 		images.classList.remove('move')
 	}
 }
-const moveEnlargedImage = () => {
-	document.querySelectorAll('.enlarged').classList.add('moveFirst')
-}
 
-document.querySelector('.right').addEventListener('click',moveEnlargedImage)
+let curSlide = 0;
+document.querySelector('.right').addEventListener("click", function () {
+     curSlide++;
+
+  document.querySelectorAll('.enlarged').forEach((slide, indx) => {
+    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+	// document.querySelector('.two').style.transform ='translateX(-100%)'
+	// document.querySelector('.three').style.transform ='translateX(-200%)'
+  });
+});
+document.querySelector('.left').addEventListener("click", function () {
+     curSlide--;
+
+  document.querySelectorAll('.enlarged').forEach((slide, indx) => {
+    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+  });
+});
+const closeEnlargedImages = () => { 
+	document.querySelector('.enlarged-photo').style.display = 'none'
+ }
+
+ document.querySelector('.close-photos').addEventListener('click',closeEnlargedImages)
+
+
+
 document.querySelector('.image2').addEventListener('click', showSecondImage)
 document.querySelector('.image3').addEventListener('click', showThirdImage)
 document.querySelector('.image4').addEventListener('click', showFourthImage)

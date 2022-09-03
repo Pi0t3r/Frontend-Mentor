@@ -185,10 +185,6 @@ hr {
   height: 100%;
   border-radius: 22px;
 }
-.enlarged-photo .moveFirst {
-  -webkit-transform: translateX(-463px);
-          transform: translateX(-463px);
-}
 .enlarged-photo .move-image {
   position: absolute;
   top: 41%;
