@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,13 +10,13 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet" />
 	</head>
-	<body>
-		<nav>
-			<div class="left-side">
+	<body> 
+		<nav class="flex-row bg-white space-between">
+			<div class="left-side flex-row">
 				<img class="open" src="./images/icon-menu.svg" alt="burger icon" />
 				<h1>sneakers</h1>
 				<div class="nav-item">
-					<ul>
+					<ul class="flex-row space-between">
 						<li><a href="#">Collections</a></li>
 						<li><a href="#">Men</a></li>
 						<li><a href="#">Women</a></li>
@@ -25,39 +25,39 @@
 					</ul>
 				</div>
 			</div>
-			<div class="right-side">
+			<div class="right-side flex-row">
 				<img class="icon-cart" src="./images/icon-cart.svg" alt="icon cart" />
-				<img src="./images/image-avatar.png" alt="image avatar man" />
+				<img class="pointer" src="./images/image-avatar.png" alt="image avatar man" />
 			</div>
 		</nav>
 		<hr />
-		<div class="enlarged-photo">
+		<div class="enlarged-photo none">
 			<div class="shadow"></div>
 			<div class="close">
-				<img class="close-photos" src="./images/icon-close.svg" alt="">
+				<img class="close-photos pointer" src="./images/icon-close.svg" alt="">
 			</div>
-			<div class="image">
+			<div class="image flex-row">
 				<img class="enlarged one" src="./images/image-product-1.jpg" alt="">
 				<img class="enlarged two" src="./images/image-product-2.jpg" alt="">
 				<img class="enlarged three" src="./images/image-product-3.jpg" alt="">
 			</div>
-			<div class="move-image">
-				<div class="left">
+			<div class="move-image flex-row space-between">
+				<div class="left bg-white pointer">
 					<img src="./images/icon-previous.svg" alt="">
 				</div>
-				<div class="right">
+				<div class="right bg-white pointer">
 					<img src="./images/icon-next.svg" alt="">
 				</div>
 			</div>
-			<div class="thumbnails">
-				<img src="./images/image-product-1.jpg" alt="">
-				<img src="./images/image-product-2.jpg" alt="">
-				<img src="./images/image-product-3.jpg" alt="">
-				<img src="./images/image-product-4.jpg" alt="">
+			<div class="thumbnails flex-row space-between">
+				<img class="pointer" src="./images/image-product-1.jpg" alt="">
+				<img class="pointer" src="./images/image-product-2.jpg" alt="">
+				<img class="pointer" src="./images/image-product-3.jpg" alt="">
+				<img class="pointer" src="./images/image-product-4.jpg" alt="">
 			</div>
 		</div>
 		<main>
-			<div class="side-menu hide">
+			<div class="side-menu bg-white">
 				<div class="btn-close">
 					<img src="./images/icon-close.svg" alt="icon close X" />
 				</div>
@@ -71,34 +71,34 @@
 					</ul>
 				</div>
 			</div>
-			<div class="amount hide">
+			<div class="amount hide main-color">
 				<p class="amount-number"></p>
 			</div>
 			<div class="img">
-				<div class="slider">
+				<div class="slider flex-row">
 					<div class="slide one">
 						<img class="main-image" src="./images/image-product-1.jpg" alt="" />
 					</div>
-					<div class="slide repeat">
+					<div class="slide repeat pointer">
 						<img class="image1" src="./images/image-product-1.jpg" alt="" />
 					</div>
-					<div class="slide two">
+					<div class="slide two pointer">
 						<img class="image2" src="./images/image-product-2.jpg" alt="" />
 					</div>
-					<div class="slide three">
+					<div class="slide three pointer">
 						<img class="image3" src="./images/image-product-3.jpg" alt="" />
 					</div>
-					<div class="slide four">
+					<div class="slide four pointer">
 						<img class="image4" src="./images/image-product-4.jpg" alt="" />
 					</div>
 				</div>
-				<div class="next">
+				<div class="next bg-white">
 					<img class="icon" src="./images/icon-next.svg" alt="icon next" />
 				</div>
-				<div class="prev">
+				<div class="prev bg-white">
 					<img class="icon" src="./images/icon-previous.svg" alt="icon previous" />
 				</div>
-				<div class="cart none">
+				<div class="cart none bg-white">
 					<p>Cart</p>
 					<hr class="hr" />
 					<div class="empty">
@@ -118,7 +118,7 @@
 							<img class="delete-icon" src="./images/icon-delete.svg" alt="icon delete" />
 						</div>
 						<div class="btn">
-							<button type="submit"><p>Checkout</p></button>
+							<button class="main-color" type="submit"><p>Checkout</p></button>
 						</div>
 					</div>
 				</div>
@@ -132,22 +132,22 @@
 						they'll withstand everything the weather can offer.
 					</p>
 				</div>
-				<div class="prices">
+				<div class="prices flex-row space-between">
 					<p class="main">$125.00</p>
 					<p class="promo">50%</p>
 					<p class="old">$250.00</p>
 				</div>
 				<div class="how-many">
-					<div class="minus">
+					<div class="minus very-light-gray">
 						<img src="./images/icon-minus.svg" alt="icon orange minus" />
 					</div>
-					<div class="plus">
+					<div class="plus very-light-gray">
 						<img src="./images/icon-plus.svg" alt="icon orange plus" />
 					</div>
-					<input class="howMany" type="text" placeholder="0" />
+					<input class="howMany very-light-gray" type="text" placeholder="0" />
 				</div>
 				<div class="btn">
-					<button class="button">
+					<button class="button main-color">
 						<p><img src="./images/icon-cart.svg" alt="icon cart" /> Add to cart</p>
 					</button>
 				</div>

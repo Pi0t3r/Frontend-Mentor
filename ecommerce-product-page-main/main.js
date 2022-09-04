@@ -60,10 +60,10 @@ const deleteCart = () => {
 	amountNumber.innerHTML = 0
 }
 const openSideMenu = () => {
-	menu.classList.remove('hide')
+	menu.classList.add('move-sideMenu')
 }
 const closeSideMenu = () => {
-	menu.classList.add('hide')
+	menu.classList.remove('move-sideMenu')
 }
 
 const add = () => {
@@ -112,31 +112,33 @@ const firstImage = () => {
 	}
 }
 
-let curSlide = 0;
-document.querySelector('.right').addEventListener("click", function () {
-     curSlide++;
+let curSlide = 0
+document.querySelector('.right').addEventListener('click', function () {
+	curSlide++
 
-  document.querySelectorAll('.enlarged').forEach((slide, indx) => {
-    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-	// document.querySelector('.two').style.transform ='translateX(-100%)'
-	// document.querySelector('.three').style.transform ='translateX(-200%)'
-  });
-});
-document.querySelector('.left').addEventListener("click", function () {
-     curSlide--;
+	document.querySelectorAll('.enlarged').forEach((slide, indx) => {
+		slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`
+	})
+	if (document.querySelector('.two').getComputedStyle('transform.translateX(-100%)')) {
+		alert('cos dziala')
+	}
+})
+document.querySelector('.left').addEventListener('click', function () {
+	curSlide--
 
-  document.querySelectorAll('.enlarged').forEach((slide, indx) => {
-    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-  });
-});
-const closeEnlargedImages = () => { 
-	document.querySelector('.enlarged-photo').style.display = 'none'
- }
+	document.querySelectorAll('.enlarged').forEach((slide, indx) => {
+		slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`
+	})
+})
+const closeEnlargedImages = () => {
+	document.querySelector('.enlarged-photo').classList.add('none')
+}
+const showEnlargedImages = () => {
+	document.querySelector('.enlarged-photo').classList.remove('none')
+}
 
- document.querySelector('.close-photos').addEventListener('click',closeEnlargedImages)
-
-
-
+document.querySelector('.main-image').addEventListener('click',showEnlargedImages)
+document.querySelector('.close-photos').addEventListener('click', closeEnlargedImages)
 document.querySelector('.image2').addEventListener('click', showSecondImage)
 document.querySelector('.image3').addEventListener('click', showThirdImage)
 document.querySelector('.image4').addEventListener('click', showFourthImage)

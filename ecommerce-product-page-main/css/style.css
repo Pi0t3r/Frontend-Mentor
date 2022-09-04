@@ -10,10 +10,7 @@ body {
   font-size: 16px;
 }
 
-nav {
-  width: 100%;
-  height: 70px;
-  background-color: hsl(0deg, 0%, 100%);
+.flex-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -21,9 +18,37 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+.none {
+  display: none;
+}
+
+.bg-white {
+  background-color: hsl(0deg, 0%, 100%);
+}
+
+.main-color {
+  background-color: hsl(26deg, 100%, 55%);
+}
+
+.very-light-gray {
+  background-color: hsl(223deg, 64%, 98%);
+}
+
+.space-between {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+nav {
+  width: 100%;
+  height: 70px;
   line-height: 70px;
   padding: 0 20px;
 }
@@ -33,13 +58,6 @@ nav {
   }
 }
 nav .left-side {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   line-height: 70px;
 }
 @media (min-width: 1440px) {
@@ -72,16 +90,6 @@ nav .left-side .nav-item {
   }
 }
 nav .left-side .nav-item ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   list-style: none;
   height: 91px;
 }
@@ -96,20 +104,10 @@ nav .left-side .nav-item ul li:hover a {
   color: hsl(0deg, 0%, 0%);
   font-weight: bold;
 }
-nav .right-side {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
 nav .right-side img {
   height: 25px;
   margin: auto;
   padding-left: 25px;
-  cursor: pointer;
 }
 @media (min-width: 1440px) {
   nav .right-side img {
@@ -155,7 +153,6 @@ hr {
   -webkit-filter: invert(100%) brightness(157%) contrast(173%);
           filter: invert(100%) brightness(157%) contrast(173%);
   z-index: 12;
-  cursor: pointer;
 }
 .enlarged-photo .close .close-photos:hover {
   -webkit-filter: invert(66%) sepia(86%) saturate(3354%) hue-rotate(357deg) brightness(132%) contrast(152%);
@@ -168,13 +165,6 @@ hr {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   overflow: hidden;
   width: 463px;
   height: 463px;
@@ -188,16 +178,6 @@ hr {
 .enlarged-photo .move-image {
   position: absolute;
   top: 41%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   width: 36%;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -206,11 +186,9 @@ hr {
 }
 .enlarged-photo .move-image .left,
 .enlarged-photo .move-image .right {
-  background-color: hsl(0deg, 0%, 100%);
   border-radius: 50%;
   height: 50px;
   width: 50px;
-  cursor: pointer;
 }
 .enlarged-photo .move-image .left img,
 .enlarged-photo .move-image .right img {
@@ -231,16 +209,6 @@ hr {
 }
 .enlarged-photo .thumbnails {
   width: 28%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   position: absolute;
   top: 79%;
   left: 50%;
@@ -251,7 +219,6 @@ hr {
 .enlarged-photo .thumbnails img {
   width: 18%;
   border-radius: 10px;
-  cursor: pointer;
   -webkit-transition: -webkit-filter 0.5s;
   transition: -webkit-filter 0.5s;
   transition: filter 0.5s;
@@ -287,7 +254,10 @@ main .side-menu {
   top: 0;
   z-index: 100;
   padding: 30px;
-  background-color: hsl(0deg, 0%, 100%);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 main .side-menu .menu-item {
   padding-top: 30px;
@@ -304,7 +274,6 @@ main .side-menu .menu-item ul li a {
 }
 main .amount {
   position: absolute;
-  background-color: hsl(26deg, 100%, 55%);
   right: 17%;
   top: 3%;
   height: 13px;
@@ -324,13 +293,17 @@ main .amount p {
   text-align: center;
   color: hsl(0deg, 0%, 100%);
 }
+main .move-sideMenu {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
 main .hide {
   display: none;
 }
 main .img {
   height: 340px;
   overflow: hidden;
-  width: 400%;
+  width: 500vw;
 }
 @media (min-width: 1440px) {
   main .img {
@@ -352,10 +325,18 @@ main .img {
     bottom: 25%;
     width: 20%;
     left: 0;
-    cursor: pointer;
   }
   main .img .slider .repeat img {
     border-radius: 10px;
+  }
+}
+@media (min-width: 1440px) {
+  main .img .slider .two,
+main .img .slider .three,
+main .img .slider .four {
+    position: absolute;
+    bottom: 25%;
+    width: 20%;
   }
 }
 @media (min-width: 1440px) {
@@ -368,11 +349,7 @@ main .img {
 }
 @media (min-width: 1440px) {
   main .img .slider .two {
-    position: absolute;
-    bottom: 25%;
-    width: 20%;
     left: 27%;
-    cursor: pointer;
   }
   main .img .slider .two img {
     border-radius: 10px;
@@ -380,10 +357,6 @@ main .img {
 }
 @media (min-width: 1440px) {
   main .img .slider .three {
-    cursor: pointer;
-    position: absolute;
-    bottom: 25%;
-    width: 20%;
     right: 27%;
   }
   main .img .slider .three img {
@@ -392,10 +365,6 @@ main .img {
 }
 @media (min-width: 1440px) {
   main .img .slider .four {
-    cursor: pointer;
-    position: absolute;
-    bottom: 25%;
-    width: 20%;
     right: 0;
   }
   main .img .slider .four img {
@@ -416,15 +385,6 @@ main .img .slider .three img:hover {
     border: 3px solid hsl(26deg, 100%, 55%);
   }
 }
-main .img .slider {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
 main .img .move {
   -webkit-transform: translateX(-750px);
           transform: translateX(-750px);
@@ -433,15 +393,7 @@ main .img .move2 {
   -webkit-transform: translateX(-1500px);
           transform: translateX(-1500px);
 }
-main .img img {
-  width: 100%;
-}
-@media (max-width: 380px) {
-  main .img img {
-    width: 100vw;
-  }
-}
-main .img .icon {
+main .icon {
   width: 27%;
   position: relative;
   top: 50%;
@@ -449,8 +401,7 @@ main .img .icon {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
-main .img .next {
-  background-color: hsl(0deg, 0%, 100%);
+main .next {
   border-radius: 50%;
   position: absolute;
   right: 4%;
@@ -460,12 +411,11 @@ main .img .next {
   cursor: pointer;
 }
 @media (min-width: 1440px) {
-  main .img .next {
+  main .next {
     display: none;
   }
 }
-main .img .prev {
-  background-color: hsl(0deg, 0%, 100%);
+main .prev {
   border-radius: 50%;
   position: absolute;
   top: 35%;
@@ -475,11 +425,11 @@ main .img .prev {
   cursor: pointer;
 }
 @media (min-width: 1440px) {
-  main .img .prev {
+  main .prev {
     display: none;
   }
 }
-main .img .cart {
+main .cart {
   position: absolute;
   top: 13%;
   left: 50%;
@@ -488,11 +438,10 @@ main .img .cart {
   width: 90%;
   height: 44%;
   border-radius: 15px;
-  background-color: hsl(0deg, 0%, 100%);
   z-index: 1;
 }
 @media (min-width: 1440px) {
-  main .img .cart {
+  main .cart {
     position: absolute;
     top: -17%;
     left: 260%;
@@ -501,20 +450,20 @@ main .img .cart {
     height: 40%;
   }
 }
-main .img .cart p {
+main .cart p {
   padding: 25px;
   font-weight: bold;
 }
-main .img .cart .empty {
+main .cart .empty {
   text-align: center;
   padding-top: 68px;
   color: hsl(219deg, 9%, 45%);
 }
-main .img .cart .hr {
+main .cart .hr {
   margin-top: 4px;
   width: 100%;
 }
-main .img .cart .has-item {
+main .cart .has-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -524,7 +473,7 @@ main .img .cart .has-item {
           flex-direction: row;
   height: 75%;
 }
-main .img .cart .has-item .cart-image {
+main .cart .has-item .cart-image {
   width: 15%;
   height: 25%;
   border-radius: 7px;
@@ -532,7 +481,7 @@ main .img .cart .has-item .cart-image {
   top: 12%;
   left: 7%;
 }
-main .img .cart .has-item .text {
+main .cart .has-item .text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -543,61 +492,66 @@ main .img .cart .has-item .text {
   position: relative;
   left: 4%;
 }
-main .img .cart .has-item .text .price {
+main .cart .has-item .text .price {
   font-weight: normal;
   margin-top: -17%;
   color: hsl(219deg, 9%, 45%);
 }
-main .img .cart .has-item .text .text-change {
-  margin-top: 10%;
+main .cart .has-item .text .text-change {
+  margin-top: 2%;
   font-weight: normal;
   color: hsl(219deg, 9%, 45%);
 }
 @media (min-width: 1440px) {
-  main .img .cart .has-item .text .text-change {
+  main .cart .has-item .text .text-change {
     display: none;
   }
 }
-main .img .cart .has-item .text .desktop {
+main .cart .has-item .text .desktop {
   display: block;
   margin-top: 2%;
 }
-main .img .cart .has-item .text .total-price {
+@media (max-width: 1439px) {
+  main .cart .has-item .text .desktop {
+    display: none;
+  }
+}
+main .cart .has-item .text .total-price {
   font-weight: bold;
   color: hsl(0deg, 0%, 0%);
 }
-main .img .cart .has-item .text .dolar {
+main .cart .has-item .text .dolar {
   font-weight: bold;
   color: hsl(0deg, 0%, 0%);
 }
-main .img .cart .has-item .delete {
+main .cart .has-item .delete {
   position: relative;
-  top: 30%;
+  top: 20%;
   right: -4%;
+  height: 20px;
 }
 @media (min-width: 1440px) {
-  main .img .cart .has-item .delete {
+  main .cart .has-item .delete {
     top: 18%;
     right: 0%;
   }
 }
-main .img .cart .has-item .delete img {
+main .cart .has-item .delete img {
   cursor: pointer;
 }
-main .img .cart .has-item .btn {
+main .cart .has-item .btn {
   position: absolute;
   bottom: 10%;
   width: 100%;
   text-align: center;
 }
-main .img .cart .has-item .btn button {
+main .cart .has-item .btn button {
   width: 88%;
   height: 50px;
   border-radius: 10px;
   border: none;
-  background-color: hsl(26deg, 100%, 55%);
 }
-main .img .cart .has-item .btn button p {
+main .cart .has-item .btn button p {
   position: relative;
   text-align: center;
   top: -13%;
@@ -606,64 +560,55 @@ main .img .cart .has-item .btn button p {
   font-family: "Kumbh Sans", sans-serif;
   letter-spacing: 1px;
 }
-main .img .cart .none {
+main .cart .none {
   display: none;
 }
-main .img .none {
+main .none {
   display: none;
 }
-main .text-main {
+
+.text-main {
   width: 90%;
   margin: 0 auto;
 }
 @media (min-width: 1440px) {
-  main .text-main {
+  .text-main {
     padding: 105px 31px 0 58px;
     width: 50%;
   }
 }
-main .text-main .orange {
+.text-main .orange {
   color: hsl(26deg, 100%, 55%);
   font-weight: bold;
   font-size: 15px;
   padding: 23px 0;
   text-transform: uppercase;
 }
-main .text-main h1 {
+.text-main h1 {
   margin: -7px 0 0 0;
   padding-bottom: 15px;
 }
 @media (min-width: 1440px) {
-  main .text-main h1 {
+  .text-main h1 {
     font-size: 42px;
   }
 }
-main .text-main .text p {
+.text-main .text p {
   color: hsl(219deg, 9%, 45%);
   font-size: 15px;
 }
 @media (min-width: 1440px) {
-  main .text-main .text p {
+  .text-main .text p {
     font-size: 16px;
     line-height: 28px;
   }
 }
-main .text-main .prices {
+.text-main .prices {
   font-weight: bold;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   padding-top: 25px;
 }
 @media (min-width: 1440px) {
-  main .text-main .prices {
+  .text-main .prices {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
@@ -672,10 +617,10 @@ main .text-main .prices {
             align-items: center;
   }
 }
-main .text-main .prices .main {
+.text-main .prices .main {
   font-size: 25px;
 }
-main .text-main .prices .promo {
+.text-main .prices .promo {
   background-color: hsl(25deg, 100%, 94%);
   width: 50px;
   height: 25px;
@@ -683,34 +628,33 @@ main .text-main .prices .promo {
   text-align: center;
   line-height: 25px;
 }
-main .text-main .prices .old {
+.text-main .prices .old {
   text-decoration: line-through;
   color: hsl(220deg, 14%, 75%);
 }
 @media (min-width: 1440px) {
-  main .text-main .prices .old {
+  .text-main .prices .old {
     position: relative;
     bottom: -36px;
     left: -28.5%;
   }
 }
-main .text-main .how-many {
+.text-main .how-many {
   text-align: center;
   margin: 20px 0 20px;
 }
 @media (min-width: 1440px) {
-  main .text-main .how-many {
+  .text-main .how-many {
     position: relative;
     top: 8%;
     width: 27%;
     left: -6px;
   }
 }
-main .text-main .how-many .minus {
+.text-main .how-many .minus {
   position: absolute;
   left: 5%;
   height: 50px;
-  background-color: hsl(223deg, 64%, 98%);
   width: 85px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -718,15 +662,14 @@ main .text-main .how-many .minus {
   cursor: pointer;
 }
 @media (min-width: 1440px) {
-  main .text-main .how-many .minus {
+  .text-main .how-many .minus {
     width: 25%;
   }
 }
-main .text-main .how-many .plus {
+.text-main .how-many .plus {
   position: absolute;
   right: 5%;
   height: 50px;
-  background-color: hsl(223deg, 64%, 98%);
   width: 85px;
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
@@ -734,61 +677,59 @@ main .text-main .how-many .plus {
   cursor: pointer;
 }
 @media (min-width: 1440px) {
-  main .text-main .how-many .plus {
+  .text-main .how-many .plus {
     width: 25%;
   }
 }
-main .text-main .how-many input {
+.text-main .how-many input {
   width: 50%;
   height: 50px;
   border: none;
-  background-color: hsl(223deg, 64%, 98%);
   text-align: center;
   font-weight: bold;
   color: hsl(0deg, 0%, 0%);
   font-size: 18px;
   outline: none;
 }
-main .text-main .how-many input::-webkit-input-placeholder {
+.text-main .how-many input::-webkit-input-placeholder {
   text-align: center;
   font-weight: bold;
   color: hsl(0deg, 0%, 0%);
   font-size: 18px;
 }
-main .text-main .how-many input::-moz-placeholder {
+.text-main .how-many input::-moz-placeholder {
   text-align: center;
   font-weight: bold;
   color: hsl(0deg, 0%, 0%);
   font-size: 18px;
 }
-main .text-main .how-many input:-ms-input-placeholder {
+.text-main .how-many input:-ms-input-placeholder {
   text-align: center;
   font-weight: bold;
   color: hsl(0deg, 0%, 0%);
   font-size: 18px;
 }
-main .text-main .how-many input::-ms-input-placeholder {
+.text-main .how-many input::-ms-input-placeholder {
   text-align: center;
   font-weight: bold;
   color: hsl(0deg, 0%, 0%);
   font-size: 18px;
 }
-main .text-main .how-many input::placeholder {
+.text-main .how-many input::placeholder {
   text-align: center;
   font-weight: bold;
   color: hsl(0deg, 0%, 0%);
   font-size: 18px;
 }
 @media (min-width: 1440px) {
-  main .text-main .btn {
+  .text-main .btn {
     position: relative;
     top: -4.5%;
     left: 28%;
     width: 57%;
   }
 }
-main .text-main .btn button {
-  background-color: hsl(26deg, 100%, 55%);
+.text-main .btn button {
   border: none;
   border-radius: 10px;
   width: 100%;
@@ -796,24 +737,24 @@ main .text-main .btn button {
   cursor: pointer;
 }
 @media (min-width: 1440px) {
-  main .text-main .btn button {
+  .text-main .btn button {
     width: 100%;
   }
 }
-main .text-main .btn button p {
+.text-main .btn button p {
   color: hsl(0deg, 0%, 100%);
   font-weight: bold;
   font-size: 15px;
   line-height: 50px;
 }
-main .text-main .btn button img {
+.text-main .btn button img {
   position: relative;
   left: -3%;
   top: 4px;
   -webkit-filter: brightness(0) invert(1);
           filter: brightness(0) invert(1);
 }
-main .text-main .btn button:hover {
+.text-main .btn button:hover {
   -webkit-filter: opacity(0.5);
           filter: opacity(0.5);
   -webkit-box-shadow: 2px 13px 20px #ffede0;
