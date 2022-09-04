@@ -352,12 +352,16 @@ main .img {
   }
 }
 @media (min-width: 1440px) {
-  main .img .slider .two, main .img .slider .three, main .img .slider .four {
+  main .img .slider .two,
+main .img .slider .three,
+main .img .slider .four {
     position: absolute;
     bottom: 19%;
     width: 20%;
   }
-  main .img .slider .two img, main .img .slider .three img, main .img .slider .four img {
+  main .img .slider .two img,
+main .img .slider .three img,
+main .img .slider .four img {
     border-radius: 10px;
     width: 100%;
   }
@@ -388,7 +392,9 @@ main .img .slider .three img:hover {
 }
 @media (min-width: 1440px) {
   main .img .slider .clicked {
-    border: 3px solid hsl(26deg, 100%, 55%);
+    border: 4px solid hsl(26deg, 100%, 55%);
+    -webkit-filter: opacity(0.5);
+            filter: opacity(0.5);
   }
 }
 main .img .move {
@@ -546,7 +552,7 @@ main .none {
 }
 @media (min-width: 1440px) {
   .text-main {
-    padding: 105px 31px 0 58px;
+    padding: 185px 52px 0 90px;
     width: 50%;
   }
 }
@@ -597,6 +603,8 @@ main .none {
   height: 25px;
   border-radius: 6px;
   line-height: 25px;
+  margin-left: 15px;
+  color: hsl(26deg, 100%, 55%);
 }
 .text-main .prices .old {
   text-decoration: line-through;
@@ -606,7 +614,7 @@ main .none {
   .text-main .prices .old {
     position: relative;
     bottom: -36px;
-    left: -28.5%;
+    left: -37.5%;
   }
 }
 .text-main .how-many {
@@ -628,23 +636,23 @@ main .none {
 @media (min-width: 1440px) {
   .text-main .how-many .minus,
 .text-main .how-many .plus {
-    width: 25%;
+    width: 33%;
   }
 }
 .text-main .how-many .minus {
-  left: 5%;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   line-height: 41px;
 }
 .text-main .how-many .plus {
-  right: 5%;
+  right: -20%;
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
   line-height: 47px;
 }
 .text-main .how-many input {
-  width: 50%;
+  left: 5%;
+  width: 70%;
   height: 50px;
   border: none;
   color: hsl(0deg, 0%, 0%);
@@ -684,8 +692,8 @@ main .none {
 @media (min-width: 1440px) {
   .text-main .btn {
     position: relative;
-    top: -4.5%;
-    left: 28%;
+    top: -5.5%;
+    left: 40%;
     width: 57%;
   }
 }
@@ -694,11 +702,12 @@ main .none {
   border-radius: 10px;
   width: 100%;
   height: 50px;
-  cursor: pointer;
 }
 @media (min-width: 1440px) {
   .text-main .btn button {
     width: 100%;
+    -webkit-filter: drop-shadow(2px 10px 11px hsl(26deg, 100%, 55%));
+            filter: drop-shadow(2px 10px 11px hsl(26deg, 100%, 55%));
   }
 }
 .text-main .btn button p {

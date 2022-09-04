@@ -85,7 +85,7 @@ nav {
 					}
 				}
 				li:hover {
-					border-bottom: 4px solid hsl(26, 100%, 55%);
+					border-bottom: 4px solid $main-color;
 				}
 				li:hover a {
 					color: hsl(0, 0%, 0%);
@@ -194,7 +194,7 @@ hr {
 		}
 		img:hover {
 			filter: contrast(0.5) brightness(1.7);
-			border: 3px solid hsl(26, 100%, 55%);
+			border: 3px solid $main-color;
 		}
 	}
 }
@@ -266,7 +266,7 @@ main {
 			overflow: visible;
 			margin-left: 6%;
 			.slider {
-				.repeat {		
+				.repeat {
 					display: none;
 					@media (min-width: 1440px) {
 						display: block;
@@ -290,7 +290,9 @@ main {
 						border-radius: 15px;
 					}
 				}
-				.two,.three,.four{
+				.two,
+				.three,
+				.four {
 					position: absolute;
 					bottom: 19%;
 					width: 20%;
@@ -301,15 +303,12 @@ main {
 				}
 				.two {
 					left: 27%;
-					
 				}
 				.three {
 					right: 27%;
-					
 				}
 				.four {
 					right: 0;
-					
 				}
 				.two,
 				.repeat,
@@ -320,7 +319,8 @@ main {
 					}
 				}
 				.clicked {
-					border: 3px solid hsl(26, 100%, 55%);
+					border: 4px solid $main-color;
+					filter: opacity(0.5);
 				}
 			}
 		}
@@ -457,11 +457,11 @@ main {
 	width: 90%;
 	margin: 0 auto;
 	@media (min-width: 1440px) {
-		padding: 105px 31px 0 58px;
+		padding: 185px 52px 0 90px;
 		width: 50%;
 	}
 	.orange {
-		color: hsl(26, 100%, 55%);
+		color: $main-color;
 		font-size: 15px;
 		padding: 23px 0;
 		text-transform: uppercase;
@@ -498,6 +498,8 @@ main {
 			height: 25px;
 			border-radius: 6px;
 			line-height: 25px;
+			margin-left: 15px;
+			color: $main-color;
 		}
 		.old {
 			text-decoration: line-through;
@@ -505,7 +507,7 @@ main {
 			@media (min-width: 1440px) {
 				position: relative;
 				bottom: -36px;
-				left: -28.5%;
+				left: -37.5%;
 			}
 		}
 	}
@@ -522,23 +524,23 @@ main {
 			height: 50px;
 			width: 85px;
 			@media (min-width: 1440px) {
-				width: 25%;
+				width: 33%;
 			}
 		}
 		.minus {
-			left: 5%;
 			border-top-left-radius: 10px;
 			border-bottom-left-radius: 10px;
 			line-height: 41px;
 		}
 		.plus {
-			right: 5%;
+			right: -20%;
 			border-bottom-right-radius: 10px;
 			border-top-right-radius: 10px;
 			line-height: 47px;
 		}
 		input {
-			width: 50%;
+			left: 5%;
+			width: 70%;
 			height: 50px;
 			border: none;
 			color: hsl(0, 0%, 0%);
@@ -555,8 +557,8 @@ main {
 	.btn {
 		@media (min-width: 1440px) {
 			position: relative;
-			top: -4.5%;
-			left: 28%;
+			top: -5.5%;
+			left: 40%;
 			width: 57%;
 		}
 		button {
@@ -564,9 +566,9 @@ main {
 			border-radius: 10px;
 			width: 100%;
 			height: 50px;
-			cursor: pointer;
 			@media (min-width: 1440px) {
 				width: 100%;
+				filter: drop-shadow(2px 10px 11px $main-color);
 			}
 			p {
 				color: $white;
