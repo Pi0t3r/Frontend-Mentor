@@ -204,7 +204,8 @@ main {
 		padding: 0 150px;
 		display: flex;
 		flex-direction: row;
-		height: 660px;
+		height: 700px;
+		margin-top: -55px;
 	}
 	.side-menu {
 		width: 70%;
@@ -258,33 +259,30 @@ main {
 		overflow: hidden;
 		width: 500vw;
 		@media (min-width: 1440px) {
-			width: 33%;
+			width: 40%;
 			height: 100%;
 			position: relative;
 			top: 115px;
 			overflow: visible;
 			margin-left: 6%;
 			.slider {
-				.repeat {
+				.repeat {		
 					display: none;
 					@media (min-width: 1440px) {
 						display: block;
 						position: absolute;
-						bottom: 25%;
+						bottom: 19%;
 						width: 20%;
 						left: 0;
-
 						img {
+							width: 100%;
 							border-radius: 10px;
 						}
 					}
 				}
-				.two,
-				.three,
-				.four {
+				.main-image {
 					position: absolute;
-					bottom: 25%;
-					width: 20%;
+					width: 100%;
 				}
 				.one {
 					width: 100%;
@@ -292,23 +290,26 @@ main {
 						border-radius: 15px;
 					}
 				}
-				.two {
-					left: 27%;
+				.two,.three,.four{
+					position: absolute;
+					bottom: 19%;
+					width: 20%;
 					img {
 						border-radius: 10px;
+						width: 100%;
 					}
+				}
+				.two {
+					left: 27%;
+					
 				}
 				.three {
 					right: 27%;
-					img {
-						border-radius: 10px;
-					}
+					
 				}
 				.four {
 					right: 0;
-					img {
-						border-radius: 10px;
-					}
+					
 				}
 				.two,
 				.repeat,
