@@ -1,6 +1,3 @@
-const openMenu = document.querySelector('.open')
-const menu = document.querySelector('.side-menu')
-const close = document.querySelector('.btn-close')
 const minus = document.querySelector('.minus')
 const plus = document.querySelector('.plus')
 const howMany = document.querySelector('.howMany')
@@ -19,12 +16,6 @@ const mainPrice = document.querySelector('.price-main')
 const deleteAll = document.querySelector('.delete-icon')
 const image1 = document.querySelector('.image1')
 const imagesEnlarged = document.querySelectorAll('.enlarged')
-const array = [
-	document.querySelector('.enlargedFirst'),
-	document.querySelector('.enlargedSecond'),
-	document.querySelector('.enlargedThird'),
-]
-const pixels = [-463, -926, -1389]
 
 const showFirstImage = () => {
 	image1.classList.toggle('clicked')
@@ -58,12 +49,6 @@ const deleteCart = () => {
 	empty.classList.remove('none')
 	howMany.value = 0
 	amountNumber.innerHTML = 0
-}
-const openSideMenu = () => {
-	menu.classList.add('move-sideMenu')
-}
-const closeSideMenu = () => {
-	menu.classList.remove('move-sideMenu')
 }
 
 const add = () => {
@@ -119,9 +104,6 @@ document.querySelector('.right').addEventListener('click', function () {
 	document.querySelectorAll('.enlarged').forEach((slide, indx) => {
 		slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`
 	})
-	if (document.querySelector('.two').getComputedStyle('transform.translateX(-100%)')) {
-		alert('cos dziala')
-	}
 })
 document.querySelector('.left').addEventListener('click', function () {
 	curSlide--
@@ -130,15 +112,13 @@ document.querySelector('.left').addEventListener('click', function () {
 		slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`
 	})
 })
-const closeEnlargedImages = () => {
-	document.querySelector('.enlarged-photo').classList.add('none')
-}
-const showEnlargedImages = () => {
-	document.querySelector('.enlarged-photo').classList.remove('none')
-}
+// const closeEnlargedImages = () => {
+// 	document.querySelector('.enlarged-photo').classList.add('none')
+// }
+// const showEnlargedImages = () => {
+// 	document.querySelector('.enlarged-photo').classList.remove('none')
+// }
 
-document.querySelector('.main-image').addEventListener('click',showEnlargedImages)
-document.querySelector('.close-photos').addEventListener('click', closeEnlargedImages)
 document.querySelector('.image2').addEventListener('click', showSecondImage)
 document.querySelector('.image3').addEventListener('click', showThirdImage)
 document.querySelector('.image4').addEventListener('click', showFourthImage)
@@ -153,5 +133,9 @@ cart.addEventListener('click', showCart)
 btn.addEventListener('click', addToCartNumber)
 minus.addEventListener('click', substract)
 plus.addEventListener('click', add)
-close.addEventListener('click', closeSideMenu)
-openMenu.addEventListener('click', openSideMenu)
+document.querySelector('.btn-close').addEventListener('click', () => {
+	document.querySelector('.side-menu').classList.remove('move-sideMenu')
+})
+document.querySelector('.open').addEventListener('click', () => {
+	document.querySelector('.side-menu').classList.add('move-sideMenu')
+})

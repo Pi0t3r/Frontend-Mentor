@@ -266,21 +266,20 @@ main {
 			overflow: visible;
 			margin-left: 6%;
 			.slider {
+				
 				.repeat {
-					display: none;
-					@media (min-width: 1440px) {
-						display: block;
-						position: absolute;
-						bottom: 19%;
-						width: 20%;
-						left: 0;
-						img {
-							width: 100%;
-							border-radius: 10px;
-						}
+					display: block;
+					position: absolute;
+					bottom: 19%;
+					width: 20%;
+					left: 0;
+					img {
+						width: 100%;
+						border-radius: 10px;
 					}
 				}
 				.main-image {
+					width: 390px;
 					position: absolute;
 					width: 100%;
 				}
@@ -323,6 +322,12 @@ main {
 					filter: opacity(0.5);
 				}
 			}
+		}
+		.slider{
+			transition: .5s;
+		}
+		.main-image {
+			width: 390px;
 		}
 		.move {
 			transform: translateX(-750px);
@@ -522,30 +527,40 @@ main {
 		.minus,
 		.plus {
 			height: 50px;
-			width: 85px;
+			width: 63px;
 			@media (min-width: 1440px) {
 				width: 33%;
 			}
 		}
 		.minus {
+			left: 20px;
 			border-top-left-radius: 10px;
 			border-bottom-left-radius: 10px;
 			line-height: 41px;
+			@media (min-width: 1440px) {
+				left: 0;
+			}
 		}
 		.plus {
-			right: -20%;
+			right: 5%;
 			border-bottom-right-radius: 10px;
 			border-top-right-radius: 10px;
 			line-height: 47px;
+			@media (min-width: 1440px) {
+				right: -26%;
+			}
 		}
 		input {
-			left: 5%;
-			width: 70%;
+			width: 63%;
 			height: 50px;
 			border: none;
 			color: hsl(0, 0%, 0%);
 			font-size: 18px;
 			outline: none;
+			@media (min-width: 1440px) {
+				width: 70%;
+				left: 9%;
+			}
 		}
 		input::placeholder {
 			text-align: center;
