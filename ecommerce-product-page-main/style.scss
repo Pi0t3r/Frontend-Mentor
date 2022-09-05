@@ -266,7 +266,6 @@ main {
 			overflow: visible;
 			margin-left: 6%;
 			.slider {
-				
 				.repeat {
 					display: block;
 					position: absolute;
@@ -323,17 +322,26 @@ main {
 				}
 			}
 		}
-		.slider{
-			transition: .5s;
+		.repeat {
+			display: none;
 		}
-		.main-image {
+		.slider {
+			transition: 0.5s;
+		}
+		.main-image,
+		.image2,
+		.image3,
+		.image4 {
 			width: 390px;
 		}
 		.move {
-			transform: translateX(-750px);
+			transform: translateX(-21%);
 		}
 		.move2 {
-			transform: translateX(-1500px);
+			transform: translateX(-42%);
+		}
+		.move3{
+			transform: translateX(-63%);
 		}
 	}
 	.icon {

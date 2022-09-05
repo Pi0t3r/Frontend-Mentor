@@ -80,38 +80,22 @@ const showCart = () => {
 		document.querySelector('.prev').style.display = 'block'
 	}
 }
-const nextImage = () => {
-	images.classList.add('move')
-}
-const lastImage = () => {
-	if (images.classList.contains('move')) {
-		images.classList.add('move2')
-	}
-}
-const secondImage = () => {
-	images.classList.remove('move2')
-}
-const firstImage = () => {
-	if (images.classList.contains('move') && !images.classList.contains('move2')) {
-		images.classList.remove('move')
-	}
-}
 
-let curSlide = 0
-document.querySelector('.right').addEventListener('click', function () {
-	curSlide++
+// let curSlide = 0
+// document.querySelector('.right').addEventListener('click', function () {
+// 	curSlide++
 
-	document.querySelectorAll('.enlarged').forEach((slide, indx) => {
-		slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`
-	})
-})
-document.querySelector('.left').addEventListener('click', function () {
-	curSlide--
+// 	document.querySelectorAll('.enlarged').forEach((slide, indx) => {
+// 		slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`
+// 	})
+// })
+// document.querySelector('.left').addEventListener('click', function () {
+// 	curSlide--
 
-	document.querySelectorAll('.enlarged').forEach((slide, indx) => {
-		slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`
-	})
-})
+// 	document.querySelectorAll('.enlarged').forEach((slide, indx) => {
+// 		slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`
+// 	})
+// })
 // const closeEnlargedImages = () => {
 // 	document.querySelector('.enlarged-photo').classList.add('none')
 // }
@@ -119,16 +103,47 @@ document.querySelector('.left').addEventListener('click', function () {
 // 	document.querySelector('.enlarged-photo').classList.remove('none')
 // }
 
-document.querySelector('.image2').addEventListener('click', showSecondImage)
-document.querySelector('.image3').addEventListener('click', showThirdImage)
-document.querySelector('.image4').addEventListener('click', showFourthImage)
-image1.addEventListener('click', showFirstImage)
+// document.querySelector('.image2').addEventListener('click', showSecondImage)
+// document.querySelector('.image3').addEventListener('click', showThirdImage)
+// document.querySelector('.image4').addEventListener('click', showFourthImage)
+// image1.addEventListener('click', showFirstImage)
+
+const toNextImage = () => {
+	images.classList.add('move')
+}
+const toThirdImage = () => {
+	if (images.classList.contains('move')) {
+		images.classList.add('move2')
+	}
+}
+const toLastImage = () => {
+	if (images.classList.contains('move2')) {
+		images.classList.add('move3')
+	}
+}
+const backToThirdImage = () => {
+	if (images.classList.contains('move') && images.classList.contains('move2') && images.classList.contains('move3')) {
+		images.classList.remove('move3')
+	}
+}
+const backToSecondImage = () => {
+	if (images.classList.contains('move') && images.classList.contains('move2') && !images.classList.contains('move3')) {
+		images.classList.remove('move2')
+	}
+}
+const backToFirstImage = () => {
+	if (images.classList.contains('move') && !images.classList.contains('move2') && !images.classList.contains('move#')) {
+		images.classList.remove('move')
+	}
+}
+prev.addEventListener('click', backToFirstImage)
+prev.addEventListener('click', backToSecondImage)
+prev.addEventListener('click', backToThirdImage)
+next.addEventListener('click', toLastImage)
+next.addEventListener('click', toThirdImage)
+next.addEventListener('click', toNextImage)
 deleteAll.addEventListener('click', deleteCart)
 cart.addEventListener('click', showItem)
-prev.addEventListener('click', firstImage)
-prev.addEventListener('click', secondImage)
-next.addEventListener('click', lastImage)
-next.addEventListener('click', nextImage)
 cart.addEventListener('click', showCart)
 btn.addEventListener('click', addToCartNumber)
 minus.addEventListener('click', substract)
