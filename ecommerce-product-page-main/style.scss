@@ -283,11 +283,13 @@ main {
 					width: 100%;
 				}
 				.one {
-					width: 100%;
+					width: 112%;
 					img {
+						width: 100%;
 						border-radius: 15px;
 					}
 				}
+				.repeat,
 				.two,
 				.three,
 				.four {
@@ -322,13 +324,14 @@ main {
 				}
 			}
 		}
-		.repeat {
+		.repeat{
 			display: none;
 		}
+
 		.slider {
 			transition: 0.5s;
 		}
-		.main-image,
+		.image1,
 		.image2,
 		.image3,
 		.image4 {
@@ -340,7 +343,7 @@ main {
 		.move2 {
 			transform: translateX(-42%);
 		}
-		.move3{
+		.move3 {
 			transform: translateX(-63%);
 		}
 	}
@@ -375,8 +378,8 @@ main {
 		border-radius: 15px;
 		z-index: 1;
 		@media (min-width: 1440px) {
-			top: -17%;
-			left: 260%;
+			top: -12%;
+			left: 180%;
 			box-shadow: -8px 13px 20px -6px #000;
 			height: 40%;
 		}
@@ -435,7 +438,7 @@ main {
 				height: 20px;
 				@media (min-width: 1440px) {
 					top: 18%;
-					right: 0%;
+					right: -8%;
 				}
 				img {
 					cursor: pointer;
@@ -578,6 +581,7 @@ main {
 		}
 	}
 	.btn {
+		margin-bottom: 50px;
 		@media (min-width: 1440px) {
 			position: relative;
 			top: -5.5%;

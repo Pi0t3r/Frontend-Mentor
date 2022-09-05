@@ -337,19 +337,22 @@ main .img {
     width: 100%;
   }
   main .img .slider .one {
-    width: 100%;
+    width: 112%;
   }
   main .img .slider .one img {
+    width: 100%;
     border-radius: 15px;
   }
-  main .img .slider .two,
+  main .img .slider .repeat,
+main .img .slider .two,
 main .img .slider .three,
 main .img .slider .four {
     position: absolute;
     bottom: 19%;
     width: 20%;
   }
-  main .img .slider .two img,
+  main .img .slider .repeat img,
+main .img .slider .two img,
 main .img .slider .three img,
 main .img .slider .four img {
     border-radius: 10px;
@@ -384,7 +387,7 @@ main .img .slider {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-main .img .main-image,
+main .img .image1,
 main .img .image2,
 main .img .image3,
 main .img .image4 {
@@ -440,8 +443,8 @@ main .cart {
 }
 @media (min-width: 1440px) {
   main .cart {
-    top: -17%;
-    left: 260%;
+    top: -12%;
+    left: 180%;
     -webkit-box-shadow: -8px 13px 20px -6px #000;
             box-shadow: -8px 13px 20px -6px #000;
     height: 40%;
@@ -514,7 +517,7 @@ main .cart .has-item .delete {
 @media (min-width: 1440px) {
   main .cart .has-item .delete {
     top: 18%;
-    right: 0%;
+    right: -8%;
   }
 }
 main .cart .has-item .delete img {
@@ -701,6 +704,9 @@ main .none {
   font-weight: bold;
   color: hsl(0deg, 0%, 0%);
   font-size: 18px;
+}
+.text-main .btn {
+  margin-bottom: 50px;
 }
 @media (min-width: 1440px) {
   .text-main .btn {

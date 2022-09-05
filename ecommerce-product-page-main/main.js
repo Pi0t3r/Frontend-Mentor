@@ -1,24 +1,5 @@
-const minus = document.querySelector('.minus')
-const plus = document.querySelector('.plus')
-const howMany = document.querySelector('.howMany')
-const btn = document.querySelector('.button')
-const cart = document.querySelector('.icon-cart')
-const amountNumber = document.querySelector('.amount-number')
-const cartMain = document.querySelector('.cart')
-const next = document.querySelector('.next')
-const prev = document.querySelector('.prev')
-const images = document.querySelector('.slider')
-const hasItem = document.querySelector('.has-item')
-const empty = document.querySelector('.empty')
-const count = document.querySelector('.count')
-const total = document.querySelector('.total-price')
-const mainPrice = document.querySelector('.price-main')
-const deleteAll = document.querySelector('.delete-icon')
-const image1 = document.querySelector('.image1')
-const imagesEnlarged = document.querySelectorAll('.enlarged')
-
 const showFirstImage = () => {
-	image1.classList.toggle('clicked')
+	image5.classList.toggle('clicked')
 }
 const showSecondImage = () => {
 	document.querySelector('.image2').classList.toggle('clicked')
@@ -30,124 +11,82 @@ const showFourthImage = () => {
 	document.querySelector('.image4').classList.toggle('clicked')
 }
 
-const showItem = () => {
-	if (amountNumber.innerHTML > 0) {
-		empty.classList.add('none')
-		hasItem.classList.remove('none')
-	} else {
-		empty.classList.remove('none')
-		hasItem.classList.add('none')
+document.querySelector('.prev').addEventListener('click', () => {
+	if (document.querySelector('.slider').classList.contains('move') && !document.querySelector('.slider').classList.contains('move2') && !document.querySelector('.slider').classList.contains('move#')) {
+		document.querySelector('.slider').classList.remove('move')
 	}
-
-	count.innerHTML = howMany.value
-	total.innerHTML = mainPrice.innerHTML * count.innerHTML + '.00'
-}
-
-const deleteCart = () => {
+})
+document.querySelector('.prev').addEventListener('click', () => {
+	if (document.querySelector('.slider').classList.contains('move') && document.querySelector('.slider').classList.contains('move2') && !document.querySelector('.slider').classList.contains('move3')) {
+		document.querySelector('.slider').classList.remove('move2')
+	}
+})
+document.querySelector('.prev').addEventListener('click', () => {
+	if (document.querySelector('.slider').classList.contains('move') && document.querySelector('.slider').classList.contains('move2') && document.querySelector('.slider').classList.contains('move3')) {
+		document.querySelector('.slider').classList.remove('move3')
+	}
+})
+document.querySelector('.next').addEventListener('click', () => {
+	if (document.querySelector('.slider').classList.contains('move2')) {
+		document.querySelector('.slider').classList.add('move3')
+	}
+})
+document.querySelector('.next').addEventListener('click', () => {
+	if (document.querySelector('.slider').classList.contains('move')) {
+		document.querySelector('.slider').classList.add('move2')
+	}
+})
+document.querySelector('.next').addEventListener('click', () => {
+	document.querySelector('.slider').classList.add('move')
+})
+document.querySelector('.delete-icon').addEventListener('click', () => {
 	document.querySelector('.amount').classList.add('hide')
-	hasItem.classList.add('none')
-	empty.classList.remove('none')
-	howMany.value = 0
-	amountNumber.innerHTML = 0
-}
-
-const add = () => {
-	howMany.value++
-}
-const substract = () => {
-	howMany.value--
-	if (howMany.value < 0) {
-		howMany.value = 0
+	document.querySelector('.has-item').classList.add('none')
+	document.querySelector('.empty').classList.remove('none')
+	document.querySelector('.howMany').value = 0
+	document.querySelector('.amount-number').innerHTML = 0
+})
+document.querySelector('.icon-cart').addEventListener('click', () => {
+	if (document.querySelector('.amount-number').innerHTML > 0) {
+		document.querySelector('.empty').classList.add('none')
+		document.querySelector('.has-item').classList.remove('none')
+	} else {
+		document.querySelector('.empty').classList.remove('none')
+		document.querySelector('.has-item').classList.add('none')
 	}
-}
-const addToCartNumber = () => {
-	if (howMany.value == 0) {
-		document.querySelector('.amount').classList.add('hide')
-		amountNumber.innerHTML = howMany.value
-	} else if (howMany.value > 0) {
-		amountNumber.innerHTML = howMany.value
-		document.querySelector('.amount').classList.remove('hide')
-	}
-}
 
-const showCart = () => {
-	cartMain.classList.toggle('none')
-	if (!cartMain.classList.contains('none')) {
+	document.querySelector('.count').innerHTML = document.querySelector('.howMany').value
+	document.querySelector('.total-price').innerHTML = document.querySelector('.price-main').innerHTML * document.querySelector('.count').innerHTML + '.00'
+})
+document.querySelector('.icon-cart').addEventListener('click', () => {
+	document.querySelector('.cart').classList.toggle('none')
+	if (!document.querySelector('.cart').classList.contains('none')) {
 		document.querySelector('.next').style.display = 'none'
 		document.querySelector('.prev').style.display = 'none'
 	} else {
 		document.querySelector('.next').style.display = 'block'
 		document.querySelector('.prev').style.display = 'block'
 	}
-}
-
-// let curSlide = 0
-// document.querySelector('.right').addEventListener('click', function () {
-// 	curSlide++
-
-// 	document.querySelectorAll('.enlarged').forEach((slide, indx) => {
-// 		slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`
-// 	})
-// })
-// document.querySelector('.left').addEventListener('click', function () {
-// 	curSlide--
-
-// 	document.querySelectorAll('.enlarged').forEach((slide, indx) => {
-// 		slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`
-// 	})
-// })
-// const closeEnlargedImages = () => {
-// 	document.querySelector('.enlarged-photo').classList.add('none')
-// }
-// const showEnlargedImages = () => {
-// 	document.querySelector('.enlarged-photo').classList.remove('none')
-// }
-
-// document.querySelector('.image2').addEventListener('click', showSecondImage)
-// document.querySelector('.image3').addEventListener('click', showThirdImage)
-// document.querySelector('.image4').addEventListener('click', showFourthImage)
-// image1.addEventListener('click', showFirstImage)
-
-const toNextImage = () => {
-	images.classList.add('move')
-}
-const toThirdImage = () => {
-	if (images.classList.contains('move')) {
-		images.classList.add('move2')
+})
+document.querySelector('.button').addEventListener('click', () => {
+	if (document.querySelector('.howMany').value == 0) {
+		document.querySelector('.amount').classList.add('hide')
+		document.querySelector('.amount-number').innerHTML = document.querySelector('.howMany').value
+	} else if (document.querySelector('.howMany').value > 0) {
+		document.querySelector('.amount-number').innerHTML = document.querySelector('.howMany').value
+		document.querySelector('.amount').classList.remove('hide')
 	}
-}
-const toLastImage = () => {
-	if (images.classList.contains('move2')) {
-		images.classList.add('move3')
+})
+document.querySelector('.minus').addEventListener('click', () => {
+	document.querySelector('.howMany').value--
+	if (document.querySelector('.howMany').value < 0) {
+		document.querySelector('.howMany').value = 0
 	}
-}
-const backToThirdImage = () => {
-	if (images.classList.contains('move') && images.classList.contains('move2') && images.classList.contains('move3')) {
-		images.classList.remove('move3')
-	}
-}
-const backToSecondImage = () => {
-	if (images.classList.contains('move') && images.classList.contains('move2') && !images.classList.contains('move3')) {
-		images.classList.remove('move2')
-	}
-}
-const backToFirstImage = () => {
-	if (images.classList.contains('move') && !images.classList.contains('move2') && !images.classList.contains('move#')) {
-		images.classList.remove('move')
-	}
-}
-prev.addEventListener('click', backToFirstImage)
-prev.addEventListener('click', backToSecondImage)
-prev.addEventListener('click', backToThirdImage)
-next.addEventListener('click', toLastImage)
-next.addEventListener('click', toThirdImage)
-next.addEventListener('click', toNextImage)
-deleteAll.addEventListener('click', deleteCart)
-cart.addEventListener('click', showItem)
-cart.addEventListener('click', showCart)
-btn.addEventListener('click', addToCartNumber)
-minus.addEventListener('click', substract)
-plus.addEventListener('click', add)
+})
+
+document.querySelector('.plus').addEventListener('click', () => {
+	document.querySelector('.howMany').value++
+})
 document.querySelector('.btn-close').addEventListener('click', () => {
 	document.querySelector('.side-menu').classList.remove('move-sideMenu')
 })
