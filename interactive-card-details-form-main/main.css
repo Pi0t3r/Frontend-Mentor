@@ -1,0 +1,473 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+  background-color: hsl(249deg, 99%, 64%) to hsl(278deg, 94%, 30%);
+}
+
+.left-side {
+  width: 35%;
+  height: 100vh;
+}
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+  .left-side {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 36%;
+  }
+}
+.left-side .background {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/bg-main-desktop.png");
+  background-size: cover;
+}
+.left-side .background .card1 {
+  width: 447px;
+  height: 245px;
+}
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+  .left-side .background .card1 {
+    width: 273.66px;
+    z-index: 2;
+    position: absolute;
+    top: 48.5%;
+    left: 5.5%;
+    height: 150px;
+  }
+}
+.left-side .background .card1 img {
+  position: relative;
+  top: 70%;
+  left: 40%;
+}
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+  .left-side .background .card1 img {
+    height: 150px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+.left-side .background .card1 .circle1 {
+  position: absolute;
+  left: 14.5%;
+  top: 24.5%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: hsl(0deg, 0%, 100%);
+}
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+  .left-side .background .card1 .circle1 {
+    left: 7%;
+    top: 11%;
+    width: 30px;
+    height: 30px;
+  }
+}
+.left-side .background .card1 .circle2 {
+  position: absolute;
+  top: 26.5%;
+  left: 19%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid hsl(0deg, 0%, 100%);
+}
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+  .left-side .background .card1 .circle2 {
+    top: 17%;
+    left: 22%;
+    height: 13px;
+    width: 13px;
+  }
+}
+.left-side .background .card1 .code {
+  position: absolute;
+  left: 14.5%;
+  top: 39%;
+  color: hsl(0deg, 0%, 100%);
+  letter-spacing: 2px;
+}
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+  .left-side .background .card1 .code {
+    left: 8%;
+    top: 58%;
+  }
+}
+.left-side .background .card1 .code p {
+  font-size: 29px;
+}
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+  .left-side .background .card1 .code p {
+    font-size: 17px;
+  }
+}
+.left-side .background .card1 .name {
+  position: absolute;
+  top: 47.5%;
+  left: 14.5%;
+  color: hsl(0deg, 0%, 100%);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+  .left-side .background .card1 .name {
+    top: 82%;
+    left: 8%;
+    letter-spacing: 1px;
+    width: 48%;
+  }
+}
+.left-side .background .card1 .name p {
+  font-size: 12px;
+}
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+  .left-side .background .card1 .name p {
+    font-size: 9px;
+  }
+}
+.left-side .background .card1 .small-code {
+  position: absolute;
+  top: 47.5%;
+  left: 37.5%;
+  color: hsl(0deg, 0%, 100%);
+}
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+  .left-side .background .card1 .small-code {
+    top: 82%;
+    left: 80.5%;
+    letter-spacing: 1px;
+  }
+}
+.left-side .background .card1 .small-code p {
+  font-size: 12px;
+}
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+  .left-side .background .card1 .small-code p {
+    font-size: 9px;
+  }
+}
+.left-side .background .card2 {
+  position: relative;
+  top: 24%;
+  left: 54%;
+}
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+  .left-side .background .card2 {
+    position: absolute;
+    top: 13%;
+    left: 23%;
+  }
+  .left-side .background .card2 img {
+    position: relative;
+    height: 150px;
+  }
+}
+.left-side .background .card2 .cvc {
+  position: absolute;
+  top: 44.7%;
+  left: 71%;
+  color: hsl(0deg, 0%, 100%);
+}
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+  .left-side .background .card2 .cvc {
+    top: 44.5%;
+    left: 79%;
+  }
+}
+.left-side .background .card2 .cvc p {
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+  .left-side .background .card2 .cvc p {
+    font-size: 8px;
+  }
+}
+
+.right-side {
+  position: absolute;
+  top: 26%;
+  width: 40%;
+  height: 55%;
+  right: 5%;
+}
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+  .right-side {
+    top: 39%;
+    width: 100%;
+    left: 0;
+  }
+}
+.right-side .none {
+  display: none;
+}
+.right-side .block {
+  display: block;
+}
+.right-side .form {
+  width: 100%;
+  height: 100%;
+}
+.right-side .form .name {
+  position: relative;
+  top: 14%;
+  left: 6%;
+}
+.right-side .form .name p {
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  color: hsl(278deg, 68%, 11%);
+  font-weight: bold;
+  width: 90%;
+}
+.right-side .form .name input {
+  width: 61%;
+  height: 44px;
+  border-radius: 11px;
+  padding: 10px;
+  border: 1px solid hsl(270deg, 3%, 87%);
+}
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+  .right-side .form .name input {
+    width: 90%;
+  }
+}
+.right-side .form .name input::-moz-placeholder {
+  color: hsl(270deg, 3%, 87%);
+  font-size: 15px;
+  font-weight: bold;
+}
+.right-side .form .name input:-ms-input-placeholder {
+  color: hsl(270deg, 3%, 87%);
+  font-size: 15px;
+  font-weight: bold;
+}
+.right-side .form .name input::placeholder {
+  color: hsl(270deg, 3%, 87%);
+  font-size: 15px;
+  font-weight: bold;
+}
+.right-side .form .number {
+  position: relative;
+  left: 6%;
+  top: 20%;
+}
+.right-side .form .number .wrong {
+  color: hsl(0deg, 100%, 66%);
+  font-weight: normal;
+  text-transform: none;
+  margin-top: 5px;
+}
+.right-side .form .number .none {
+  display: none;
+}
+.right-side .form .number .block {
+  display: block;
+}
+.right-side .form .number p {
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  color: hsl(278deg, 68%, 11%);
+  font-weight: bold;
+}
+.right-side .form .number input {
+  width: 61%;
+  height: 44px;
+  border-radius: 11px;
+  padding: 10px;
+  border: 1px solid hsl(270deg, 3%, 87%);
+}
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+  .right-side .form .number input {
+    width: 90%;
+  }
+}
+.right-side .form .number input::-moz-placeholder {
+  color: hsl(270deg, 3%, 87%);
+  font-size: 15px;
+  font-weight: bold;
+}
+.right-side .form .number input:-ms-input-placeholder {
+  color: hsl(270deg, 3%, 87%);
+  font-size: 15px;
+  font-weight: bold;
+}
+.right-side .form .number input::placeholder {
+  color: hsl(270deg, 3%, 87%);
+  font-size: 15px;
+  font-weight: bold;
+}
+.right-side .form .dateCvc {
+  position: relative;
+  left: 6%;
+  top: 26%;
+  display: flex;
+  flex-direction: row;
+  width: 61%;
+}
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+  .right-side .form .dateCvc {
+    width: 90%;
+  }
+}
+.right-side .form .dateCvc .date p {
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  color: hsl(278deg, 68%, 11%);
+  font-weight: bold;
+}
+.right-side .form .dateCvc .date input {
+  width: 43%;
+  height: 35px;
+  padding: 10px;
+  border-radius: 9px;
+  border: 1px solid hsl(270deg, 3%, 87%);
+}
+.right-side .form .dateCvc .date input::-moz-placeholder {
+  color: hsl(270deg, 3%, 87%);
+  font-size: 15px;
+  font-weight: bold;
+}
+.right-side .form .dateCvc .date input:-ms-input-placeholder {
+  color: hsl(270deg, 3%, 87%);
+  font-size: 15px;
+  font-weight: bold;
+}
+.right-side .form .dateCvc .date input::placeholder {
+  color: hsl(270deg, 3%, 87%);
+  font-size: 15px;
+  font-weight: bold;
+}
+.right-side .form .dateCvc .date .wrong {
+  margin-top: 5px;
+  color: hsl(0deg, 100%, 66%);
+  font-weight: normal;
+  text-transform: none;
+  display: none;
+}
+.right-side .form .dateCvc .cvc p {
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  color: hsl(278deg, 68%, 11%);
+  font-weight: bold;
+}
+.right-side .form .dateCvc .cvc input {
+  height: 35px;
+  padding: 10px;
+  border-radius: 9px;
+  border: 1px solid hsl(270deg, 3%, 87%);
+}
+.right-side .form .dateCvc .cvc input::-moz-placeholder {
+  color: hsl(270deg, 3%, 87%);
+  font-size: 15px;
+  font-weight: bold;
+}
+.right-side .form .dateCvc .cvc input:-ms-input-placeholder {
+  color: hsl(270deg, 3%, 87%);
+  font-size: 15px;
+  font-weight: bold;
+}
+.right-side .form .dateCvc .cvc input::placeholder {
+  color: hsl(270deg, 3%, 87%);
+  font-size: 15px;
+  font-weight: bold;
+}
+.right-side .form .dateCvc .cvc .wrong {
+  color: hsl(0deg, 100%, 66%);
+  font-weight: normal;
+  text-transform: none;
+  margin-top: 5px;
+}
+.right-side .form .btn {
+  position: relative;
+  left: 6%;
+  top: 30%;
+  width: 100%;
+}
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+  .right-side .form .btn {
+    width: 100%;
+    left: 0;
+    text-align: center;
+  }
+}
+.right-side .form .btn button {
+  width: 61%;
+  height: 50px;
+  border-radius: 9px;
+  background-color: hsl(278deg, 68%, 11%);
+  color: hsl(270deg, 3%, 87%);
+  cursor: pointer;
+}
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+  .right-side .form .btn button {
+    width: 90%;
+  }
+}
+.right-side .form .btn button p {
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+  .right-side .form .btn button p {
+    font-size: 17px;
+  }
+}
+.right-side .complete {
+  width: 100%;
+  height: 100%;
+}
+.right-side .complete .icon {
+  height: 40%;
+}
+.right-side .complete .icon img {
+  position: relative;
+  left: 50%;
+  top: 58%;
+  transform: translateX(-50%);
+}
+.right-side .complete .text {
+  text-align: center;
+}
+.right-side .complete .text h1 {
+  text-transform: uppercase;
+  color: hsl(278deg, 68%, 11%);
+  margin-top: 27px;
+  letter-spacing: 2px;
+  font-weight: lighter;
+}
+.right-side .complete .text p {
+  color: hsl(279deg, 6%, 55%);
+  margin-top: 20px;
+}
+.right-side .complete .button {
+  margin-top: 30px;
+  text-align: center;
+}
+.right-side .complete .button button {
+  background-color: hsl(278deg, 68%, 11%);
+  color: hsl(270deg, 3%, 87%);
+  width: 70%;
+  height: 50px;
+  border-radius: 8px;
+  letter-spacing: 1px;
+  font-size: 15px;
+  cursor: pointer;
+}/*# sourceMappingURL=main.css.map */
